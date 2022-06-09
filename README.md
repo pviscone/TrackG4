@@ -3,5 +3,5 @@
 </a>
 
 <a href="https://github.com/pviscone/TrackG4/actions/workflows/Tests.yml">
-  <img align="center" src="https://github.com/pviscone/TrackG4/workflows/Tests.yml/badge.svg?event=push" />
+  <img align="center" src="https://github.com/pviscone/TrackG4/actions/workflows/Tests.yml/badge.svg" />
 </a>
