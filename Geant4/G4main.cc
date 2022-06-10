@@ -26,7 +26,7 @@ int main(int argc, char **argv){
     // Set up the geometry, the physics and the actions and initialize the run manager
     runManager->SetUserInitialization(new MyDetectorConstruction());
     runManager->SetUserInitialization(new MyPhysicsList());
-    runManager->SetUserInitialization(new MyActionInitialization);
+    runManager->SetUserInitialization(new MyActionInitialization());
     runManager->Initialize();
 
     // Set up the visualization
