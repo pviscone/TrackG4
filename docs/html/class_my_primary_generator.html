@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -69,9 +76,6 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>The Generator class.  
- <a href="class_my_primary_generator.html#details">More...</a></p>
-
 <p><code>#include &lt;<a class="el" href="_generator_8hh_source.html">Generator.hh</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for MyPrimaryGenerator:</div>
@@ -82,14 +86,89 @@ Inheritance diagram for MyPrimaryGenerator:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa966828cfffe6e110e3122e13a47a86b"><td class="memItemLeft" align="right" valign="top"><a id="aa966828cfffe6e110e3122e13a47a86b" name="aa966828cfffe6e110e3122e13a47a86b"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>GeneratePrimaries</b> (G4Event *event)</td></tr>
-<tr class="separator:aa966828cfffe6e110e3122e13a47a86b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a719b919dd38eeb0bab12357144ff5a5f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_primary_generator.html#a719b919dd38eeb0bab12357144ff5a5f">MyPrimaryGenerator</a> ()</td></tr>
+<tr class="separator:a719b919dd38eeb0bab12357144ff5a5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d8e84de7be72677f984fb317977d732"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_primary_generator.html#a2d8e84de7be72677f984fb317977d732">~MyPrimaryGenerator</a> ()</td></tr>
+<tr class="separator:a2d8e84de7be72677f984fb317977d732"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78b02e982cd927d94b3537e7852d7b11"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_primary_generator.html#a78b02e982cd927d94b3537e7852d7b11">GeneratePrimaries</a> (G4Event *event)</td></tr>
+<tr class="separator:a78b02e982cd927d94b3537e7852d7b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >The Generator class. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="_generator_8hh_source.html#l00011">11</a> of file <a class="el" href="_generator_8hh_source.html">Generator.hh</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a719b919dd38eeb0bab12357144ff5a5f" name="a719b919dd38eeb0bab12357144ff5a5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a719b919dd38eeb0bab12357144ff5a5f">&#9670;&nbsp;</a></span>MyPrimaryGenerator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MyPrimaryGenerator::MyPrimaryGenerator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_generator_8cc_source.html#l00003">3</a> of file <a class="el" href="_generator_8cc_source.html">Generator.cc</a>.</p>
+
+</div>
+</div>
+<a id="a2d8e84de7be72677f984fb317977d732" name="a2d8e84de7be72677f984fb317977d732"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d8e84de7be72677f984fb317977d732">&#9670;&nbsp;</a></span>~MyPrimaryGenerator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MyPrimaryGenerator::~MyPrimaryGenerator </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_generator_8cc_source.html#l00012">12</a> of file <a class="el" href="_generator_8cc_source.html">Generator.cc</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a78b02e982cd927d94b3537e7852d7b11" name="a78b02e982cd927d94b3537e7852d7b11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78b02e982cd927d94b3537e7852d7b11">&#9670;&nbsp;</a></span>GeneratePrimaries()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MyPrimaryGenerator::GeneratePrimaries </td>
+          <td>(</td>
+          <td class="paramtype">G4Event *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_generator_8cc_source.html#l00017">17</a> of file <a class="el" href="_generator_8cc_source.html">Generator.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="_detector_parameters_8hh_source.html#l00034">GeometryParameters::worldSize</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/pviscone/Desktop/TrackG4/Geant4/include/<a class="el" href="_generator_8hh_source.html">Generator.hh</a></li>
+<li>/home/pviscone/Desktop/TrackG4/Geant4/src/<a class="el" href="_generator_8cc_source.html">Generator.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

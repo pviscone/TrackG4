@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -69,16 +76,19 @@ $(function() {
   <div class="headertitle"><div class="title">Materials.hh</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<a href="_materials_8hh.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;G4NistManager.hh&quot;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;G4Material.hh&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">struct</span>{</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        G4NistManager* nist = G4NistManager::Instance();</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        G4Material* Air = (this-&gt;nist)-&gt;FindOrBuildMaterial(<span class="stringliteral">&quot;G4_AIR&quot;</span>);</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        G4Material* Si = (this-&gt;nist)-&gt;FindOrBuildMaterial(<span class="stringliteral">&quot;G4_Si&quot;</span>);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>} <a class="code hl_struct" href="struct_my_materials.html">MyMaterials</a>;</div>
-<div class="ttc" id="astruct_my_materials_html"><div class="ttname"><a href="struct_my_materials.html">MyMaterials</a></div><div class="ttdoc">The Materials class.</div></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="_materials_8hh.html#a97f2235c75f0e3e25e4b620776361be9">   11</a></span>        G4NistManager* <a class="code hl_variable" href="_materials_8hh.html#a97f2235c75f0e3e25e4b620776361be9">nist</a> = G4NistManager::Instance();</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="_materials_8hh.html#ac40b3492f500fae011430373ce2b8578">   12</a></span>        G4Material* <a class="code hl_variable" href="_materials_8hh.html#ac40b3492f500fae011430373ce2b8578">Air</a> = (this-&gt;<a class="code hl_variable" href="_materials_8hh.html#a97f2235c75f0e3e25e4b620776361be9">nist</a>)-&gt;FindOrBuildMaterial(<span class="stringliteral">&quot;G4_AIR&quot;</span>);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="_materials_8hh.html#a5d3c745453f998425afd91ed866b053c">   13</a></span>        G4Material* <a class="code hl_variable" href="_materials_8hh.html#a5d3c745453f998425afd91ed866b053c">Si</a> = (this-&gt;<a class="code hl_variable" href="_materials_8hh.html#a97f2235c75f0e3e25e4b620776361be9">nist</a>)-&gt;FindOrBuildMaterial(<span class="stringliteral">&quot;G4_Si&quot;</span>);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="_materials_8hh.html#a666566f2e3dc732abc51e05bf1d9902d">   14</a></span>} <a class="code hl_variable" href="_materials_8hh.html#a666566f2e3dc732abc51e05bf1d9902d">MyMaterials</a>;</div>
+<div class="ttc" id="a_materials_8hh_html_a5d3c745453f998425afd91ed866b053c"><div class="ttname"><a href="_materials_8hh.html#a5d3c745453f998425afd91ed866b053c">Si</a></div><div class="ttdeci">G4Material * Si</div><div class="ttdef"><b>Definition:</b> <a href="_materials_8hh_source.html#l00013">Materials.hh:13</a></div></div>
+<div class="ttc" id="a_materials_8hh_html_a666566f2e3dc732abc51e05bf1d9902d"><div class="ttname"><a href="_materials_8hh.html#a666566f2e3dc732abc51e05bf1d9902d">MyMaterials</a></div><div class="ttdeci">struct @0 MyMaterials</div></div>
+<div class="ttc" id="a_materials_8hh_html_a97f2235c75f0e3e25e4b620776361be9"><div class="ttname"><a href="_materials_8hh.html#a97f2235c75f0e3e25e4b620776361be9">nist</a></div><div class="ttdeci">G4NistManager * nist</div><div class="ttdef"><b>Definition:</b> <a href="_materials_8hh_source.html#l00011">Materials.hh:11</a></div></div>
+<div class="ttc" id="a_materials_8hh_html_ac40b3492f500fae011430373ce2b8578"><div class="ttname"><a href="_materials_8hh.html#ac40b3492f500fae011430373ce2b8578">Air</a></div><div class="ttdeci">G4Material * Air</div><div class="ttdef"><b>Definition:</b> <a href="_materials_8hh_source.html#l00012">Materials.hh:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
