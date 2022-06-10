@@ -1,9 +1,9 @@
 ## Set the minumum version
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 
-set(PROJECT "Simulation")
-set(EXECUTABLE_NAME "sim")
-set(MAIN_FILE "sim.cc")
+set(PROJECT "Cosmic Ray on CMS tracker modules")
+set(EXECUTABLE_NAME "CosmicMuSimulation")
+set(MAIN_FILE "G4main.cc")
 
 ## Project name
 project(${PROJECT})
@@ -14,6 +14,7 @@ project(${PROJECT})
 
 ## Set Cpp Standard
 set (CMAKE_CXX_STANDARD 17)
+
 
 ##Set g++ as compiler if exists
 find_program(GPP g++)
@@ -33,15 +34,17 @@ find_package(Geant4 REQUIRED ui_all vis_all)
 include(${Geant4_USE_FILE})
 
 
+
 ## Set the include directories and the file to compile
 include_directories(${PROJECT_SOURCE_DIR}/include)
 file(GLOB sources ${PROJECT_SOURCE_DIR}/src/*.cc ${PROJECT_SOURCE_DIR}/src/*.cpp ${PROJECT_SOURCE_DIR}/src/*.c)
 file(GLOB headers ${PROJECT_SOURCE_DIR}/include/*.hh ${PROJECT_SOURCE_DIR}/include/*.h)
 
 
+
 ## Create the executable
 add_executable(${EXECUTABLE_NAME} ${MAIN_FILE} ${sources} ${headers})
-target_link_libraries(sim ${Geant4_LIBRARIES})
+target_link_libraries(${EXECUTABLE_NAME} ${Geant4_LIBRARIES})
 
 
 #----------------------------------------------------------------------------
