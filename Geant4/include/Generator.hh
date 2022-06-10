@@ -6,6 +6,7 @@
 #include "G4UniformRandPool.hh"
 #include "CLHEP/Units/PhysicalConstants.h"
 #include "G4GeneralParticleSource.hh"
+#include "DetectorParameters.hh"
 
 class MyPrimaryGenerator : public G4VUserPrimaryGeneratorAction{
     private:

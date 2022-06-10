@@ -16,6 +16,9 @@ MyPrimaryGenerator::~MyPrimaryGenerator()
 
 void MyPrimaryGenerator::GeneratePrimaries(G4Event *event)
 {
+
+    G4double worldSize = GeometryParameters::worldSize;
+    //G4cout << "worldSize: " << MyDetectorConstruction::GetWorldSize() << G4endl;
     //G4cout<< "======== NEW BEAM =======" << G4endl;
     G4ParticleDefinition* mu_p = particleTable->FindParticle("mu+");
     G4ParticleDefinition* mu_n = particleTable->FindParticle("mu-");
