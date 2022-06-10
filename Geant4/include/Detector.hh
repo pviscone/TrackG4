@@ -1,6 +1,6 @@
 #pragma once
 #include "G4VUserDetectorConstruction.hh"
-#include "Materials.hh"
+#include "DetectorParameters.hh"
 #include "G4LogicalVolume.hh"
 #include "G4VPhysicalVolume.hh"
 #include "G4SystemOfUnits.hh"
@@ -13,6 +13,8 @@
  * @brief The class that build the geometry of the simulation
  */
 class MyDetectorConstruction : public G4VUserDetectorConstruction{
+
+
 /*
     private:
         G4LogicalVolume *logicSensitiveDetector;
@@ -42,4 +44,5 @@ class MyDetectorConstruction : public G4VUserDetectorConstruction{
          * @return std::vector<G4double> Vector that cointains the position of the modules on a given axis
          */
         std::vector<G4double> ComputeModulePosition(G4int nOfModulesOnAxis,G4double moduleSize,G4double moduleSpacing);
+
 };
