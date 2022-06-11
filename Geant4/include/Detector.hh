@@ -1,6 +1,6 @@
 #pragma once
 #include "G4VUserDetectorConstruction.hh"
-#include "DetectorParameters.hh"
+#include "UserParameters.hh"
 #include "G4LogicalVolume.hh"
 #include "G4VPhysicalVolume.hh"
 #include "G4SystemOfUnits.hh"

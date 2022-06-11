@@ -8,7 +8,7 @@
 
 
 
-/** @struct MyGeometry
+/** @namespace GeometryParameters
  * @brief Just a container for the geometry parameters of the detector
  *
  * This struct contains all the materials used in the simulation 
@@ -27,18 +27,18 @@ namespace GeometryParameters{
         inline G4int nOfColsX=3;
         inline G4int nOfColsY=1;
         inline G4int nOfLayers=6;
-
+        //Put the world size equal the longest side of the detector * 4
         inline auto sideLenght = [] (G4double moduleDimOnAxis, G4double spacingOnAxis, G4int nOfCols){
                 return (moduleDimOnAxis+spacingOnAxis)*(nOfCols+1);
                 };
-        inline G4double worldSize=std::max({sideLenght(moduleDimX,moduleSpacingX,nOfColsX),
+        inline G4double worldSize=4*std::max({sideLenght(moduleDimX,moduleSpacingX,nOfColsX),
                                 sideLenght(moduleDimY,moduleSpacingY,nOfColsY),
                                 sideLenght(moduleDimZ,moduleSpacingZ,nOfLayers)})/2;
 
 
 };
 
-/** @struct MyMaterials
+/** @namespace Materials
  * @brief Just a container for the materials used in the simulation
  *
  * This struct contains all the materials used in the simulation
