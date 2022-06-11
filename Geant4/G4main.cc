@@ -42,6 +42,7 @@ int main(int argc, char **argv){
     if(argc==1){
         std::cout << "No input file specified. Using default macro." << std::endl;
         UImanager->ApplyCommand(command+"./vis.mac");
+        UImanager->ApplyCommand(command+"./run.mac");
         ui->SessionStart();
     }
     else{
