@@ -1,55 +1,76 @@
 #include "Generator.hh"
 
+using namespace GeometryParameters;
+/**
+ * Create the particle gun and the particle table
+ *
+ */
 MyPrimaryGenerator::MyPrimaryGenerator()
 {
 
-    //numero di particelle per evento
     fParticleGun = new G4ParticleGun(1);
     particleTable = G4ParticleTable::GetParticleTable();
 
 }
 
+/**
+ * Destroy the particle gun
+ *
+ */
 MyPrimaryGenerator::~MyPrimaryGenerator()
 {
     delete fParticleGun;
 }
 
+/**
+ *Every time a beam is generated this function generate randomly a muon
+ *according to the muons charge ratio (mu+/mu- = 1.3)
+ *
+ * The beam is generated in a random position in the face of the world perpendicular
+ * to the z axis.
+ *
+ */
 void MyPrimaryGenerator::GeneratePrimaries(G4Event *event)
 {
 
-    G4double worldSize = GeometryParameters::worldSize;
-    //G4cout << "worldSize: " << MyDetectorConstruction::GetWorldSize() << G4endl;
-    //G4cout<< "======== NEW BEAM =======" << G4endl;
+
+    //Definition of mu+ and mu-
     G4ParticleDefinition* mu_p = particleTable->FindParticle("mu+");
     G4ParticleDefinition* mu_n = particleTable->FindParticle("mu-");
+    //Dummy variable to store the particle definition
     G4ParticleDefinition* particle;
-    G4int partID = (int) (G4UniformRand()*2);
-    G4double phi = G4UniformRand()*CLHEP::twopi;
-    G4double theta;
-    G4double xPos = G4UniformRand()*0.5*m-0.25*m;
-    G4double yPos = G4UniformRand()*0.5*m-0.25*m;
-    G4double zPos = -0.3*m;
+    // Random number to generate random mu+ or mu- according to their charge ratio
+    G4double muCharge = (G4UniformRand());
+    // Starting point of the beam.
+    // It covers uniformly the whole side of the box
+    G4double xPos = G4UniformRand()*worldSize*2-worldSize;
+    G4double yPos = G4UniformRand()*worldSize*2-worldSize;
+    G4double zPos = -worldSize;
 
-    switch (partID)
+    //The charge ratio of cosmic muons (mu+/mu-) is 1.3 (assumed constant in energy)
+    //This means that the 57% of the muons are mu+ and 43% of them are mu-
+    switch (muCharge>0.57)
     {
         case 0:
-            particle=mu_n;
+            particle=mu_p;
             break;
         case 1:
-            particle=mu_p;
+            particle=mu_n;
             break;
         default:
             break;
     }
-
+    //Set the particle definition
     fParticleGun->SetParticleDefinition(particle);
-    fParticleGun->SetParticleEnergy(4*GeV);
-
+    //Set the starting point of the beam
     fParticleGun->SetParticlePosition(G4ThreeVector(xPos,yPos,zPos));
+
+    //TODO Set the energy and direction distribution with gps macros
+    fParticleGun->SetParticleEnergy(4*GeV);
     fParticleGun->SetParticleMomentumDirection(G4ThreeVector(0,0,1));
 
 
 
-
+    //Generate the primary particle
     fParticleGun->GeneratePrimaryVertex(event);
 }
