@@ -11,7 +11,21 @@
  */
 class MyPhysicsList : public G4VModularPhysicsList{
     public:
+        /** @brief Constructor of the PhysicsList class
+         *
+         * This constructor initializes the PhysicsList.
+         */
         MyPhysicsList();
+
+        /** @brief Destructor of the PhysicsList class
+         *
+         * This destructor deletes the PhysicsList.
+         */
         ~MyPhysicsList();
+
+        /**
+         * @brief Set the cuts for the physics processes.
+         *
+         */
         virtual void SetCuts();
 };
