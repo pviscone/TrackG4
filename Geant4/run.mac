@@ -1,0 +1,9 @@
+#Set the cuts for the air
+/run/setCutForAGivenParticle e+ 2 cm
+/run/setCutForAGivenParticle e- 2 cm
+
+#Set the cuts for the silicon modules
+/run/setCutForRegion SiliconModule 0.1 mm
+
+#Shot the beam
+/run/beamOn 10

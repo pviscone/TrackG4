@@ -54,6 +54,7 @@ target_link_libraries(${EXECUTABLE_NAME} ${Geant4_LIBRARIES})
 #
 set(SCRIPTS
     vis.mac
+    run.mac
     )
 
 
