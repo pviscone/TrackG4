@@ -52,6 +52,12 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct(){
     G4Box *solidSiModule = new G4Box("Module",moduleDimX/2,moduleDimY/2,moduleDimZ/2);
     G4LogicalVolume *logicSiModule = new G4LogicalVolume(solidSiModule,Si,"Module");
 
+    //Create a region for the modules
+    G4Region* SiModuleRegion = new G4Region("SiliconModule");
+    logicSiModule->SetRegion(SiModuleRegion);
+    SiModuleRegion->AddRootLogicalVolume(logicSiModule);
+
+
     //For loop on the positions vectors to create the physical volume of the modules
     for (auto layerPos : ComputeModulePosition(nOfLayers,moduleDimZ,moduleSpacingZ)){
         for (auto colPosX : ComputeModulePosition(nOfColsX,moduleDimX,moduleSpacingX)){
