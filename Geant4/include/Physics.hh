@@ -5,7 +5,7 @@
 #include "G4SystemOfUnits.hh"
 
 /** @class MyPhysicsList
- * @brief The PhysicsList class
+ * @brief The PhysicsList class that defines the physics processes involved in the simulation
  *
  * This class contains the physics processes used in the simulation.
  */

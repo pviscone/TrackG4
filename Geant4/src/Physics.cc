@@ -1,8 +1,7 @@
 #include "Physics.hh"
 
 /**
- *Define the physics module G4EmStandardPhysics
- *
+ *Define the physics module G4EmStandardPhysics \n
  *It takes account of the most common electromagnetic interaction involved in HEP.
  */
 MyPhysicsList::MyPhysicsList(){

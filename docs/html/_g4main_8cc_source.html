@@ -120,35 +120,36 @@ $(function() {
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">if</span>(argc==1){</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;No input file specified. Using default macro.&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        UImanager-&gt;ApplyCommand(command+<span class="stringliteral">&quot;./vis.mac&quot;</span>);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        ui-&gt;SessionStart();</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">else</span>{</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        G4String key;</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=1; i&lt;argc; ++i){</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            key=argv[i];</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            G4cout &lt;&lt; <span class="stringliteral">&quot;Executed macro:&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;  &quot;</span>&lt;&lt; key &lt;&lt; G4endl;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            G4cout &lt;&lt;command+key&lt;&lt; G4endl;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            UImanager-&gt;ApplyCommand(command+key);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <span class="keywordflow">if</span> (key==<span class="stringliteral">&quot;vis.mac&quot;</span>){</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                ui-&gt;SessionStart();</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            }</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">//Deallocate manager&#39;s  pointers on the heap</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">delete</span> ui;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">delete</span> visManager;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">delete</span> runManager;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        UImanager-&gt;ApplyCommand(command+<span class="stringliteral">&quot;./run.mac&quot;</span>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        ui-&gt;SessionStart();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">else</span>{</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        G4String key;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=1; i&lt;argc; ++i){</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            key=argv[i];</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            G4cout &lt;&lt; <span class="stringliteral">&quot;Executed macro:&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;  &quot;</span>&lt;&lt; key &lt;&lt; G4endl;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            G4cout &lt;&lt;command+key&lt;&lt; G4endl;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            UImanager-&gt;ApplyCommand(command+key);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">if</span> (key==<span class="stringliteral">&quot;vis.mac&quot;</span>){</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                ui-&gt;SessionStart();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">//Deallocate manager&#39;s  pointers on the heap</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keyword">delete</span> ui;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keyword">delete</span> visManager;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">delete</span> runManager;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
 <div class="ttc" id="a_action_8hh_html"><div class="ttname"><a href="_action_8hh.html">Action.hh</a></div></div>
 <div class="ttc" id="a_detector_8hh_html"><div class="ttname"><a href="_detector_8hh.html">Detector.hh</a></div></div>
 <div class="ttc" id="a_g4main_8cc_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="_g4main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="_g4main_8cc_source.html#l00013">G4main.cc:13</a></div></div>
 <div class="ttc" id="a_physics_8hh_html"><div class="ttname"><a href="_physics_8hh.html">Physics.hh</a></div></div>
 <div class="ttc" id="aclass_my_action_initialization_html"><div class="ttname"><a href="class_my_action_initialization.html">MyActionInitialization</a></div><div class="ttdef"><b>Definition:</b> <a href="_action_8hh_source.html#l00006">Action.hh:6</a></div></div>
-<div class="ttc" id="aclass_my_detector_construction_html"><div class="ttname"><a href="class_my_detector_construction.html">MyDetectorConstruction</a></div><div class="ttdoc">The class that build the geometry of the simulation.</div><div class="ttdef"><b>Definition:</b> <a href="_detector_8hh_source.html#l00015">Detector.hh:15</a></div></div>
-<div class="ttc" id="aclass_my_physics_list_html"><div class="ttname"><a href="class_my_physics_list.html">MyPhysicsList</a></div><div class="ttdoc">The PhysicsList class.</div><div class="ttdef"><b>Definition:</b> <a href="_physics_8hh_source.html#l00011">Physics.hh:11</a></div></div>
+<div class="ttc" id="aclass_my_detector_construction_html"><div class="ttname"><a href="class_my_detector_construction.html">MyDetectorConstruction</a></div><div class="ttdoc">The class that build the geometry of the simulation.</div><div class="ttdef"><b>Definition:</b> <a href="_detector_8hh_source.html#l00016">Detector.hh:16</a></div></div>
+<div class="ttc" id="aclass_my_physics_list_html"><div class="ttname"><a href="class_my_physics_list.html">MyPhysicsList</a></div><div class="ttdoc">The PhysicsList class that defines the physics processes involved in the simulation.</div><div class="ttdef"><b>Definition:</b> <a href="_physics_8hh_source.html#l00012">Physics.hh:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

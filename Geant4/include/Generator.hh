@@ -10,7 +10,7 @@
 
 /**
  * @class MyPrimaryGenerator
- * @brief The Geant4 primary generator.
+ * @brief The generator of the primary beam.
  *
  * This class manages the primary particles generation.
  */
