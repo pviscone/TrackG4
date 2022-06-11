@@ -44,6 +44,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct(){
      // Divided by 2 because in G4box the dimension represent the half length
 
     //Create the world
+    G4cout << "The world size is " << worldSize/m << "m" << G4endl;
     G4Box *solidWorld = new G4Box("World",worldSize,worldSize,worldSize);
     G4LogicalVolume *logicWorld = new G4LogicalVolume(solidWorld,Air,"World");
     G4VPhysicalVolume *physWorld = new G4PVPlacement(0,G4ThreeVector(0.,0.,0.),logicWorld,"World",0,false,0,false);

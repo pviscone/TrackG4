@@ -28,12 +28,12 @@ namespace GeometryParameters{
         inline G4int nOfColsY=6;
         inline G4int nOfLayers=6;
         //Put the world size equal the longest side of the detector * 2
-        inline auto sideLenght = [] (G4double moduleDimOnAxis, G4double spacingOnAxis, G4int nOfCols){
+        inline auto sideLength = [] (G4double moduleDimOnAxis, G4double spacingOnAxis, G4int nOfCols){
                 return (moduleDimOnAxis+spacingOnAxis)*(nOfCols+1);
                 };
-        inline G4double worldSize=2*std::max({sideLenght(moduleDimX,moduleSpacingX,nOfColsX),
-                                sideLenght(moduleDimY,moduleSpacingY,nOfColsY),
-                                sideLenght(moduleDimZ,moduleSpacingZ,nOfLayers)})/2;
+        inline G4double worldSize=2*std::max({sideLength(moduleDimX,moduleSpacingX,nOfColsX),
+                                sideLength(moduleDimY,moduleSpacingY,nOfColsY),
+                                sideLength(moduleDimZ,moduleSpacingZ,nOfLayers)})/2;
 
 
 };

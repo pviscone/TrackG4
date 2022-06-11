@@ -49,11 +49,10 @@ void MyPrimaryGenerator::GeneratePrimaries(G4Event *event)
 
     //The charge ratio of cosmic muons (mu+/mu-) is 1.3 (assumed constant in energy)
     //This means that the 57% of the muons are mu+ and 43% of them are mu-
-    if(muCharge>0.57)
-    {
+    if(muCharge>0.57){
         particle=mu_p;
     }
-    else
+    else{
         particle=mu_n;
     }
     //Set the particle definition
