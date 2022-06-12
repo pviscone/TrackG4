@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -69,9 +76,9 @@ $(function() {
   <div class="headertitle"><div class="title">DetectorGeometry.hh</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<a href="_detector_geometry_8hh.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;G4VUserDetectorConstruction.hh&quot;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;UserParameters.hh&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_user_parameters_8hh.html">UserParameters.hh</a>&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;G4LogicalVolume.hh&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;G4VPhysicalVolume.hh&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;G4SystemOfUnits.hh&quot;</span></div>
@@ -100,11 +107,12 @@ $(function() {
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        std::vector&lt;G4double&gt; <a class="code hl_function" href="class_my_detector_construction.html#a14e1749fb2e077c053e8739e32908721">ComputeModulePosition</a>(G4int nOfModulesOnAxis,G4double moduleSize,G4double moduleSpacing);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>};</div>
-<div class="ttc" id="aclass_my_detector_construction_html"><div class="ttname"><a href="class_my_detector_construction.html">MyDetectorConstruction</a></div><div class="ttdoc">The class that build the geometry of the simulation.</div><div class="ttdef"><b>Definition:</b> DetectorGeometry.hh:17</div></div>
-<div class="ttc" id="aclass_my_detector_construction_html_a01ab5593d40d2ede193b80f0b0bfb53a"><div class="ttname"><a href="class_my_detector_construction.html#a01ab5593d40d2ede193b80f0b0bfb53a">MyDetectorConstruction::MyDetectorConstruction</a></div><div class="ttdeci">MyDetectorConstruction()</div><div class="ttdoc">Construct a new My Detector Construction object. Inherited from G4VUserDetectorConstruction.</div><div class="ttdef"><b>Definition:</b> DetectorGeometry.cc:7</div></div>
-<div class="ttc" id="aclass_my_detector_construction_html_a14e1749fb2e077c053e8739e32908721"><div class="ttname"><a href="class_my_detector_construction.html#a14e1749fb2e077c053e8739e32908721">MyDetectorConstruction::ComputeModulePosition</a></div><div class="ttdeci">std::vector&lt; G4double &gt; ComputeModulePosition(G4int nOfModulesOnAxis, G4double moduleSize, G4double moduleSpacing)</div><div class="ttdoc">Compute the positions of the center of the modules on a given axis.</div><div class="ttdef"><b>Definition:</b> DetectorGeometry.cc:15</div></div>
-<div class="ttc" id="aclass_my_detector_construction_html_a41342002c2e91fa9f4b7d92ca94c18fb"><div class="ttname"><a href="class_my_detector_construction.html#a41342002c2e91fa9f4b7d92ca94c18fb">MyDetectorConstruction::~MyDetectorConstruction</a></div><div class="ttdeci">~MyDetectorConstruction()</div><div class="ttdoc">Destroy the My Detector Construction object. Inherited from G4VUserDetectorConstruction.</div><div class="ttdef"><b>Definition:</b> DetectorGeometry.cc:9</div></div>
-<div class="ttc" id="aclass_my_detector_construction_html_af59abea99479b785b14f81c3e6a9a2e8"><div class="ttname"><a href="class_my_detector_construction.html#af59abea99479b785b14f81c3e6a9a2e8">MyDetectorConstruction::Construct</a></div><div class="ttdeci">G4VPhysicalVolume * Construct()</div><div class="ttdoc">Build the geometry of the simulation.</div><div class="ttdef"><b>Definition:</b> DetectorGeometry.cc:42</div></div>
+<div class="ttc" id="a_user_parameters_8hh_html"><div class="ttname"><a href="_user_parameters_8hh.html">UserParameters.hh</a></div></div>
+<div class="ttc" id="aclass_my_detector_construction_html"><div class="ttname"><a href="class_my_detector_construction.html">MyDetectorConstruction</a></div><div class="ttdoc">The class that build the geometry of the simulation.</div><div class="ttdef"><b>Definition:</b> <a href="_detector_geometry_8hh_source.html#l00017">DetectorGeometry.hh:17</a></div></div>
+<div class="ttc" id="aclass_my_detector_construction_html_a01ab5593d40d2ede193b80f0b0bfb53a"><div class="ttname"><a href="class_my_detector_construction.html#a01ab5593d40d2ede193b80f0b0bfb53a">MyDetectorConstruction::MyDetectorConstruction</a></div><div class="ttdeci">MyDetectorConstruction()</div><div class="ttdoc">Construct a new My Detector Construction object. Inherited from G4VUserDetectorConstruction.</div><div class="ttdef"><b>Definition:</b> <a href="_detector_geometry_8cc_source.html#l00007">DetectorGeometry.cc:7</a></div></div>
+<div class="ttc" id="aclass_my_detector_construction_html_a14e1749fb2e077c053e8739e32908721"><div class="ttname"><a href="class_my_detector_construction.html#a14e1749fb2e077c053e8739e32908721">MyDetectorConstruction::ComputeModulePosition</a></div><div class="ttdeci">std::vector&lt; G4double &gt; ComputeModulePosition(G4int nOfModulesOnAxis, G4double moduleSize, G4double moduleSpacing)</div><div class="ttdoc">Compute the positions of the center of the modules on a given axis.</div><div class="ttdef"><b>Definition:</b> <a href="_detector_geometry_8cc_source.html#l00015">DetectorGeometry.cc:15</a></div></div>
+<div class="ttc" id="aclass_my_detector_construction_html_a41342002c2e91fa9f4b7d92ca94c18fb"><div class="ttname"><a href="class_my_detector_construction.html#a41342002c2e91fa9f4b7d92ca94c18fb">MyDetectorConstruction::~MyDetectorConstruction</a></div><div class="ttdeci">~MyDetectorConstruction()</div><div class="ttdoc">Destroy the My Detector Construction object. Inherited from G4VUserDetectorConstruction.</div><div class="ttdef"><b>Definition:</b> <a href="_detector_geometry_8cc_source.html#l00009">DetectorGeometry.cc:9</a></div></div>
+<div class="ttc" id="aclass_my_detector_construction_html_af59abea99479b785b14f81c3e6a9a2e8"><div class="ttname"><a href="class_my_detector_construction.html#af59abea99479b785b14f81c3e6a9a2e8">MyDetectorConstruction::Construct</a></div><div class="ttdeci">G4VPhysicalVolume * Construct()</div><div class="ttdoc">Build the geometry of the simulation.</div><div class="ttdef"><b>Definition:</b> <a href="_detector_geometry_8cc_source.html#l00042">DetectorGeometry.cc:42</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

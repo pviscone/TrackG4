@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -82,13 +89,11 @@ Inheritance diagram for MyDetectorConstruction:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a01ab5593d40d2ede193b80f0b0bfb53a"><td class="memItemLeft" align="right" valign="top"><a id="a01ab5593d40d2ede193b80f0b0bfb53a" name="a01ab5593d40d2ede193b80f0b0bfb53a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>MyDetectorConstruction</b> ()</td></tr>
-<tr class="memdesc:a01ab5593d40d2ede193b80f0b0bfb53a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new My Detector Construction object. Inherited from G4VUserDetectorConstruction. <br /></td></tr>
+<tr class="memitem:a01ab5593d40d2ede193b80f0b0bfb53a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_detector_construction.html#a01ab5593d40d2ede193b80f0b0bfb53a">MyDetectorConstruction</a> ()</td></tr>
+<tr class="memdesc:a01ab5593d40d2ede193b80f0b0bfb53a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new My Detector Construction object. Inherited from G4VUserDetectorConstruction.  <a href="class_my_detector_construction.html#a01ab5593d40d2ede193b80f0b0bfb53a">More...</a><br /></td></tr>
 <tr class="separator:a01ab5593d40d2ede193b80f0b0bfb53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41342002c2e91fa9f4b7d92ca94c18fb"><td class="memItemLeft" align="right" valign="top"><a id="a41342002c2e91fa9f4b7d92ca94c18fb" name="a41342002c2e91fa9f4b7d92ca94c18fb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>~MyDetectorConstruction</b> ()</td></tr>
-<tr class="memdesc:a41342002c2e91fa9f4b7d92ca94c18fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the My Detector Construction object. Inherited from G4VUserDetectorConstruction. <br /></td></tr>
+<tr class="memitem:a41342002c2e91fa9f4b7d92ca94c18fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_detector_construction.html#a41342002c2e91fa9f4b7d92ca94c18fb">~MyDetectorConstruction</a> ()</td></tr>
+<tr class="memdesc:a41342002c2e91fa9f4b7d92ca94c18fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the My Detector Construction object. Inherited from G4VUserDetectorConstruction.  <a href="class_my_detector_construction.html#a41342002c2e91fa9f4b7d92ca94c18fb">More...</a><br /></td></tr>
 <tr class="separator:a41342002c2e91fa9f4b7d92ca94c18fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af59abea99479b785b14f81c3e6a9a2e8"><td class="memItemLeft" align="right" valign="top">G4VPhysicalVolume *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_detector_construction.html#af59abea99479b785b14f81c3e6a9a2e8">Construct</a> ()</td></tr>
 <tr class="memdesc:af59abea99479b785b14f81c3e6a9a2e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build the geometry of the simulation.  <a href="class_my_detector_construction.html#af59abea99479b785b14f81c3e6a9a2e8">More...</a><br /></td></tr>
@@ -99,7 +104,52 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >The class that build the geometry of the simulation. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+
+<p class="definition">Definition at line <a class="el" href="_detector_geometry_8hh_source.html#l00017">17</a> of file <a class="el" href="_detector_geometry_8hh_source.html">DetectorGeometry.hh</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a01ab5593d40d2ede193b80f0b0bfb53a" name="a01ab5593d40d2ede193b80f0b0bfb53a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01ab5593d40d2ede193b80f0b0bfb53a">&#9670;&nbsp;</a></span>MyDetectorConstruction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MyDetectorConstruction::MyDetectorConstruction </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new My Detector Construction object. Inherited from G4VUserDetectorConstruction. </p>
+
+<p class="definition">Definition at line <a class="el" href="_detector_geometry_8cc_source.html#l00007">7</a> of file <a class="el" href="_detector_geometry_8cc_source.html">DetectorGeometry.cc</a>.</p>
+
+</div>
+</div>
+<a id="a41342002c2e91fa9f4b7d92ca94c18fb" name="a41342002c2e91fa9f4b7d92ca94c18fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41342002c2e91fa9f4b7d92ca94c18fb">&#9670;&nbsp;</a></span>~MyDetectorConstruction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MyDetectorConstruction::~MyDetectorConstruction </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destroy the My Detector Construction object. Inherited from G4VUserDetectorConstruction. </p>
+
+<p class="definition">Definition at line <a class="el" href="_detector_geometry_8cc_source.html#l00009">9</a> of file <a class="el" href="_detector_geometry_8cc_source.html">DetectorGeometry.cc</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a14e1749fb2e077c053e8739e32908721" name="a14e1749fb2e077c053e8739e32908721"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a14e1749fb2e077c053e8739e32908721">&#9670;&nbsp;</a></span>ComputeModulePosition()</h2>
 
@@ -142,8 +192,12 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;G4double&gt; Vector that cointains the position of the modules on a given axis</dd></dl>
-<p>If the number of units is odd then it add to the position vector 0 and <img class="formulaInl" alt="$ \pm $" src="form_0.png"/> i*(size+spacing)/2 where i is the loop index and start form 1 to nOfUnits+1/2 <br  />
-If the number of units is even then it add to the vector <img class="formulaInl" alt="$ \pm $" src="form_0.png"/> (i+1/2)*(size+spacing)/2 where i is the loop index and start form 0 to nOfUnits/2 </p>
+<p>If the number of units is odd then it add to the position vector 0 and \( \pm \) i*(size+spacing)/2 where i is the loop index and start form 1 to nOfUnits+1/2 <br  />
+If the number of units is even then it add to the vector \( \pm \) (i+1/2)*(size+spacing)/2 where i is the loop index and start form 0 to nOfUnits/2 </p>
+
+<p class="definition">Definition at line <a class="el" href="_detector_geometry_8cc_source.html#l00015">15</a> of file <a class="el" href="_detector_geometry_8cc_source.html">DetectorGeometry.cc</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_detector_geometry_8cc_source.html#l00042">Construct()</a>.</p>
 
 </div>
 </div>
@@ -165,11 +219,15 @@ If the number of units is even then it add to the vector <img class="formulaInl"
 <p>Build the geometry of the simulation. </p>
 <dl class="section return"><dt>Returns</dt><dd>The physical volume of the world </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="_detector_geometry_8cc_source.html#l00042">42</a> of file <a class="el" href="_detector_geometry_8cc_source.html">DetectorGeometry.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="_user_parameters_8hh_source.html#l00048">Materials::Air</a>, <a class="el" href="_detector_geometry_8cc_source.html#l00015">ComputeModulePosition()</a>, <a class="el" href="_user_parameters_8hh_source.html#l00019">GeometryParameters::moduleDimX</a>, <a class="el" href="_user_parameters_8hh_source.html#l00020">GeometryParameters::moduleDimY</a>, <a class="el" href="_user_parameters_8hh_source.html#l00021">GeometryParameters::moduleDimZ</a>, <a class="el" href="_user_parameters_8hh_source.html#l00023">GeometryParameters::moduleSpacingX</a>, <a class="el" href="_user_parameters_8hh_source.html#l00024">GeometryParameters::moduleSpacingY</a>, <a class="el" href="_user_parameters_8hh_source.html#l00025">GeometryParameters::moduleSpacingZ</a>, <a class="el" href="_user_parameters_8hh_source.html#l00027">GeometryParameters::nOfColsX</a>, <a class="el" href="_user_parameters_8hh_source.html#l00028">GeometryParameters::nOfColsY</a>, <a class="el" href="_user_parameters_8hh_source.html#l00029">GeometryParameters::nOfLayers</a>, <a class="el" href="_user_parameters_8hh_source.html#l00049">Materials::Si</a>, and <a class="el" href="_user_parameters_8hh_source.html#l00034">GeometryParameters::worldSize</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Geant4/include/<a class="el" href="_detector_geometry_8hh_source.html">DetectorGeometry.hh</a></li>
-<li>Geant4/src/DetectorGeometry.cc</li>
+<li>Geant4/src/<a class="el" href="_detector_geometry_8cc_source.html">DetectorGeometry.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

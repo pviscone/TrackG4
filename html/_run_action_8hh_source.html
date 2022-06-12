@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -69,7 +76,7 @@ $(function() {
   <div class="headertitle"><div class="title">RunAction.hh</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<a href="_run_action_8hh.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;G4UserRunAction.hh&quot;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;G4AnalysisManager.hh&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
@@ -83,11 +90,11 @@ $(function() {
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_my_run_action.html#aceeba229b0f5493ae9dc1d069ef10293">EndOfRunAction</a>(<span class="keyword">const</span> G4Run*);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>};</div>
-<div class="ttc" id="aclass_my_run_action_html"><div class="ttname"><a href="class_my_run_action.html">MyRunAction</a></div><div class="ttdoc">The class that manages the run action.</div><div class="ttdef"><b>Definition:</b> RunAction.hh:12</div></div>
-<div class="ttc" id="aclass_my_run_action_html_a82c981e9ea84bee9578cb7cafae7fbff"><div class="ttname"><a href="class_my_run_action.html#a82c981e9ea84bee9578cb7cafae7fbff">MyRunAction::~MyRunAction</a></div><div class="ttdeci">virtual ~MyRunAction()</div><div class="ttdoc">Destructor of the run action.</div><div class="ttdef"><b>Definition:</b> RunAction.cc:6</div></div>
-<div class="ttc" id="aclass_my_run_action_html_a9dacd747212ed9d0bcd9c365e0cf6c52"><div class="ttname"><a href="class_my_run_action.html#a9dacd747212ed9d0bcd9c365e0cf6c52">MyRunAction::BeginOfRunAction</a></div><div class="ttdeci">virtual void BeginOfRunAction(const G4Run *)</div><div class="ttdoc">Method that is called at the beginning of the run.</div><div class="ttdef"><b>Definition:</b> RunAction.cc:8</div></div>
-<div class="ttc" id="aclass_my_run_action_html_aceeba229b0f5493ae9dc1d069ef10293"><div class="ttname"><a href="class_my_run_action.html#aceeba229b0f5493ae9dc1d069ef10293">MyRunAction::EndOfRunAction</a></div><div class="ttdeci">virtual void EndOfRunAction(const G4Run *)</div><div class="ttdoc">Method that is called at the end of the run.</div><div class="ttdef"><b>Definition:</b> RunAction.cc:42</div></div>
-<div class="ttc" id="aclass_my_run_action_html_acffdff2aae0d71d149e418896a6ddcd2"><div class="ttname"><a href="class_my_run_action.html#acffdff2aae0d71d149e418896a6ddcd2">MyRunAction::MyRunAction</a></div><div class="ttdeci">MyRunAction()</div><div class="ttdoc">Constructor of the run action.</div><div class="ttdef"><b>Definition:</b> RunAction.cc:4</div></div>
+<div class="ttc" id="aclass_my_run_action_html"><div class="ttname"><a href="class_my_run_action.html">MyRunAction</a></div><div class="ttdoc">The class that manages the run action.</div><div class="ttdef"><b>Definition:</b> <a href="_run_action_8hh_source.html#l00012">RunAction.hh:12</a></div></div>
+<div class="ttc" id="aclass_my_run_action_html_a82c981e9ea84bee9578cb7cafae7fbff"><div class="ttname"><a href="class_my_run_action.html#a82c981e9ea84bee9578cb7cafae7fbff">MyRunAction::~MyRunAction</a></div><div class="ttdeci">virtual ~MyRunAction()</div><div class="ttdoc">Destructor of the run action.</div><div class="ttdef"><b>Definition:</b> <a href="_run_action_8cc_source.html#l00006">RunAction.cc:6</a></div></div>
+<div class="ttc" id="aclass_my_run_action_html_a9dacd747212ed9d0bcd9c365e0cf6c52"><div class="ttname"><a href="class_my_run_action.html#a9dacd747212ed9d0bcd9c365e0cf6c52">MyRunAction::BeginOfRunAction</a></div><div class="ttdeci">virtual void BeginOfRunAction(const G4Run *)</div><div class="ttdoc">Method that is called at the beginning of the run.</div><div class="ttdef"><b>Definition:</b> <a href="_run_action_8cc_source.html#l00008">RunAction.cc:8</a></div></div>
+<div class="ttc" id="aclass_my_run_action_html_aceeba229b0f5493ae9dc1d069ef10293"><div class="ttname"><a href="class_my_run_action.html#aceeba229b0f5493ae9dc1d069ef10293">MyRunAction::EndOfRunAction</a></div><div class="ttdeci">virtual void EndOfRunAction(const G4Run *)</div><div class="ttdoc">Method that is called at the end of the run.</div><div class="ttdef"><b>Definition:</b> <a href="_run_action_8cc_source.html#l00042">RunAction.cc:42</a></div></div>
+<div class="ttc" id="aclass_my_run_action_html_acffdff2aae0d71d149e418896a6ddcd2"><div class="ttname"><a href="class_my_run_action.html#acffdff2aae0d71d149e418896a6ddcd2">MyRunAction::MyRunAction</a></div><div class="ttdeci">MyRunAction()</div><div class="ttdoc">Constructor of the run action.</div><div class="ttdef"><b>Definition:</b> <a href="_run_action_8cc_source.html#l00004">RunAction.cc:4</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

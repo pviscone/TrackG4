@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -95,6 +102,8 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >The generator of the primary beam. </p>
 <p >This class manages the primary particles generation. </p>
+
+<p class="definition">Definition at line <a class="el" href="_generator_8hh_source.html#l00019">19</a> of file <a class="el" href="_generator_8hh_source.html">Generator.hh</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a719b919dd38eeb0bab12357144ff5a5f" name="a719b919dd38eeb0bab12357144ff5a5f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a719b919dd38eeb0bab12357144ff5a5f">&#9670;&nbsp;</a></span>MyPrimaryGenerator()</h2>
@@ -114,6 +123,8 @@ Public Member Functions</h2></td></tr>
 <p>Constructor of the particle gun. </p>
 <p >This constructor initializes the particle gun.</p>
 <p >Create the particle gun and the particle table </p>
+
+<p class="definition">Definition at line <a class="el" href="_generator_8cc_source.html#l00010">10</a> of file <a class="el" href="_generator_8cc_source.html">Generator.cc</a>.</p>
 
 </div>
 </div>
@@ -135,6 +146,8 @@ Public Member Functions</h2></td></tr>
 <p>Destructor of the particle gun. </p>
 <p >This destructor deletes the particle gun.</p>
 <p >Destroy the particle gun </p>
+
+<p class="definition">Definition at line <a class="el" href="_generator_8cc_source.html#l00022">22</a> of file <a class="el" href="_generator_8cc_source.html">Generator.cc</a>.</p>
 
 </div>
 </div>
@@ -170,12 +183,12 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>Every time a beam is generated this function generate randomly a muon according to the muons charge ratio <img class="formulaInl" alt="$ \frac{\mu_{+}}{\mu_{-}} = 1.3 $" src="form_1.png"/></p>
-<p >The beam is generated in a random position of the face of the world box perpendicular to the z axis and its direction is parametrized by a spherical unit vector ( <img class="formulaInl" alt="$ (\cos(\phi)\sin(\theta),\sin(\phi)\sin(\theta),\cos(\theta)) $" src="form_2.png"/>)</p>
-<p >The polar angle of the direction vector of the beam is randomly generated between 0 and <img class="formulaInl" alt="$ 2 \pi $" src="form_3.png"/></p>
-<p >The azimuthal angle <img class="formulaInl" alt="$ \theta $" src="form_4.png"/> of the direction vector beam is randomly generated between 0 and pi according to the distribution <img class="formulaInl" alt="$ \cos^2{\theta} $" src="form_5.png"/></p>
-<p >The beam is generated with a random energy between minBeamEnergy and maxBeamEnergy (defined by the user in <a class="el" href="_user_parameters_8hh_source.html">UserParameters.hh</a>) according to the energy distribution for cosmic muons at the sea surface</p>
-<p ><img class="formulaInl" alt="$ \frac{dN_{\mu}}{dE_{\mu} d \Omega} \approx \frac{0.14 E_{\mu}^{-2.7}}{cm^2 \; s \;sr \; GeV} \left( \frac{1}{1+\frac{1.1 E_{\mu}\cos{\theta}}{115 GeV}} + \frac{0.054}{1+\frac{1.1 E_{\mu}\cos{\theta}}{850 GeV}} \right)$" src="form_6.png"/></p>
+<p>Every time a beam is generated this function generate randomly a muon according to the muons charge ratio \( \frac{\mu_{+}}{\mu_{-}} = 1.3 \)</p>
+<p >The beam is generated in a random position of the face of the world box perpendicular to the z axis and its direction is parametrized by a spherical unit vector ( \( (\cos(\phi)\sin(\theta),\sin(\phi)\sin(\theta),\cos(\theta)) \))</p>
+<p >The polar angle of the direction vector of the beam is randomly generated between 0 and \( 2 \pi \)</p>
+<p >The azimuthal angle \( \theta \) of the direction vector beam is randomly generated between 0 and pi according to the distribution \( \cos^2{\theta} \)</p>
+<p >The beam is generated with a random energy between minBeamEnergy and maxBeamEnergy (defined by the user in <a class="el" href="_user_parameters_8hh.html">UserParameters.hh</a>) according to the energy distribution for cosmic muons at the sea surface</p>
+<p >\( \frac{dN_{\mu}}{dE_{\mu} d \Omega} \approx \frac{0.14 E_{\mu}^{-2.7}}{cm^2 \; s \;sr \; GeV} \left( \frac{1}{1+\frac{1.1 E_{\mu}\cos{\theta}}{115 GeV}} + \frac{0.054}{1+\frac{1.1 E_{\mu}\cos{\theta}}{850 GeV}} \right)\)</p>
 <p >The data of every beam is stored as an ntuple in the output root file. The saved data are:</p><ul>
 <li>EventID</li>
 <li>posX X position of the particle gun (m)</li>
@@ -188,11 +201,15 @@ Public Member Functions</h2></td></tr>
 <li>ParticleName </li>
 </ul>
 
+<p class="definition">Definition at line <a class="el" href="_generator_8cc_source.html#l00057">57</a> of file <a class="el" href="_generator_8cc_source.html">Generator.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="_user_parameters_8hh_source.html#l00060">BeamParameters::maxBeamEnergy</a>, <a class="el" href="_user_parameters_8hh_source.html#l00059">BeamParameters::minBeamEnergy</a>, and <a class="el" href="_user_parameters_8hh_source.html#l00034">GeometryParameters::worldSize</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Geant4/include/<a class="el" href="_generator_8hh_source.html">Generator.hh</a></li>
-<li>Geant4/src/Generator.cc</li>
+<li>Geant4/src/<a class="el" href="_generator_8cc_source.html">Generator.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
