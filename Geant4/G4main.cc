@@ -1,4 +1,4 @@
-#include "Detector.hh"
+#include "DetectorGeometry.hh"
 #include "Physics.hh"
 #include "Action.hh"
 #include "G4UImanager.hh"

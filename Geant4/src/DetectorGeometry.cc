@@ -1,4 +1,4 @@
-#include "Detector.hh"
+#include "DetectorGeometry.hh"
 
 using namespace GeometryParameters;
 using namespace Materials;
