@@ -5,6 +5,7 @@ doxygen
 Geant4
 hadd
 root
+cppitertools
 
 #Optional:
 ccache
