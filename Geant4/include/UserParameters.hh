@@ -11,7 +11,7 @@
 /** @namespace GeometryParameters
  * @brief Just a container for the geometry parameters of the detector
  *
- * This struct contains all the materials used in the simulation 
+ * This struct contains all the materials used in the simulation
  * and the geometrical parameters of the detector
  */
 namespace GeometryParameters{
@@ -48,4 +48,14 @@ namespace Materials{
         inline G4Material* Air = (nist)->FindOrBuildMaterial("G4_AIR");
         inline G4Material* Si = (nist)->FindOrBuildMaterial("G4_Si");
 
+};
+
+/** @namespace BeamParameters
+ * @brief Just a container for the beam parameters of the simulation
+ *
+ * This namespace contains all the energy parameters of the beam
+ */
+namespace BeamParameters{
+        inline double minBeamEnergy=1;          //GeV
+        inline double maxBeamEnergy=1000;       //Gev
 };
