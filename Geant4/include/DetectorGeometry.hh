@@ -8,6 +8,7 @@
 #include "G4ThreeVector.hh"
 #include "G4Box.hh"
 #include "G4Region.hh"
+#include "cppitertools/enumerate.hpp"
 
 
 /**
@@ -16,11 +17,18 @@
 class MyDetectorConstruction : public G4VUserDetectorConstruction{
 
 
-/*
+
     private:
-        G4LogicalVolume *logicSensitiveDetector;
+        /**
+         * @brief The logical volume of the sensitive silicon module
+         */
+        G4LogicalVolume *logicSiModule;
+
+        /**
+         * @brief The constructor of the sensitive volume
+         */
         void ConstructSDandField();
-*/
+
     public:
         /**
          * @brief Construct a new My Detector Construction object. Inherited from G4VUserDetectorConstruction

@@ -1,4 +1,5 @@
 #include "DetectorGeometry.hh"
+#include "SensitiveDetector.hh"
 
 using namespace GeometryParameters;
 using namespace Materials;
@@ -51,7 +52,7 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct(){
 
     //Create the logical volume of silicon module
     G4Box *solidSiModule = new G4Box("Module",moduleDimX/2,moduleDimY/2,moduleDimZ/2);
-    G4LogicalVolume *logicSiModule = new G4LogicalVolume(solidSiModule,Si,"Module");
+    logicSiModule = new G4LogicalVolume(solidSiModule,Si,"Module");
 
     //Create a region for the modules
     G4Region* SiModuleRegion = new G4Region("SiliconModule");
@@ -60,17 +61,24 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct(){
 
 
     //For loop on the positions vectors to create the physical volume of the modules
-    for (auto layerPos : ComputeModulePosition(nOfLayers,moduleDimZ,moduleSpacingZ)){
+    for (auto&& [layerIdx, layerPos] : iter::enumerate(ComputeModulePosition(nOfLayers,moduleDimZ,moduleSpacingZ))){
         for (auto colPosX : ComputeModulePosition(nOfColsX,moduleDimX,moduleSpacingX)){
             for (auto colPosY : ComputeModulePosition(nOfColsY,moduleDimY,moduleSpacingY)){
-                new G4PVPlacement(0,G4ThreeVector(colPosX,colPosY,layerPos),logicSiModule,"Module",logicWorld,false,0,false);
+                new G4PVPlacement(0,G4ThreeVector(colPosX,colPosY,layerPos),logicSiModule,"Module",logicWorld,false,layerIdx+1,false);
             }
 
         }
     }
 
 
+
     //Return the physical world
     return physWorld;
 }
 
+
+void MyDetectorConstruction::ConstructSDandField(){
+    //Set the logical volume of the silicon module as sensitive volume
+    MySensitiveDetector *sensDet = new MySensitiveDetector("SensitiveDetector");
+    logicSiModule->SetSensitiveDetector(sensDet);
+    }
