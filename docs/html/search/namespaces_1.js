@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['materials_0',['Materials',['../namespace_materials.html',1,'']]]
+  ['geometryparameters_0',['GeometryParameters',['../namespace_geometry_parameters.html',1,'']]]
 ];

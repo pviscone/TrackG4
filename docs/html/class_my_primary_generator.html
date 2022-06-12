@@ -103,7 +103,7 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p >The generator of the primary beam. </p>
 <p >This class manages the primary particles generation. </p>
 
-<p class="definition">Definition at line <a class="el" href="_generator_8hh_source.html#l00017">17</a> of file <a class="el" href="_generator_8hh_source.html">Generator.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_generator_8hh_source.html#l00018">18</a> of file <a class="el" href="_generator_8hh_source.html">Generator.hh</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a719b919dd38eeb0bab12357144ff5a5f" name="a719b919dd38eeb0bab12357144ff5a5f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a719b919dd38eeb0bab12357144ff5a5f">&#9670;&nbsp;</a></span>MyPrimaryGenerator()</h2>
@@ -124,7 +124,7 @@ Public Member Functions</h2></td></tr>
 <p >This constructor initializes the particle gun.</p>
 <p >Create the particle gun and the particle table </p>
 
-<p class="definition">Definition at line <a class="el" href="_generator_8cc_source.html#l00008">8</a> of file <a class="el" href="_generator_8cc_source.html">Generator.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_generator_8cc_source.html#l00010">10</a> of file <a class="el" href="_generator_8cc_source.html">Generator.cc</a>.</p>
 
 </div>
 </div>
@@ -147,7 +147,7 @@ Public Member Functions</h2></td></tr>
 <p >This destructor deletes the particle gun.</p>
 <p >Destroy the particle gun </p>
 
-<p class="definition">Definition at line <a class="el" href="_generator_8cc_source.html#l00020">20</a> of file <a class="el" href="_generator_8cc_source.html">Generator.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_generator_8cc_source.html#l00022">22</a> of file <a class="el" href="_generator_8cc_source.html">Generator.cc</a>.</p>
 
 </div>
 </div>
@@ -183,12 +183,16 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>Every time a beam is generated this function generate randomly a muon according to the muons charge ratio (mu+/mu- = 1.3)</p>
-<p >The beam is generated in a random position in the face of the world perpendicular to the z axis. </p>
+<p>Every time a beam is generated this function generate randomly a muon according to the muons charge ratio \( \frac{\mu_{+}}{\mu_{-}} = 1.3 \)</p>
+<p >The beam is generated in a random position of the face of the world box perpendicular to the z axis and its direction is parametrized by a spherical versor ( \( (\cos(\phi)\sin(\theta),\sin(\phi)\sin(\theta),\cos(\theta)) \))</p>
+<p >The polar angle of the direction vector of the beam is randomly generated between 0 and \( 2 \pi \)</p>
+<p >The azimuthal angle \( \theta \) of the direction vector beam is randomly generated between 0 and pi according to the distribution \( \cos^2{\theta} \)</p>
+<p >The beam is generated with a random energy between minBeamEnergy and maxBeamEnergy (defined by the user in <a class="el" href="_user_parameters_8hh.html">UserParameters.hh</a>) according to the energy distribution for cosmic muons at the sea surface</p>
+<p >\( \frac{dN_{\mu}}{dE_{\mu} d \Omega} \approx \frac{0.14 E_{\mu}^{-2.7}}{cm^2 \; s \;sr \; GeV} \left( \frac{1}{1+\frac{1.1 E_{\mu}\cos{\theta}}{115 GeV}} + \frac{0.054}{1+\frac{1.1 E_{\mu}\cos{\theta}}{850 GeV}} \right)\) </p>
 
-<p class="definition">Definition at line <a class="el" href="_generator_8cc_source.html#l00033">33</a> of file <a class="el" href="_generator_8cc_source.html">Generator.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_generator_8cc_source.html#l00046">46</a> of file <a class="el" href="_generator_8cc_source.html">Generator.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="_user_parameters_8hh_source.html#l00034">GeometryParameters::worldSize</a>.</p>
+<p class="reference">References <a class="el" href="_user_parameters_8hh_source.html#l00060">BeamParameters::maxBeamEnergy</a>, <a class="el" href="_user_parameters_8hh_source.html#l00059">BeamParameters::minBeamEnergy</a>, and <a class="el" href="_user_parameters_8hh_source.html#l00034">GeometryParameters::worldSize</a>.</p>
 
 </div>
 </div>
