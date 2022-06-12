@@ -7,6 +7,7 @@
 #include "CLHEP/Units/PhysicalConstants.h"
 #include "G4GeneralParticleSource.hh"
 #include "UserParameters.hh"
+#include "TF1.h"
 
 /**
  * @class MyPrimaryGenerator
