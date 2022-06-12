@@ -5,7 +5,10 @@
             "includePath": [
                 "${default}",
                 "/usr/include/eigen3",
-                "${workspaceFolder}/include"
+                "${workspaceFolder}/include",
+                "/usr/include/Geant4",
+                "${workspaceFolder}/Geant4/include",
+                "${workspaceFolder}/Geant4/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/g++",

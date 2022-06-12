@@ -1,8 +1,12 @@
 cmake
 doxygen
 
-
-
+# Required for the simulation
+Geant4
+hadd
+root
+cppitertools
 
 #Optional:
 ccache
+
