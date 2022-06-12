@@ -5,7 +5,8 @@
 #include "G4ParticleTable.hh"
 #include "G4UniformRandPool.hh"
 #include "CLHEP/Units/PhysicalConstants.h"
-#include "G4GeneralParticleSource.hh"
+#include "G4AnalysisManager.hh"
+#include "G4RunManager.hh"
 #include "UserParameters.hh"
 #include "TF1.h"
 

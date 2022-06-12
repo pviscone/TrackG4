@@ -29,7 +29,7 @@ MyPrimaryGenerator::~MyPrimaryGenerator()
  *according to the muons charge ratio \f$ \frac{\mu_{+}}{\mu_{-}} = 1.3 \f$
  *
  * The beam is generated in a random position of the face of the world box perpendicular
- * to the z axis and its direction is parametrized by a spherical versor (\f$ (\cos(\phi)\sin(\theta),\sin(\phi)\sin(\theta),\cos(\theta)) \f$)
+ * to the z axis and its direction is parametrized by a spherical unit vector (\f$ (\cos(\phi)\sin(\theta),\sin(\phi)\sin(\theta),\cos(\theta)) \f$)
  *
  * The polar angle of the direction vector of the beam is randomly generated between 0 and \f$ 2 \pi \f$
  *
@@ -42,6 +42,17 @@ MyPrimaryGenerator::~MyPrimaryGenerator()
  *
  * \f$ \frac{dN_{\mu}}{dE_{\mu} d \Omega} \approx \frac{0.14 E_{\mu}^{-2.7}}{cm^2 \; s \;sr \; GeV} \left( \frac{1}{1+\frac{1.1 E_{\mu}\cos{\theta}}{115 GeV}} + \frac{0.054}{1+\frac{1.1 E_{\mu}\cos{\theta}}{850 GeV}} \right)\f$
  *
+ * The data of every beam is stored as an ntuple in the output root file.
+ * The saved data are:
+ * - EventID
+ * - posX X position of the particle gun (m)
+ * - posY Y position of the particle gun (m)
+ * - posZ Z position of the particle gun (m)
+ * - phi Polar angle of the direction vector of the beam
+ * - theta Azimuthal angle of the direction vector of the beam
+ * - energy Beam energy (GeV)
+ * - ParticleID
+ * - ParticleName
  */
 void MyPrimaryGenerator::GeneratePrimaries(G4Event *event)
 {
@@ -62,7 +73,6 @@ void MyPrimaryGenerator::GeneratePrimaries(G4Event *event)
     else{
         fParticleGun->SetParticleDefinition(mu_p);
     }
-
 
 
     /********************************PARTICLE POSITION********************************/
@@ -90,6 +100,27 @@ void MyPrimaryGenerator::GeneratePrimaries(G4Event *event)
     fSpectrum->SetParameter(0,theta);
     G4double energy = (fSpectrum->GetRandom())*GeV;
     fParticleGun->SetParticleEnergy(energy);
+
+
+    /******************************** SAVE THE DATA ********************************/
+    G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
+    G4double evID = event->GetEventID();
+    analysisManager->FillNtupleDColumn( 1, 0, evID );
+    analysisManager->FillNtupleDColumn( 1, 1, xPos/m );
+    analysisManager->FillNtupleDColumn( 1, 2, yPos/m );
+    analysisManager->FillNtupleDColumn( 1, 3, zPos/m );
+    analysisManager->FillNtupleDColumn( 1, 4, phi );
+    analysisManager->FillNtupleDColumn( 1, 5, theta );
+    analysisManager->FillNtupleDColumn( 1, 6, energy/GeV );
+    if(muCharge>0.57){
+        analysisManager->FillNtupleDColumn( 1, 7, 0 );
+        analysisManager->FillNtupleSColumn( 1, 8, "mu-" );
+    }
+    else{
+        analysisManager->FillNtupleDColumn( 1, 7, 1 );
+        analysisManager->FillNtupleSColumn( 1, 8, "mu+");
+    }
+    analysisManager->AddNtupleRow(1);
 
 
     /********************************PARTICLE GENERATION****************************/
