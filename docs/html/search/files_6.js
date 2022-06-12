@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['sampletest_2ecpp_0',['SampleTest.cpp',['../_sample_test_8cpp.html',1,'']]],
-  ['sampletest_2ecpp_2eo_2ed_1',['SampleTest.cpp.o.d',['../_sample_test_8cpp_8o_8d.html',1,'']]]
+  ['sensitivedetector_2ecc_0',['SensitiveDetector.cc',['../_sensitive_detector_8cc.html',1,'']]],
+  ['sensitivedetector_2ehh_1',['SensitiveDetector.hh',['../_sensitive_detector_8hh.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['generateprimaries_0',['GeneratePrimaries',['../class_my_primary_generator.html#a78b02e982cd927d94b3537e7852d7b11',1,'MyPrimaryGenerator']]]
+  ['endofrunaction_0',['EndOfRunAction',['../class_my_run_action.html#aceeba229b0f5493ae9dc1d069ef10293',1,'MyRunAction']]]
 ];

@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['physics_2ecc_0',['Physics.cc',['../_physics_8cc.html',1,'']]],
-  ['physics_2ehh_1',['Physics.hh',['../_physics_8hh.html',1,'']]]
+  ['nist_0',['nist',['../namespace_materials.html#a8309d530acdf9f83c697beabd369348a',1,'Materials']]],
+  ['nofcolsx_1',['nOfColsX',['../namespace_geometry_parameters.html#a489e8fe463e2cf19d0a49ee8e534de49',1,'GeometryParameters']]],
+  ['nofcolsy_2',['nOfColsY',['../namespace_geometry_parameters.html#aa882b7dc6fbc1aa2ad87e227a3a5bd85',1,'GeometryParameters']]],
+  ['noflayers_3',['nOfLayers',['../namespace_geometry_parameters.html#a91d6de733cf761562085544a21d1cc10',1,'GeometryParameters']]]
 ];
