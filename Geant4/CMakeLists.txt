@@ -14,7 +14,8 @@ project(${PROJECT})
 
 ## Set Cpp Standard
 set (CMAKE_CXX_STANDARD 17)
-
+## Set ROOT flags
+set(CMAKE_CXX_FLAGS "-pthread -m64 -L/usr/lib/root -lCore -lImt -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lROOTVecOps -lTree -lTreePlayer -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lMultiProc -lROOTDataFrame -pthread -lm -ldl -rdynamic")
 
 ##Set g++ as compiler if exists
 find_program(GPP g++)
