@@ -8,12 +8,17 @@
 #include "G4VisManager.hh"
 #include "G4UIExecutive.hh"
 #include <thread>
+#include <TROOT.h>
 
 
 int main(int argc, char **argv){
 
     // If Geant was compiled in multithreaded mode run the simulation in multi-threaded mode
     #ifdef G4MULTITHREADED
+        //Needed by the Tfunction in Generator.cc
+        ROOT::EnableImplicitMT();
+        ROOT::EnableThreadSafety();
+        //Set the max number of threads that can run in parallel
         G4int nThreads = std::thread::hardware_concurrency();
         G4MTRunManager* runManager = new G4MTRunManager;
         runManager->SetNumberOfThreads(nThreads);
