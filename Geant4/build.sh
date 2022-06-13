@@ -2,8 +2,8 @@
 THREADS=`grep -c ^processor /proc/cpuinfo`
 mkdir -p ./build
 cd ./build
+rm ./output*.root
 cmake ..
 make -j$THREADS
-rm ./output*.root
 ./CosmicMuSimulation
 hadd ./output.root ./output*.root
