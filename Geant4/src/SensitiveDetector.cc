@@ -74,10 +74,10 @@ G4bool MySensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory* R0his
     analysisManager->FillNtupleDColumn(0, 1, trackID);
     analysisManager->FillNtupleDColumn(0, 2, particleID);
     analysisManager->FillNtupleSColumn(0, 3, particle);
-    analysisManager->FillNtupleDColumn(0, 4, edep);
-    analysisManager->FillNtupleDColumn(0, 5, hitPos.x());
-    analysisManager->FillNtupleDColumn(0, 6, hitPos.y());
-    analysisManager->FillNtupleDColumn(0, 7, hitPos.z());
+    analysisManager->FillNtupleDColumn(0, 4, edep/GeV);
+    analysisManager->FillNtupleDColumn(0, 5, hitPos.x()/m);
+    analysisManager->FillNtupleDColumn(0, 6, hitPos.y()/m);
+    analysisManager->FillNtupleDColumn(0, 7, hitPos.z()/m);
     analysisManager->FillNtupleDColumn(0, 8, layer);
     analysisManager->AddNtupleRow(0);
 
