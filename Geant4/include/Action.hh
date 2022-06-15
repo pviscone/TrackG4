@@ -2,6 +2,7 @@
 #include "G4VUserActionInitialization.hh"
 #include "Generator.hh"
 #include "RunAction.hh"
+#include "EventAction.hh"
 
 /**
  * @brief The class that manages the action initialization.

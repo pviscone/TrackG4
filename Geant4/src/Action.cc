@@ -13,6 +13,9 @@ void MyActionInitialization::Build() const{
     MyRunAction* runAction = new MyRunAction();
     SetUserAction(runAction);
 
+    MyEventAction* eventAction = new MyEventAction();
+    SetUserAction(eventAction);
+
     //Define the action that manage the beam
     MyPrimaryGenerator* primaryGenerator = new MyPrimaryGenerator();
     SetUserAction(primaryGenerator);
