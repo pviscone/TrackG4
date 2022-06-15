@@ -35,8 +35,8 @@ G4bool MySensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory* R0his
     G4StepPoint *preStepPoint = aStep -> GetPreStepPoint();
     G4ThreeVector hitPos = preStepPoint->GetPosition();
 
-    //Get the event ID from the run manager
-    G4int evID=G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
+/*     //Get the event ID from the run manager
+    G4int evID=G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID(); */
 
     //Get the energy deposit in the step
     G4double edep= aStep->GetTotalEnergyDeposit();
@@ -67,7 +67,20 @@ G4bool MySensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory* R0his
     else{
         particleID=-1;
     }
-    //Get the pointer to the analysis manager
+
+    DataManager *dataManager = DataManager::GetInstance();
+    Event *ev = dataManager->GetEvent();
+    ev->detectorData.TrackID.push_back((int) trackID);
+    ev->detectorData.ParticleID.push_back((int)particleID);
+    ev->detectorData.EnergyDeposited.push_back((double)(edep/GeV));
+    ev->detectorData.posX.push_back((double)(hitPos.x()/m));
+    ev->detectorData.posY.push_back((double)(hitPos.y()/m));
+    ev->detectorData.posZ.push_back((double)(hitPos.z()/m));
+    ev->detectorData.Layer.push_back((int) layer);
+
+
+
+   /*  //Get the pointer to the analysis manager
     G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
     //Fill the ntuple
     analysisManager->FillNtupleDColumn(0, 0,  evID);
@@ -80,7 +93,7 @@ G4bool MySensitiveDetector::ProcessHits(G4Step* aStep, G4TouchableHistory* R0his
     analysisManager->FillNtupleDColumn(0, 7, hitPos.z()/m);
     analysisManager->FillNtupleDColumn(0, 8, layer);
     analysisManager->AddNtupleRow(0);
-
+ */
 /*     track->SetTrackStatus(fStopAndKill);
     if (trackID != 1 && particleName != "gamma"){
         track->SetTrackStatus(fStopAndKill);
