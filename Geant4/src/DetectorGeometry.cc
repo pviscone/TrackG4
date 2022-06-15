@@ -60,11 +60,12 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct(){
     SiModuleRegion->AddRootLogicalVolume(logicSiModule);
 
 
-    //For loop on the positions vectors to create the physical volume of the modules
+    //For loop on the positions vectors to create the physical volume of the modules and for each module create the macropixel and the strips
     for (auto&& [layerIdx, layerPos] : iter::enumerate(ComputeModulePosition(nOfLayers,moduleDimZ,moduleSpacingZ))){
         for (auto colPosX : ComputeModulePosition(nOfColsX,moduleDimX,moduleSpacingX)){
             for (auto colPosY : ComputeModulePosition(nOfColsY,moduleDimY,moduleSpacingY)){
-                new G4PVPlacement(0,G4ThreeVector(colPosX,colPosY,layerPos),logicSiModule,"Module",logicWorld,false,layerIdx+1,false);
+                new G4PVPlacement(0,G4ThreeVector(colPosX,colPosY,layerPos+pixelStripSpacing/2),logicSiModule,"Module",logicWorld,false,2*layerIdx+1,false);
+                new G4PVPlacement(0,G4ThreeVector(colPosX,colPosY,layerPos-pixelStripSpacing/2),logicSiModule,"Module",logicWorld,false,2*layerIdx+2,false);
             }
 
         }
