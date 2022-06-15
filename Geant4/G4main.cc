@@ -12,10 +12,10 @@
 
 
 int main(int argc, char **argv){
-
+    gInterpreter->GenerateDictionary("Event;TruthBeamData;DetectorData","../include/EventData.hh");
     // If Geant was compiled in multithreaded mode run the simulation in multi-threaded mode
-    #ifdef G4MULTITHREADED
-        //Needed by the Tfunction in Generator.cc
+    #ifndef G4MULTITHREADED
+        //Needed by the TFunction in Generator.cc
         ROOT::EnableImplicitMT();
         ROOT::EnableThreadSafety();
         //Set the max number of threads that can run in parallel
