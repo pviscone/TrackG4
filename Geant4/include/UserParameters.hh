@@ -3,7 +3,16 @@
 #include "G4Material.hh"
 #include "G4SystemOfUnits.hh"
 
-
+/**
+ * @brief Calculate the length of the side of the box given the number of modules, their size and spacing
+ * @param nOfModulesOnAxis Number of modules on each axis
+ * @param moduleSize Size of the module
+ * @param moduleSpacing Spacing between the modules
+ * @return The length of the side of the box
+ */
+inline auto sideLength = [] (G4double moduleDimOnAxis, G4double spacingOnAxis, G4int nOfCols){
+        return (moduleDimOnAxis+spacingOnAxis)*(nOfCols+1);
+        };
 
 
 
@@ -18,20 +27,19 @@ namespace GeometryParameters{
         //Dimension of the silicon module
         inline G4double moduleDimX=20*cm;
         inline G4double moduleDimY=5*cm;
-        inline G4double moduleDimZ=1*mm;
+        inline G4double moduleDimZ=0.3*mm;
         //Spacing between the modules
         inline G4double moduleSpacingX=10*cm;
         inline G4double moduleSpacingY=10*cm;
         inline G4double moduleSpacingZ=20*cm;
+        //Spacing between pixels and strips
+        inline G4double pixelStripSpacing=4*mm;
         //Number of silicon module in the x and y directions
-        inline G4int nOfColsX=3;
-        inline G4int nOfColsY=6;
-        inline G4int nOfLayers=6;
-        //Put the world size equal the longest side of the detector * 2
-        inline auto sideLength = [] (G4double moduleDimOnAxis, G4double spacingOnAxis, G4int nOfCols){
-                return (moduleDimOnAxis+spacingOnAxis)*(nOfCols+1);
-                };
-        inline G4double worldSize=2*std::max({sideLength(moduleDimX,moduleSpacingX,nOfColsX),
+        inline G4int nOfColsX=2;
+        inline G4int nOfColsY=1;
+        inline G4int nOfLayers=5;
+        //Put the world size equal the longest side of the detector multiplied by a factor chosen by the user
+        inline G4double worldSize=1.2*std::max({sideLength(moduleDimX,moduleSpacingX,nOfColsX),
                                 sideLength(moduleDimY,moduleSpacingY,nOfColsY),
                                 sideLength(moduleDimZ,moduleSpacingZ,nOfLayers)})/2;
 
