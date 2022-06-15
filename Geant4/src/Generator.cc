@@ -103,7 +103,27 @@ void MyPrimaryGenerator::GeneratePrimaries(G4Event *event)
 
 
     /******************************** SAVE THE DATA ********************************/
-    G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
+    DataManager *dataManager=DataManager::GetInstance();
+    Event *ev = dataManager->GetEvent();
+    int evID = event->GetEventID();
+
+    ev->eventID=evID;
+    ev->truthBeamData.posX=(double)(xPos/m);
+    ev->truthBeamData.posY=(double)(yPos/m);
+    ev->truthBeamData.posZ=(double)(zPos/m);
+    ev->truthBeamData.phi=(double)(phi);
+    ev->truthBeamData.theta=(double)(theta);
+    ev->truthBeamData.energy=(double)(energy/GeV);
+    if(muCharge>0.57){
+        ev->truthBeamData.ParticleID=0;//mu-
+    }
+    else{
+        ev->truthBeamData.ParticleID=1;//mu+
+    }
+
+
+
+   /*  G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
     G4double evID = event->GetEventID();
     analysisManager->FillNtupleDColumn( 1, 0, evID );
     analysisManager->FillNtupleDColumn( 1, 1, xPos/m );
@@ -121,7 +141,7 @@ void MyPrimaryGenerator::GeneratePrimaries(G4Event *event)
         analysisManager->FillNtupleSColumn( 1, 8, "mu+");
     }
     analysisManager->AddNtupleRow(1);
-
+ */
 
     /********************************PARTICLE GENERATION****************************/
     //Generate the primary particle
