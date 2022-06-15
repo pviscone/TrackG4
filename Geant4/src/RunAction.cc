@@ -6,10 +6,20 @@ MyRunAction::MyRunAction(){}
 MyRunAction::~MyRunAction(){}
 
 void MyRunAction::BeginOfRunAction(const G4Run*){
-    //G4AnalysisManager is a wrapper to ROOT
+
+    //Get the thread id
+    G4int threadId = G4Threading::G4GetThreadId();
+    std::string filename = "output_t" + std::to_string(threadId) + ".root";
+    //std::string filename = "output.root";
+    DataManager *dataManager = DataManager::GetInstance();
+    TFile* file = dataManager->OpenFile(filename,"RECREATE");
+    TTree* tree = dataManager->CreateTree("Events");
+
+  /*   //G4AnalysisManager is a wrapper to ROOT
     G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
     analysisManager->SetVerboseLevel(2);
     analysisManager->OpenFile("output.root");
+
 
     //Define the data from the sensitive detector to store in the output file
     analysisManager->CreateNtuple("Detector", "Detector");
@@ -36,13 +46,20 @@ void MyRunAction::BeginOfRunAction(const G4Run*){
     analysisManager->CreateNtupleDColumn(1,"ParticleID");
     analysisManager->CreateNtupleSColumn(1,"ParticleName");
     analysisManager->FinishNtuple(1);
-
+ */
 }
 
 void MyRunAction::EndOfRunAction(const G4Run*){
-    //The analysis manager is a singleton. This instance return the pointer to the analysis manager instanced before in the begin of the run action.
+    DataManager *dataManager = DataManager::GetInstance();
+    dataManager->GetFile()->Write();
+    dataManager->GetFile()->Close();
+
+
+
+
+/*     //The analysis manager is a singleton. This instance return the pointer to the analysis manager instanced before in the begin of the run action.
     G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
     //Write and close the file
     analysisManager->Write();
-    analysisManager->CloseFile();
+    analysisManager->CloseFile(); */
 }

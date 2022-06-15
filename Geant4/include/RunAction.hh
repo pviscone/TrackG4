@@ -1,8 +1,15 @@
 #pragma once
 #include "G4UserRunAction.hh"
 #include "G4AnalysisManager.hh"
+#include "EventData.hh"
+#include "TFile.h"
+#include "TSystem.h"
+#include "TTree.h"
+#include "DataManager.hh"
+#include <string>
 
 /**
+ * @class MyRunAction
  * @brief The class that manages the run action.
  *
  * In this class we define the structure of the output file to store the sensitive detector data.
