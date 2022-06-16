@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['name_0',['name',['../struct_catch_1_1_name_and_tags.html#a7cbea60e0cebfa622c667008eb011420',1,'Catch::NameAndTags::name()'],['../struct_catch_1_1_section_info.html#a704c8fc662d309137e0d4f199cb7df58',1,'Catch::SectionInfo::name()'],['../struct_catch_1_1_test_case_info.html#a463794e2f5cfead307c93efd134ade36',1,'Catch::TestCaseInfo::name()']]],
-  ['nist_1',['nist',['../_materials_8hh.html#a97f2235c75f0e3e25e4b620776361be9',1,'Materials.hh']]]
+  ['theta_0',['theta',['../class_truth_beam_data.html#a42cae571a42f6337db40e7a65f9e4cab',1,'TruthBeamData']]],
+  ['trackid_1',['TrackID',['../class_detector_data.html#a6edbd0d091bd36d579c556dd0fc7d980',1,'DetectorData']]],
+  ['truthbeamdata_2',['truthBeamData',['../class_event.html#a1b892618f44f2668f5e4dd5673995598',1,'Event']]]
 ];

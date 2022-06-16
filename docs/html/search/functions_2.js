@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['endofrunaction_0',['EndOfRunAction',['../class_my_run_action.html#aceeba229b0f5493ae9dc1d069ef10293',1,'MyRunAction']]]
+  ['detectordata_0',['DetectorData',['../class_detector_data.html#a8b0c1ca4100ae357ff533685be8f586c',1,'DetectorData']]]
 ];
