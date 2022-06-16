@@ -2,6 +2,7 @@
 #include "G4NistManager.hh"
 #include "G4Material.hh"
 #include "G4SystemOfUnits.hh"
+#include <thread>
 
 /**
  * @brief Calculate the length of the side of the box given the number of modules, their size and spacing
@@ -14,6 +15,11 @@ inline auto sideLength = [] (G4double moduleDimOnAxis, G4double spacingOnAxis, G
         return (moduleDimOnAxis+spacingOnAxis)*(nOfCols+1);
         };
 
+
+
+namespace SystemParameters{
+        inline int nThreads=std::thread::hardware_concurrency();
+}
 
 
 
@@ -66,4 +72,8 @@ namespace Materials{
 namespace BeamParameters{
         inline double minBeamEnergy=1;          //GeV
         inline double maxBeamEnergy=1000;       //Gev
+};
+
+namespace OutputParameters{
+        inline std::string outputFileName="output";
 };
