@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['theta_0',['theta',['../class_truth_beam_data.html#a42cae571a42f6337db40e7a65f9e4cab',1,'TruthBeamData']]],
-  ['trackid_1',['TrackID',['../class_detector_data.html#a6edbd0d091bd36d579c556dd0fc7d980',1,'DetectorData']]],
-  ['truthbeamdata_2',['truthBeamData',['../class_event.html#a1b892618f44f2668f5e4dd5673995598',1,'Event']]]
+  ['si_0',['Si',['../namespace_materials.html#aa4297481113f745507cdf76480a37365',1,'Materials']]],
+  ['sidelength_1',['sideLength',['../_user_parameters_8hh.html#ac8a722989c5d57aa81681338d6f93572',1,'UserParameters.hh']]]
 ];

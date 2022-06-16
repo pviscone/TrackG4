@@ -100,10 +100,12 @@ void MyPrimaryGenerator::GeneratePrimaries(G4Event *event)
     /******************************** SAVE THE DATA ********************************/
     int evID = event->GetEventID();
 
+    //Get the DataManager object of the i-th thread
     DataManagerMT *dataManagerMT = DataManagerMT::GetInstance();
     int threadID = G4Threading::G4GetThreadId();
-
     DataManager *dataManager = dataManagerMT->GetSTDataManager(threadID);
+
+    //Fill the event object with the data
     Event *ev = dataManager->GetEvent();
     ev->eventID = evID;
     ev->truthBeamData.posX = (double)(xPos / m);

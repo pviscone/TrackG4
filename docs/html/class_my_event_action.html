@@ -76,6 +76,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>This class manage the user action at each event.  
+ <a href="class_my_event_action.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_event_action_8hh_source.html">EventAction.hh</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for MyEventAction:</div>
@@ -91,13 +94,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa441edb97ffc59c74bcef93ca0cc3ffa"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_event_action.html#aa441edb97ffc59c74bcef93ca0cc3ffa">~MyEventAction</a> ()</td></tr>
 <tr class="separator:aa441edb97ffc59c74bcef93ca0cc3ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa080901f06ee45820f1023ce2155858e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_event_action.html#aa080901f06ee45820f1023ce2155858e">BeginOfEventAction</a> (const G4Event *)</td></tr>
+<tr class="memdesc:aa080901f06ee45820f1023ce2155858e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that is called at the beginning of the event.  <a href="class_my_event_action.html#aa080901f06ee45820f1023ce2155858e">More...</a><br /></td></tr>
 <tr class="separator:aa080901f06ee45820f1023ce2155858e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac386368555d513e06369805002e11a70"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_event_action.html#ac386368555d513e06369805002e11a70">EndOfEventAction</a> (const G4Event *)</td></tr>
+<tr class="memdesc:ac386368555d513e06369805002e11a70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that is called at the end of each event.  <a href="class_my_event_action.html#ac386368555d513e06369805002e11a70">More...</a><br /></td></tr>
 <tr class="separator:ac386368555d513e06369805002e11a70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_event_action_8hh_source.html#l00009">9</a> of file <a class="el" href="_event_action_8hh_source.html">EventAction.hh</a>.</p>
+<div class="textblock"><p >This class manage the user action at each event. </p>
+
+<p class="definition">Definition at line <a class="el" href="_event_action_8hh_source.html#l00013">13</a> of file <a class="el" href="_event_action_8hh_source.html">EventAction.hh</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a34f364ae441703c61e54f92d40299d61" name="a34f364ae441703c61e54f92d40299d61"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a34f364ae441703c61e54f92d40299d61">&#9670;&nbsp;</a></span>MyEventAction()</h2>
@@ -170,6 +176,14 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Function that is called at the beginning of the event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>Pointer to the event that is currently running. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="_event_action_8cc_source.html#l00007">7</a> of file <a class="el" href="_event_action_8cc_source.html">EventAction.cc</a>.</p>
 
 </div>
@@ -198,9 +212,18 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_event_action_8cc_source.html#l00011">11</a> of file <a class="el" href="_event_action_8cc_source.html">EventAction.cc</a>.</p>
+<p>Function that is called at the end of each event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>Pointer to the event that is currently running.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>At the end of each action this function fill the tree and clear the event object </p>
 
-<p class="reference">References <a class="el" href="_event_data_8cc_source.html#l00003">Event::Clear()</a>, <a class="el" href="_data_manager_8cc_source.html#l00044">DataManager::GetEvent()</a>, <a class="el" href="_data_manager_m_t_8cc_source.html#l00020">DataManagerMT::GetInstance()</a>, <a class="el" href="_data_manager_m_t_8cc_source.html#l00027">DataManagerMT::GetSTDataManager()</a>, and <a class="el" href="_data_manager_8cc_source.html#l00040">DataManager::GetTree()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_event_action_8cc_source.html#l00015">15</a> of file <a class="el" href="_event_action_8cc_source.html">EventAction.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="_event_data_8cc_source.html#l00004">Event::Clear()</a>, <a class="el" href="_data_manager_8cc_source.html#l00055">DataManager::GetEvent()</a>, <a class="el" href="_data_manager_m_t_8cc_source.html#l00025">DataManagerMT::GetInstance()</a>, <a class="el" href="_data_manager_m_t_8cc_source.html#l00035">DataManagerMT::GetSTDataManager()</a>, and <a class="el" href="_data_manager_8cc_source.html#l00050">DataManager::GetTree()</a>.</p>
 
 </div>
 </div>

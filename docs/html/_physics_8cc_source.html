@@ -78,20 +78,20 @@ $(function() {
 <div class="contents">
 <a href="_physics_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="_physics_8hh.html">Physics.hh</a>&quot;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_my_physics_list.html#ade7b92c76a0ef3126c3a2496667ce882">    7</a></span><a class="code hl_function" href="class_my_physics_list.html#ade7b92c76a0ef3126c3a2496667ce882">MyPhysicsList::MyPhysicsList</a>(){</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="comment">//Definition of all standard electromagnetic processes</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    RegisterPhysics(<span class="keyword">new</span> G4EmStandardPhysics());</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>}</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_my_physics_list.html#a19a81527b16438248eaa1c129abc3592">   12</a></span><a class="code hl_function" href="class_my_physics_list.html#a19a81527b16438248eaa1c129abc3592">MyPhysicsList::~MyPhysicsList</a>(){}</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="class_my_physics_list.html#ade7b92c76a0ef3126c3a2496667ce882">    7</a></span><a class="code hl_function" href="class_my_physics_list.html#ade7b92c76a0ef3126c3a2496667ce882">MyPhysicsList::MyPhysicsList</a>()</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="comment">// Definition of all standard electromagnetic processes</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    RegisterPhysics(<span class="keyword">new</span> G4EmStandardPhysics());</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>}</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_my_physics_list.html#a19a81527b16438248eaa1c129abc3592">   13</a></span><a class="code hl_function" href="class_my_physics_list.html#a19a81527b16438248eaa1c129abc3592">MyPhysicsList::~MyPhysicsList</a>() {}</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_my_physics_list.html#a9ce516bb1f1de0addd933cb75e8e1a20">   19</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_my_physics_list.html#a9ce516bb1f1de0addd933cb75e8e1a20">MyPhysicsList::SetCuts</a>()</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    DumpCutValuesTable();</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>}</div>
 <div class="ttc" id="a_physics_8hh_html"><div class="ttname"><a href="_physics_8hh.html">Physics.hh</a></div></div>
-<div class="ttc" id="aclass_my_physics_list_html_a19a81527b16438248eaa1c129abc3592"><div class="ttname"><a href="class_my_physics_list.html#a19a81527b16438248eaa1c129abc3592">MyPhysicsList::~MyPhysicsList</a></div><div class="ttdeci">~MyPhysicsList()</div><div class="ttdoc">Destructor of the PhysicsList class.</div><div class="ttdef"><b>Definition:</b> <a href="_physics_8cc_source.html#l00012">Physics.cc:12</a></div></div>
+<div class="ttc" id="aclass_my_physics_list_html_a19a81527b16438248eaa1c129abc3592"><div class="ttname"><a href="class_my_physics_list.html#a19a81527b16438248eaa1c129abc3592">MyPhysicsList::~MyPhysicsList</a></div><div class="ttdeci">~MyPhysicsList()</div><div class="ttdoc">Destructor of the PhysicsList class.</div><div class="ttdef"><b>Definition:</b> <a href="_physics_8cc_source.html#l00013">Physics.cc:13</a></div></div>
 <div class="ttc" id="aclass_my_physics_list_html_a9ce516bb1f1de0addd933cb75e8e1a20"><div class="ttname"><a href="class_my_physics_list.html#a9ce516bb1f1de0addd933cb75e8e1a20">MyPhysicsList::SetCuts</a></div><div class="ttdeci">virtual void SetCuts()</div><div class="ttdoc">Set the cuts for the physics processes.</div><div class="ttdef"><b>Definition:</b> <a href="_physics_8cc_source.html#l00019">Physics.cc:19</a></div></div>
 <div class="ttc" id="aclass_my_physics_list_html_ade7b92c76a0ef3126c3a2496667ce882"><div class="ttname"><a href="class_my_physics_list.html#ade7b92c76a0ef3126c3a2496667ce882">MyPhysicsList::MyPhysicsList</a></div><div class="ttdeci">MyPhysicsList()</div><div class="ttdoc">Constructor of the PhysicsList class.</div><div class="ttdef"><b>Definition:</b> <a href="_physics_8cc_source.html#l00007">Physics.cc:7</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

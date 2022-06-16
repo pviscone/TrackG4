@@ -1,5 +1,6 @@
 #include "EventData.hh"
 
+//Clear all the vectors in the event
 void Event::Clear(){
     detectorData.TrackID.clear();
     detectorData.ParticleID.clear();

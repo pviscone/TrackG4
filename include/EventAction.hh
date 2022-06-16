@@ -6,10 +6,28 @@
 #include "G4Threading.hh"
 #include <iostream>
 
-class MyEventAction : public G4UserEventAction {
+/**
+ * @brief This class manage the user action at each event
+ *
+ */
+class MyEventAction : public G4UserEventAction
+{
 public:
     MyEventAction();
     virtual ~MyEventAction();
-    virtual void BeginOfEventAction(const G4Event*);
-    virtual void EndOfEventAction(const G4Event*);
+
+    /**
+     * @brief Function that is called at the beginning of the event.
+     *
+     * @param event Pointer to the event that is currently running.
+     */
+
+    virtual void BeginOfEventAction(const G4Event *);
+
+    /**
+     * @brief Function that is called at the end of each event.
+     *
+     * @param event Pointer to the event that is currently running.
+     */
+    virtual void EndOfEventAction(const G4Event *);
 };
