@@ -1,1 +1,6 @@
+build/CMake*
+build/CMakeFiles
+build/AutoDict*
+build/cmake*
+build/output_t*
 ./analysis
