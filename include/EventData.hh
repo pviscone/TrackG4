@@ -4,6 +4,7 @@
 #include "TSystem.h"
 
 /**
+ * @class TruthBeamData
  * @brief Class to store the truth data of the primary beam
  *
  */
@@ -22,6 +23,7 @@ public:
 };
 
 /**
+ * @class DetectorData
  * @brief Class to store the data of the sensitive detector
  *
  */
@@ -49,6 +51,7 @@ public:
 };
 
 /**
+ * @class Event
  * @brief Class to store the data of the simulation
  */
 class Event
