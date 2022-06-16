@@ -80,6 +80,9 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;../catch.hpp&quot;</code><br />
 <code>#include &quot;<a class="el" href="_data_manager_m_t_8hh_source.html">DataManagerMT.hh</a>&quot;</code><br />
+<code>#include &lt;thread&gt;</code><br />
+<code>#include &lt;cppitertools/combinations.hpp&gt;</code><br />
+<code>#include &quot;<a class="el" href="_user_parameters_8hh_source.html">UserParameters.hh</a>&quot;</code><br />
 </div>
 <p><a href="_data_manager_m_t_test_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -87,10 +90,34 @@ $(function() {
 Functions</h2></td></tr>
 <tr class="memitem:aa13251e05e7143e9927082b47bd166b6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_data_manager_m_t_test_8cpp.html#aa13251e05e7143e9927082b47bd166b6">TEST_CASE</a> (&quot;Verify that <a class="el" href="class_data_manager_m_t.html">DataManagerMT</a> is a singleton&quot;)</td></tr>
 <tr class="separator:aa13251e05e7143e9927082b47bd166b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4690fb3465c8781e22d98f95903e911e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_data_manager_m_t_test_8cpp.html#a4690fb3465c8781e22d98f95903e911e">TEST_CASE</a> (&quot;Verify that DataManagerMt has a vector of different instances of <a class="el" href="class_data_manager.html">DataManager</a>&quot;)</td></tr>
+<tr class="separator:a4690fb3465c8781e22d98f95903e911e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a4690fb3465c8781e22d98f95903e911e" name="a4690fb3465c8781e22d98f95903e911e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4690fb3465c8781e22d98f95903e911e">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;Verify that DataManagerMt has a vector of different instances of <a class="el" href="class_data_manager.html">DataManager</a>&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_data_manager_m_t_test_8cpp_source.html#l00014">14</a> of file <a class="el" href="_data_manager_m_t_test_8cpp_source.html">DataManagerMTTest.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_data_manager_m_t_8cc_source.html#l00025">DataManagerMT::GetInstance()</a>, <a class="el" href="_data_manager_m_t_8cc_source.html#l00035">DataManagerMT::GetSTDataManager()</a>, and <a class="el" href="_user_parameters_8hh_source.html#l00026">SystemParameters::nThreads</a>.</p>
+
+</div>
+</div>
 <a id="aa13251e05e7143e9927082b47bd166b6" name="aa13251e05e7143e9927082b47bd166b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa13251e05e7143e9927082b47bd166b6">&#9670;&nbsp;</a></span>TEST_CASE()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa13251e05e7143e9927082b47bd166b6">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -105,7 +132,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_data_manager_m_t_test_8cpp_source.html#l00004">4</a> of file <a class="el" href="_data_manager_m_t_test_8cpp_source.html">DataManagerMTTest.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_data_manager_m_t_test_8cpp_source.html#l00007">7</a> of file <a class="el" href="_data_manager_m_t_test_8cpp_source.html">DataManagerMTTest.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_data_manager_m_t_8cc_source.html#l00025">DataManagerMT::GetInstance()</a>.</p>
 
