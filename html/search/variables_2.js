@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['nist_0',['nist',['../namespace_materials.html#a8309d530acdf9f83c697beabd369348a',1,'Materials']]],
-  ['nofcolsx_1',['nOfColsX',['../namespace_geometry_parameters.html#a489e8fe463e2cf19d0a49ee8e534de49',1,'GeometryParameters']]],
-  ['nofcolsy_2',['nOfColsY',['../namespace_geometry_parameters.html#aa882b7dc6fbc1aa2ad87e227a3a5bd85',1,'GeometryParameters']]],
-  ['noflayers_3',['nOfLayers',['../namespace_geometry_parameters.html#a91d6de733cf761562085544a21d1cc10',1,'GeometryParameters']]]
+  ['energy_0',['energy',['../class_truth_beam_data.html#a198f3d9d01bb64afb060bd0440db1cba',1,'TruthBeamData']]],
+  ['energycut_1',['energyCut',['../namespace_trigger_parameters.html#a68c50f6ae1ff7058b5a6a45db7055cf1',1,'TriggerParameters']]],
+  ['energydeposited_2',['EnergyDeposited',['../class_detector_data.html#ac778f5c36e85d89e993280d67f1f7409',1,'DetectorData']]],
+  ['eventid_3',['eventID',['../class_event.html#a84dc42ba617572023b251c869f6fd54c',1,'Event']]]
 ];

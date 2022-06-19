@@ -71,6 +71,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="class_my_detector_construction-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">MyDetectorConstruction Class Reference</div></div>
 </div><!--header-->
@@ -98,14 +99,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af59abea99479b785b14f81c3e6a9a2e8"><td class="memItemLeft" align="right" valign="top">G4VPhysicalVolume *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_detector_construction.html#af59abea99479b785b14f81c3e6a9a2e8">Construct</a> ()</td></tr>
 <tr class="memdesc:af59abea99479b785b14f81c3e6a9a2e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Build the geometry of the simulation.  <a href="class_my_detector_construction.html#af59abea99479b785b14f81c3e6a9a2e8">More...</a><br /></td></tr>
 <tr class="separator:af59abea99479b785b14f81c3e6a9a2e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14e1749fb2e077c053e8739e32908721"><td class="memItemLeft" align="right" valign="top">std::vector&lt; G4double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_detector_construction.html#a14e1749fb2e077c053e8739e32908721">ComputeModulePosition</a> (G4int nOfModulesOnAxis, G4double moduleSize, G4double moduleSpacing)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a14e1749fb2e077c053e8739e32908721"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; G4double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_detector_construction.html#a14e1749fb2e077c053e8739e32908721">ComputeModulePosition</a> (G4int nOfModulesOnAxis, G4double moduleSize, G4double moduleSpacing)</td></tr>
 <tr class="memdesc:a14e1749fb2e077c053e8739e32908721"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the positions of the center of the modules on a given axis.  <a href="class_my_detector_construction.html#a14e1749fb2e077c053e8739e32908721">More...</a><br /></td></tr>
 <tr class="separator:a14e1749fb2e077c053e8739e32908721"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >The class that build the geometry of the simulation. </p>
 
-<p class="definition">Definition at line <a class="el" href="_detector_geometry_8hh_source.html#l00017">17</a> of file <a class="el" href="_detector_geometry_8hh_source.html">DetectorGeometry.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_detector_geometry_8hh_source.html#l00016">16</a> of file <a class="el" href="_detector_geometry_8hh_source.html">DetectorGeometry.hh</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a01ab5593d40d2ede193b80f0b0bfb53a" name="a01ab5593d40d2ede193b80f0b0bfb53a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a01ab5593d40d2ede193b80f0b0bfb53a">&#9670;&nbsp;</a></span>MyDetectorConstruction()</h2>
@@ -155,6 +159,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt; G4double &gt; MyDetectorConstruction::ComputeModulePosition </td>
@@ -180,6 +187,11 @@ Public Member Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Compute the positions of the center of the modules on a given axis. </p>
@@ -191,13 +203,13 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;G4double&gt; Vector that cointains the position of the modules on a given axis</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;G4double&gt; Vector that contains the position of the modules on a given axis</dd></dl>
 <p>If the number of units is odd then it add to the position vector 0 and \( \pm \) i*(size+spacing)/2 where i is the loop index and start form 1 to nOfUnits+1/2 <br  />
 If the number of units is even then it add to the vector \( \pm \) (i+1/2)*(size+spacing)/2 where i is the loop index and start form 0 to nOfUnits/2 </p>
 
 <p class="definition">Definition at line <a class="el" href="_detector_geometry_8cc_source.html#l00015">15</a> of file <a class="el" href="_detector_geometry_8cc_source.html">DetectorGeometry.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_detector_geometry_8cc_source.html#l00042">Construct()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_detector_geometry_8cc_source.html#l00045">Construct()</a>.</p>
 
 </div>
 </div>
@@ -219,15 +231,15 @@ If the number of units is even then it add to the vector \( \pm \) (i+1/2)*(size
 <p>Build the geometry of the simulation. </p>
 <dl class="section return"><dt>Returns</dt><dd>The physical volume of the world </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_detector_geometry_8cc_source.html#l00042">42</a> of file <a class="el" href="_detector_geometry_8cc_source.html">DetectorGeometry.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_detector_geometry_8cc_source.html#l00045">45</a> of file <a class="el" href="_detector_geometry_8cc_source.html">DetectorGeometry.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="_user_parameters_8hh_source.html#l00048">Materials::Air</a>, <a class="el" href="_detector_geometry_8cc_source.html#l00015">ComputeModulePosition()</a>, <a class="el" href="_user_parameters_8hh_source.html#l00019">GeometryParameters::moduleDimX</a>, <a class="el" href="_user_parameters_8hh_source.html#l00020">GeometryParameters::moduleDimY</a>, <a class="el" href="_user_parameters_8hh_source.html#l00021">GeometryParameters::moduleDimZ</a>, <a class="el" href="_user_parameters_8hh_source.html#l00023">GeometryParameters::moduleSpacingX</a>, <a class="el" href="_user_parameters_8hh_source.html#l00024">GeometryParameters::moduleSpacingY</a>, <a class="el" href="_user_parameters_8hh_source.html#l00025">GeometryParameters::moduleSpacingZ</a>, <a class="el" href="_user_parameters_8hh_source.html#l00027">GeometryParameters::nOfColsX</a>, <a class="el" href="_user_parameters_8hh_source.html#l00028">GeometryParameters::nOfColsY</a>, <a class="el" href="_user_parameters_8hh_source.html#l00029">GeometryParameters::nOfLayers</a>, <a class="el" href="_user_parameters_8hh_source.html#l00049">Materials::Si</a>, and <a class="el" href="_user_parameters_8hh_source.html#l00034">GeometryParameters::worldSize</a>.</p>
+<p class="reference">References <a class="el" href="_user_parameters_8hh_source.html#l00083">Materials::Air</a>, <a class="el" href="_detector_geometry_8cc_source.html#l00015">ComputeModulePosition()</a>, <a class="el" href="_user_parameters_8hh_source.html#l00058">GeometryParameters::moduleDimX</a>, <a class="el" href="_user_parameters_8hh_source.html#l00059">GeometryParameters::moduleDimY</a>, <a class="el" href="_user_parameters_8hh_source.html#l00060">GeometryParameters::moduleDimZ</a>, <a class="el" href="_user_parameters_8hh_source.html#l00062">GeometryParameters::moduleSpacingX</a>, <a class="el" href="_user_parameters_8hh_source.html#l00063">GeometryParameters::moduleSpacingY</a>, <a class="el" href="_user_parameters_8hh_source.html#l00064">GeometryParameters::moduleSpacingZ</a>, <a class="el" href="_user_parameters_8hh_source.html#l00068">GeometryParameters::nOfColsX</a>, <a class="el" href="_user_parameters_8hh_source.html#l00069">GeometryParameters::nOfColsY</a>, <a class="el" href="_user_parameters_8hh_source.html#l00070">GeometryParameters::nOfLayers</a>, <a class="el" href="_user_parameters_8hh_source.html#l00066">GeometryParameters::pixelStripSpacing</a>, <a class="el" href="_user_parameters_8hh_source.html#l00084">Materials::Si</a>, and <a class="el" href="_user_parameters_8hh_source.html#l00072">GeometryParameters::worldSize</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Geant4/include/<a class="el" href="_detector_geometry_8hh_source.html">DetectorGeometry.hh</a></li>
-<li>Geant4/src/<a class="el" href="_detector_geometry_8cc_source.html">DetectorGeometry.cc</a></li>
+<li>include/<a class="el" href="_detector_geometry_8hh_source.html">DetectorGeometry.hh</a></li>
+<li>src/<a class="el" href="_detector_geometry_8cc_source.html">DetectorGeometry.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
