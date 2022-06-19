@@ -1,5 +1,5 @@
 build/CMake*
 build/CMakeFiles
 build/cmake*
-build/output_t*
+build/output*
 analysis/
