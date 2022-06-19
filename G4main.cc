@@ -16,7 +16,8 @@
 
 int main(int argc, char **argv){
 
-    gInterpreter->GenerateDictionary("Event;TruthBeamData;DetectorData","../include/EventData.hh");
+    gSystem->Load("AutoDict_Event_2947179584_cxx.so");
+    //gInterpreter->GenerateDictionary("Event;TruthBeamData;DetectorData","../include/EventData.hh");
     // If Geant was compiled in multithreaded mode run the simulation in multi-threaded mode
     #ifdef G4MULTITHREADED
         //Needed by the TFunction in Generator.cc
