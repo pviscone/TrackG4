@@ -8,6 +8,7 @@
                 "${workspaceFolder}/include",
                 "/usr/include/Geant4",
                 "${workspaceFolder}/include",
+                "${workspaceFolder}/include",
                 "${workspaceFolder}/include"
             ],
             "defines": [],
