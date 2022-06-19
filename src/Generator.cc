@@ -43,9 +43,9 @@ MyPrimaryGenerator::~MyPrimaryGenerator()
  * The data of every beam is stored as an ntuple in the output root file.
  * The saved data are:
  * - EventID
- * - posX X position of the particle gun (m)
- * - posY Y position of the particle gun (m)
- * - posZ Z position of the particle gun (m)
+ * - posX X position of the particle gun (mm)
+ * - posY Y position of the particle gun (mm)
+ * - posZ Z position of the particle gun (mm)
  * - phi Polar angle of the direction vector of the beam
  * - theta Azimuthal angle of the direction vector of the beam
  * - energy Beam energy (GeV)
@@ -108,9 +108,9 @@ void MyPrimaryGenerator::GeneratePrimaries(G4Event *event)
     //Fill the event object with the data
     Event *ev = dataManager->GetEvent();
     ev->eventID = evID;
-    ev->truthBeamData.posX = (double)(xPos / m);
-    ev->truthBeamData.posY = (double)(yPos / m);
-    ev->truthBeamData.posZ = (double)(zPos / m);
+    ev->truthBeamData.posX = (double)(xPos /mm);
+    ev->truthBeamData.posY = (double)(yPos /mm);
+    ev->truthBeamData.posZ = (double)(zPos /mm);
     ev->truthBeamData.phi = (double)(phi);
     ev->truthBeamData.theta = (double)(theta);
     ev->truthBeamData.energy = (double)(energy / GeV);
