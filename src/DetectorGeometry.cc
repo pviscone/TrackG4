@@ -70,8 +70,8 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct()
         {
             for (auto colPosY : ComputeModulePosition(nOfColsY, moduleDimY, moduleSpacingY))
             {
-                new G4PVPlacement(0, G4ThreeVector(colPosX, colPosY, layerPos + pixelStripSpacing / 2), logicSiModule, "Module", logicWorld, false, 2 * layerIdx + 1, false);
-                new G4PVPlacement(0, G4ThreeVector(colPosX, colPosY, layerPos - pixelStripSpacing / 2), logicSiModule, "Module", logicWorld, false, 2 * layerIdx + 2, false);
+                new G4PVPlacement(0, G4ThreeVector(colPosX, colPosY, layerPos - pixelStripSpacing/2), logicSiModule, "Module", logicWorld, false, 2 * layerIdx + 1, false);
+                new G4PVPlacement(0, G4ThreeVector(colPosX, colPosY, layerPos + pixelStripSpacing/2), logicSiModule, "Module", logicWorld, false, 2 * layerIdx + 2, false);
             }
         }
     }
