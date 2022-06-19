@@ -142,19 +142,6 @@ tests_executable/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests_executable.dir/build.make CMakeFiles/tests_executable.dir/build
 .PHONY : tests_executable/fast
 
-#=============================================================================
-# Target rules for targets named doc_doxygen
-
-# Build rule for target.
-doc_doxygen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 doc_doxygen
-.PHONY : doc_doxygen
-
-# fast build rule for target.
-doc_doxygen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/doc_doxygen.dir/build.make CMakeFiles/doc_doxygen.dir/build
-.PHONY : doc_doxygen/fast
-
 G4main.o: G4main.cc.o
 .PHONY : G4main.o
 
@@ -395,6 +382,33 @@ src/Physics.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests_executable.dir/build.make CMakeFiles/tests_executable.dir/src/Physics.cc.s
 .PHONY : src/Physics.cc.s
 
+src/ReadOut.o: src/ReadOut.cpp.o
+.PHONY : src/ReadOut.o
+
+# target to build an object file
+src/ReadOut.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CosmicMuSimulation.dir/build.make CMakeFiles/CosmicMuSimulation.dir/src/ReadOut.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests_executable.dir/build.make CMakeFiles/tests_executable.dir/src/ReadOut.cpp.o
+.PHONY : src/ReadOut.cpp.o
+
+src/ReadOut.i: src/ReadOut.cpp.i
+.PHONY : src/ReadOut.i
+
+# target to preprocess a source file
+src/ReadOut.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CosmicMuSimulation.dir/build.make CMakeFiles/CosmicMuSimulation.dir/src/ReadOut.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests_executable.dir/build.make CMakeFiles/tests_executable.dir/src/ReadOut.cpp.i
+.PHONY : src/ReadOut.cpp.i
+
+src/ReadOut.s: src/ReadOut.cpp.s
+.PHONY : src/ReadOut.s
+
+# target to generate assembly for a file
+src/ReadOut.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CosmicMuSimulation.dir/build.make CMakeFiles/CosmicMuSimulation.dir/src/ReadOut.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests_executable.dir/build.make CMakeFiles/tests_executable.dir/src/ReadOut.cpp.s
+.PHONY : src/ReadOut.cpp.s
+
 src/RunAction.o: src/RunAction.cc.o
 .PHONY : src/RunAction.o
 
@@ -497,6 +511,30 @@ test/DataManagerMT/DataManagerMTTest.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests_executable.dir/build.make CMakeFiles/tests_executable.dir/test/DataManagerMT/DataManagerMTTest.cpp.s
 .PHONY : test/DataManagerMT/DataManagerMTTest.cpp.s
 
+test/ReadOut/ReadOutTest.o: test/ReadOut/ReadOutTest.cpp.o
+.PHONY : test/ReadOut/ReadOutTest.o
+
+# target to build an object file
+test/ReadOut/ReadOutTest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests_executable.dir/build.make CMakeFiles/tests_executable.dir/test/ReadOut/ReadOutTest.cpp.o
+.PHONY : test/ReadOut/ReadOutTest.cpp.o
+
+test/ReadOut/ReadOutTest.i: test/ReadOut/ReadOutTest.cpp.i
+.PHONY : test/ReadOut/ReadOutTest.i
+
+# target to preprocess a source file
+test/ReadOut/ReadOutTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests_executable.dir/build.make CMakeFiles/tests_executable.dir/test/ReadOut/ReadOutTest.cpp.i
+.PHONY : test/ReadOut/ReadOutTest.cpp.i
+
+test/ReadOut/ReadOutTest.s: test/ReadOut/ReadOutTest.cpp.s
+.PHONY : test/ReadOut/ReadOutTest.s
+
+# target to generate assembly for a file
+test/ReadOut/ReadOutTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests_executable.dir/build.make CMakeFiles/tests_executable.dir/test/ReadOut/ReadOutTest.cpp.s
+.PHONY : test/ReadOut/ReadOutTest.cpp.s
+
 test/mainTest.o: test/mainTest.cpp.o
 .PHONY : test/mainTest.o
 
@@ -529,7 +567,6 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... doc_doxygen"
 	@echo "... CosmicMuSimulation"
 	@echo "... tests_executable"
 	@echo "... G4main.o"
@@ -559,6 +596,9 @@ help:
 	@echo "... src/Physics.o"
 	@echo "... src/Physics.i"
 	@echo "... src/Physics.s"
+	@echo "... src/ReadOut.o"
+	@echo "... src/ReadOut.i"
+	@echo "... src/ReadOut.s"
 	@echo "... src/RunAction.o"
 	@echo "... src/RunAction.i"
 	@echo "... src/RunAction.s"
@@ -571,6 +611,9 @@ help:
 	@echo "... test/DataManagerMT/DataManagerMTTest.o"
 	@echo "... test/DataManagerMT/DataManagerMTTest.i"
 	@echo "... test/DataManagerMT/DataManagerMTTest.s"
+	@echo "... test/ReadOut/ReadOutTest.o"
+	@echo "... test/ReadOut/ReadOutTest.i"
+	@echo "... test/ReadOut/ReadOutTest.s"
 	@echo "... test/mainTest.o"
 	@echo "... test/mainTest.i"
 	@echo "... test/mainTest.s"
