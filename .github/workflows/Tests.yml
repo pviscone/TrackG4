@@ -22,4 +22,4 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Tests
-        run: ./${{github.workspace}}/build/tests_executable -s
+        run: ./build/tests_executable -s
