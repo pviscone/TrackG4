@@ -48,7 +48,7 @@ public:
      * @param nOfModulesOnAxis Number of modules on the axis
      * @param moduleSize Size of the module on a given axis
      * @param moduleSpacing Spacing between the modules on a given axis axis
-     * @return std::vector<G4double> Vector that cointains the position of the modules on a given axis
+     * @return std::vector<G4double> Vector that contains the position of the modules on a given axis
      */
-    std::vector<G4double> ComputeModulePosition(G4int nOfModulesOnAxis, G4double moduleSize, G4double moduleSpacing);
+    static std::vector<G4double> ComputeModulePosition(G4int nOfModulesOnAxis, G4double moduleSize, G4double moduleSpacing);
 };
