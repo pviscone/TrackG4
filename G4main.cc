@@ -1,3 +1,11 @@
+/*! \mainpage TrackG4PS
+ *
+ * \section Geant4_simulation
+ * In this project we simulate the commissioning with cosmic rays of the PS module for the CMS detector.
+ *
+ * A PS module is composed by a layer of strips and a layer of pixels.
+ * In this project we simulate a telescope for cosmic muons build with the PS modules.
+ */
 #include "DetectorGeometry.hh"
 #include "Physics.hh"
 #include "Action.hh"

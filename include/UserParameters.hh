@@ -4,6 +4,11 @@
 #include "G4SystemOfUnits.hh"
 #include <thread>
 
+
+/**
+ * @namespace TriggerParameters
+ * @brief Just a container for the parameter of the Trigger
+ */
 namespace TriggerParameters{
     inline G4double energyCut=50 *keV;
 }
@@ -96,7 +101,7 @@ inline double maxBeamEnergy = 1000; // Gev
 };                                  // namespace BeamParameters
 
 /**
- * @namespace OuterParameters
+ * @namespace OutputParameters
  * @brief A container for the parameters of the output data
  *
  */
