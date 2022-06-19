@@ -1,15 +1,14 @@
 #pragma once
-#include <vector>
-#include <string>
 #include "TSystem.h"
+#include <string>
+#include <vector>
 
 /**
  * @class TruthBeamData
  * @brief Class to store the truth data of the primary beam
  *
  */
-class TruthBeamData
-{
+class TruthBeamData {
 public:
     double posX;
     double posY;
@@ -27,8 +26,7 @@ public:
  * @brief Class to store the data of the sensitive detector
  *
  */
-class DetectorData
-{
+class DetectorData {
 public:
     std::vector<int> TrackID;
     std::vector<int> ParticleID;
@@ -37,8 +35,7 @@ public:
     std::vector<double> posY;
     std::vector<double> posZ;
     std::vector<int> Layer;
-    DetectorData()
-    {
+    DetectorData() {
         TrackID.clear();
         ParticleID.clear();
         EnergyDeposited.clear();
@@ -48,14 +45,19 @@ public:
         Layer.clear();
     }
     ~DetectorData() {}
+
+    /**
+     * @brief Clear all the vectors in the detector data object
+     *
+     */
+    void Clear();
 };
 
 /**
  * @class Event
  * @brief Class to store the data of the simulation
  */
-class Event
-{
+class Event {
 public:
     int eventID;
     DetectorData detectorData;

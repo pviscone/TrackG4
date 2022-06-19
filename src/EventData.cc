@@ -10,3 +10,13 @@ void Event::Clear(){
     detectorData.posZ.clear();
     detectorData.Layer.clear();
 }
+
+void DetectorData::Clear(){
+    TrackID.clear();
+    ParticleID.clear();
+    EnergyDeposited.clear();
+    posX.clear();
+    posY.clear();
+    posZ.clear();
+    Layer.clear();
+}
