@@ -7,8 +7,9 @@
                 "/usr/include/eigen3",
                 "${workspaceFolder}/include",
                 "/usr/include/Geant4",
-                "${workspaceFolder}/Geant4/include",
-                "${workspaceFolder}/Geant4/include"
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/g++",

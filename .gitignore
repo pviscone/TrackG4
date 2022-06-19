@@ -1,2 +1,5 @@
-build
-G4/build
+build/CMake*
+build/CMakeFiles
+build/cmake*
+build/output*
+analysis/

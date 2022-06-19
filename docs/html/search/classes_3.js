@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['decomposer_0',['Decomposer',['../struct_catch_1_1_decomposer.html',1,'Catch']]]
+  ['truthbeamdata_0',['TruthBeamData',['../class_truth_beam_data.html',1,'']]]
 ];

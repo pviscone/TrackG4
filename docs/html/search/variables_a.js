@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['resultdisposition_0',['resultDisposition',['../struct_catch_1_1_assertion_info.html#a60353b3632ab2f827162f2b2d6911073',1,'Catch::AssertionInfo']]]
+  ['worldsize_0',['worldSize',['../namespace_geometry_parameters.html#a570b2e932151afe5646b9299171256fc',1,'GeometryParameters']]]
 ];

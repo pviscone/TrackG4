@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TrackG4: /home/pviscone/Desktop/TrackG4/Geant4/src/Generator.cc Source File</title>
+<title>TrackG4: /home/pviscone/Desktop/TrackG4/src/Generator.cc Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,7 +69,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_0950574b702a2c1aa4227fc115416609.html">Geant4</a></li><li class="navelem"><a class="el" href="dir_003f59076d86ebbf14ef49699490cacf.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -79,103 +79,118 @@ $(function() {
 <a href="_generator_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="_generator_8hh.html">Generator.hh</a>&quot;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespace_geometry_parameters.html">GeometryParameters</a>;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespace_beam_parameters.html">BeamParameters</a></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_my_primary_generator.html#a719b919dd38eeb0bab12357144ff5a5f">   10</a></span><a class="code hl_function" href="class_my_primary_generator.html#a719b919dd38eeb0bab12357144ff5a5f">MyPrimaryGenerator::MyPrimaryGenerator</a>()</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    fParticleGun = <span class="keyword">new</span> G4ParticleGun(1);</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    particleTable = G4ParticleTable::GetParticleTable();</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using namespace </span><a class="code hl_namespace" href="namespace_beam_parameters.html">BeamParameters</a>;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_my_primary_generator.html#a719b919dd38eeb0bab12357144ff5a5f">    9</a></span><a class="code hl_function" href="class_my_primary_generator.html#a719b919dd38eeb0bab12357144ff5a5f">MyPrimaryGenerator::MyPrimaryGenerator</a>()</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    fParticleGun = <span class="keyword">new</span> G4ParticleGun(1);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    particleTable = G4ParticleTable::GetParticleTable();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>}</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>}</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_my_primary_generator.html#a2d8e84de7be72677f984fb317977d732">   22</a></span><a class="code hl_function" href="class_my_primary_generator.html#a2d8e84de7be72677f984fb317977d732">MyPrimaryGenerator::~MyPrimaryGenerator</a>()</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">delete</span> fParticleGun;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_my_primary_generator.html#a78b02e982cd927d94b3537e7852d7b11">   57</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_my_primary_generator.html#a78b02e982cd927d94b3537e7852d7b11">MyPrimaryGenerator::GeneratePrimaries</a>(G4Event *event)</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>{</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">    /********************************PARTICLE DEFINITION********************************/</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="comment">//Definition of mu+ and mu-</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    G4ParticleDefinition* mu_p = particleTable-&gt;FindParticle(<span class="stringliteral">&quot;mu+&quot;</span>);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    G4ParticleDefinition* mu_n = particleTable-&gt;FindParticle(<span class="stringliteral">&quot;mu-&quot;</span>);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">// Random number to generate random mu+ or mu- according to their charge ratio</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    G4double muCharge = (G4UniformRand());</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="comment">//The charge ratio of cosmic muons (mu+/mu-) is 1.3 (assumed constant in energy)</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="comment">//This means that the 57% of the muons are mu+ and 43% of them are mu-</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordflow">if</span>(muCharge&gt;0.57){</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        fParticleGun-&gt;SetParticleDefinition(mu_n);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordflow">else</span>{</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        fParticleGun-&gt;SetParticleDefinition(mu_p);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">    /********************************PARTICLE POSITION********************************/</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">// Starting point of the beam.</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="comment">// It covers uniformly the whole side of the box</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    G4double xPos = G4UniformRand()*<a class="code hl_variable" href="namespace_geometry_parameters.html#a570b2e932151afe5646b9299171256fc">worldSize</a>*2-<a class="code hl_variable" href="namespace_geometry_parameters.html#a570b2e932151afe5646b9299171256fc">worldSize</a>;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    G4double yPos = G4UniformRand()*<a class="code hl_variable" href="namespace_geometry_parameters.html#a570b2e932151afe5646b9299171256fc">worldSize</a>*2-<a class="code hl_variable" href="namespace_geometry_parameters.html#a570b2e932151afe5646b9299171256fc">worldSize</a>;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    G4double zPos = -<a class="code hl_variable" href="namespace_geometry_parameters.html#a570b2e932151afe5646b9299171256fc">worldSize</a>;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="comment">//Set the starting point of the beam</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    fParticleGun-&gt;SetParticlePosition(G4ThreeVector(xPos,yPos,zPos));</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment">    /********************************PARTICLE DIRECTION******************************/</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">//Set the particle direction using the cos^2 distribution for the azimuthal angle and the uniform distribution for the polar angle</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">double</span> phi = G4UniformRand()*2*TMath::Pi();</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    TF1 *fTheta = <span class="keyword">new</span> TF1(<span class="stringliteral">&quot;f2&quot;</span>,<span class="stringliteral">&quot;cos(x)*cos(x)&quot;</span>,0,TMath::Pi()/2);</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">double</span> theta = fTheta-&gt;GetRandom();</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    fParticleGun-&gt;SetParticleMomentumDirection(G4ThreeVector(cos(phi)*sin(theta),sin(phi)*sin(theta),cos(theta)));</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment">    /********************************PARTICLE ENERGY********************************/</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="comment">//Set the particle energy according to the muon energy distribution at the surface</span></div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    TF1 *fSpectrum = <span class="keyword">new</span> TF1(<span class="stringliteral">&quot;f4&quot;</span>,<span class="stringliteral">&quot;0.14*TMath::Power(x,-2.7)*(1/(1+(1.1*x*TMath::Cos([0]))/115)+0.054/(1+(1.1*x*TMath::Cos([0]))/850))&quot;</span>,<a class="code hl_variable" href="namespace_beam_parameters.html#a4d548543367492837fc80453013899c6">minBeamEnergy</a>,<a class="code hl_variable" href="namespace_beam_parameters.html#a7aa3c8e0966376c0bab541c05d365926">maxBeamEnergy</a>);</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    fSpectrum-&gt;SetParameter(0,theta);</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    G4double energy = (fSpectrum-&gt;GetRandom())*GeV;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    fParticleGun-&gt;SetParticleEnergy(energy);</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment">    /******************************** SAVE THE DATA ********************************/</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    G4double evID = <span class="keyword">event</span>-&gt;GetEventID();</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    analysisManager-&gt;FillNtupleDColumn( 1, 0, evID );</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    analysisManager-&gt;FillNtupleDColumn( 1, 1, xPos/m );</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    analysisManager-&gt;FillNtupleDColumn( 1, 2, yPos/m );</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    analysisManager-&gt;FillNtupleDColumn( 1, 3, zPos/m );</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    analysisManager-&gt;FillNtupleDColumn( 1, 4, phi );</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    analysisManager-&gt;FillNtupleDColumn( 1, 5, theta );</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    analysisManager-&gt;FillNtupleDColumn( 1, 6, energy/GeV );</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordflow">if</span>(muCharge&gt;0.57){</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        analysisManager-&gt;FillNtupleDColumn( 1, 7, 0 );</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        analysisManager-&gt;FillNtupleSColumn( 1, 8, <span class="stringliteral">&quot;mu-&quot;</span> );</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    }</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordflow">else</span>{</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        analysisManager-&gt;FillNtupleDColumn( 1, 7, 1 );</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        analysisManager-&gt;FillNtupleSColumn( 1, 8, <span class="stringliteral">&quot;mu+&quot;</span>);</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    }</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    analysisManager-&gt;AddNtupleRow(1);</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_my_primary_generator.html#a2d8e84de7be72677f984fb317977d732">   20</a></span><a class="code hl_function" href="class_my_primary_generator.html#a2d8e84de7be72677f984fb317977d732">MyPrimaryGenerator::~MyPrimaryGenerator</a>()</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">delete</span> fParticleGun;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>}</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_my_primary_generator.html#a78b02e982cd927d94b3537e7852d7b11">   55</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_my_primary_generator.html#a78b02e982cd927d94b3537e7852d7b11">MyPrimaryGenerator::GeneratePrimaries</a>(G4Event *event)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>{</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">    /********************************PARTICLE DEFINITION********************************/</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">// Definition of mu+ and mu-</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    G4ParticleDefinition *mu_p = particleTable-&gt;FindParticle(<span class="stringliteral">&quot;mu+&quot;</span>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    G4ParticleDefinition *mu_n = particleTable-&gt;FindParticle(<span class="stringliteral">&quot;mu-&quot;</span>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">// Random number to generate random mu+ or mu- according to their charge ratio</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    G4double muCharge = (G4UniformRand());</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="comment">// The charge ratio of cosmic muons (mu+/mu-) is 1.3 (assumed constant in energy)</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">// This means that the 57% of the muons are mu+ and 43% of them are mu-</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">if</span> (muCharge &gt; 0.57)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        fParticleGun-&gt;SetParticleDefinition(mu_n);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        fParticleGun-&gt;SetParticleDefinition(mu_p);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">    /********************************PARTICLE POSITION********************************/</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">// Starting point of the beam.</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="comment">// It covers uniformly the whole side of the box</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    G4double xPos = G4UniformRand() * <a class="code hl_variable" href="namespace_geometry_parameters.html#a570b2e932151afe5646b9299171256fc">worldSize</a> * 2 - <a class="code hl_variable" href="namespace_geometry_parameters.html#a570b2e932151afe5646b9299171256fc">worldSize</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    G4double yPos = G4UniformRand() * <a class="code hl_variable" href="namespace_geometry_parameters.html#a570b2e932151afe5646b9299171256fc">worldSize</a> * 2 - <a class="code hl_variable" href="namespace_geometry_parameters.html#a570b2e932151afe5646b9299171256fc">worldSize</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    G4double zPos = -<a class="code hl_variable" href="namespace_geometry_parameters.html#a570b2e932151afe5646b9299171256fc">worldSize</a>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="comment">// Set the starting point of the beam</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    fParticleGun-&gt;SetParticlePosition(G4ThreeVector(xPos, yPos, zPos));</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">    /********************************PARTICLE DIRECTION******************************/</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="comment">// Set the particle direction using the cos^2 distribution for the azimuthal angle and the uniform distribution for the polar angle</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">double</span> phi = G4UniformRand() * 2 * TMath::Pi();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    TF1 *fTheta = <span class="keyword">new</span> TF1(<span class="stringliteral">&quot;f2&quot;</span>, <span class="stringliteral">&quot;cos(x)*cos(x)&quot;</span>, 0, TMath::Pi() / 2);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">double</span> theta = fTheta-&gt;GetRandom();</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    fParticleGun-&gt;SetParticleMomentumDirection(G4ThreeVector(cos(phi) * sin(theta), sin(phi) * sin(theta), cos(theta)));</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment">    /********************************PARTICLE ENERGY********************************/</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="comment">// Set the particle energy according to the muon energy distribution at the surface</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    TF1 *fSpectrum = <span class="keyword">new</span> TF1(<span class="stringliteral">&quot;f4&quot;</span>, <span class="stringliteral">&quot;0.14*TMath::Power(x,-2.7)*(1/(1+(1.1*x*TMath::Cos([0]))/115)+0.054/(1+(1.1*x*TMath::Cos([0]))/850))&quot;</span>, <a class="code hl_variable" href="namespace_beam_parameters.html#a4d548543367492837fc80453013899c6">minBeamEnergy</a>, <a class="code hl_variable" href="namespace_beam_parameters.html#a7aa3c8e0966376c0bab541c05d365926">maxBeamEnergy</a>);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    fSpectrum-&gt;SetParameter(0, theta);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    G4double energy = (fSpectrum-&gt;GetRandom()) * GeV;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    fParticleGun-&gt;SetParticleEnergy(energy);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">    /******************************** SAVE THE DATA ********************************/</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordtype">int</span> evID = <span class="keyword">event</span>-&gt;GetEventID();</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="comment">//Get the DataManager object of the i-th thread</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <a class="code hl_class" href="class_data_manager_m_t.html">DataManagerMT</a> *dataManagerMT = <a class="code hl_function" href="class_data_manager_m_t.html#a84f6d5288b2d7c5a71911bd3b8f83607">DataManagerMT::GetInstance</a>();</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordtype">int</span> threadID = G4Threading::G4GetThreadId();</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <a class="code hl_class" href="class_data_manager.html">DataManager</a> *dataManager = dataManagerMT-&gt;<a class="code hl_function" href="class_data_manager_m_t.html#a2d9d19d85c1769ab84cd510962678566">GetSTDataManager</a>(threadID);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="comment">//Fill the event object with the data</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <a class="code hl_class" href="class_event.html">Event</a> *ev = dataManager-&gt;<a class="code hl_function" href="class_data_manager.html#afb94f61f4007618c76bb9623ca9a76e4">GetEvent</a>();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    ev-&gt;<a class="code hl_variable" href="class_event.html#a84dc42ba617572023b251c869f6fd54c">eventID</a> = evID;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    ev-&gt;<a class="code hl_variable" href="class_event.html#a1b892618f44f2668f5e4dd5673995598">truthBeamData</a>.<a class="code hl_variable" href="class_truth_beam_data.html#a782f34982e7ebc242e242e212aa70e73">posX</a> = (double)(xPos / m);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    ev-&gt;<a class="code hl_variable" href="class_event.html#a1b892618f44f2668f5e4dd5673995598">truthBeamData</a>.<a class="code hl_variable" href="class_truth_beam_data.html#ad4a2d3d1c882cfe2d445426d2736f81c">posY</a> = (double)(yPos / m);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    ev-&gt;<a class="code hl_variable" href="class_event.html#a1b892618f44f2668f5e4dd5673995598">truthBeamData</a>.<a class="code hl_variable" href="class_truth_beam_data.html#a45e06290b047b85c77a119d7bbaf0dd6">posZ</a> = (double)(zPos / m);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    ev-&gt;<a class="code hl_variable" href="class_event.html#a1b892618f44f2668f5e4dd5673995598">truthBeamData</a>.<a class="code hl_variable" href="class_truth_beam_data.html#a1d1aaddf67aa2ea63706415fd388392f">phi</a> = (double)(phi);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    ev-&gt;<a class="code hl_variable" href="class_event.html#a1b892618f44f2668f5e4dd5673995598">truthBeamData</a>.<a class="code hl_variable" href="class_truth_beam_data.html#a42cae571a42f6337db40e7a65f9e4cab">theta</a> = (double)(theta);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    ev-&gt;<a class="code hl_variable" href="class_event.html#a1b892618f44f2668f5e4dd5673995598">truthBeamData</a>.<a class="code hl_variable" href="class_truth_beam_data.html#a198f3d9d01bb64afb060bd0440db1cba">energy</a> = (double)(energy / GeV);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordflow">if</span> (muCharge &gt; 0.57)</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        ev-&gt;<a class="code hl_variable" href="class_event.html#a1b892618f44f2668f5e4dd5673995598">truthBeamData</a>.<a class="code hl_variable" href="class_truth_beam_data.html#a63cb3e70d6c22ad7de3160191ca57a83">ParticleID</a> = 0; <span class="comment">// mu-</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        ev-&gt;<a class="code hl_variable" href="class_event.html#a1b892618f44f2668f5e4dd5673995598">truthBeamData</a>.<a class="code hl_variable" href="class_truth_beam_data.html#a63cb3e70d6c22ad7de3160191ca57a83">ParticleID</a> = 1; <span class="comment">// mu+</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    }</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment">    /********************************PARTICLE GENERATION****************************/</span></div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="comment">//Generate the primary particle</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="comment">// Generate the primary particle</span></div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    fParticleGun-&gt;GeneratePrimaryVertex(event);</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>}</div>
 <div class="ttc" id="a_generator_8hh_html"><div class="ttname"><a href="_generator_8hh.html">Generator.hh</a></div></div>
-<div class="ttc" id="aclass_my_primary_generator_html_a2d8e84de7be72677f984fb317977d732"><div class="ttname"><a href="class_my_primary_generator.html#a2d8e84de7be72677f984fb317977d732">MyPrimaryGenerator::~MyPrimaryGenerator</a></div><div class="ttdeci">~MyPrimaryGenerator()</div><div class="ttdoc">Destructor of the particle gun.</div><div class="ttdef"><b>Definition:</b> <a href="_generator_8cc_source.html#l00022">Generator.cc:22</a></div></div>
-<div class="ttc" id="aclass_my_primary_generator_html_a719b919dd38eeb0bab12357144ff5a5f"><div class="ttname"><a href="class_my_primary_generator.html#a719b919dd38eeb0bab12357144ff5a5f">MyPrimaryGenerator::MyPrimaryGenerator</a></div><div class="ttdeci">MyPrimaryGenerator()</div><div class="ttdoc">Constructor of the particle gun.</div><div class="ttdef"><b>Definition:</b> <a href="_generator_8cc_source.html#l00010">Generator.cc:10</a></div></div>
-<div class="ttc" id="aclass_my_primary_generator_html_a78b02e982cd927d94b3537e7852d7b11"><div class="ttname"><a href="class_my_primary_generator.html#a78b02e982cd927d94b3537e7852d7b11">MyPrimaryGenerator::GeneratePrimaries</a></div><div class="ttdeci">virtual void GeneratePrimaries(G4Event *event)</div><div class="ttdoc">Generate the primary particles.</div><div class="ttdef"><b>Definition:</b> <a href="_generator_8cc_source.html#l00057">Generator.cc:57</a></div></div>
-<div class="ttc" id="anamespace_beam_parameters_html"><div class="ttname"><a href="namespace_beam_parameters.html">BeamParameters</a></div><div class="ttdoc">Just a container for the beam parameters of the simulation.</div><div class="ttdef"><b>Definition:</b> <a href="_user_parameters_8hh_source.html#l00053">UserParameters.hh:51</a></div></div>
-<div class="ttc" id="anamespace_beam_parameters_html_a4d548543367492837fc80453013899c6"><div class="ttname"><a href="namespace_beam_parameters.html#a4d548543367492837fc80453013899c6">BeamParameters::minBeamEnergy</a></div><div class="ttdeci">double minBeamEnergy</div><div class="ttdef"><b>Definition:</b> <a href="_user_parameters_8hh_source.html#l00059">UserParameters.hh:59</a></div></div>
-<div class="ttc" id="anamespace_beam_parameters_html_a7aa3c8e0966376c0bab541c05d365926"><div class="ttname"><a href="namespace_beam_parameters.html#a7aa3c8e0966376c0bab541c05d365926">BeamParameters::maxBeamEnergy</a></div><div class="ttdeci">double maxBeamEnergy</div><div class="ttdef"><b>Definition:</b> <a href="_user_parameters_8hh_source.html#l00060">UserParameters.hh:60</a></div></div>
+<div class="ttc" id="aclass_data_manager_html"><div class="ttname"><a href="class_data_manager.html">DataManager</a></div><div class="ttdoc">This class manage TFiles and TTrees to store the data exploiting the Event class structure.</div><div class="ttdef"><b>Definition:</b> <a href="_data_manager_8hh_source.html#l00013">DataManager.hh:14</a></div></div>
+<div class="ttc" id="aclass_data_manager_html_afb94f61f4007618c76bb9623ca9a76e4"><div class="ttname"><a href="class_data_manager.html#afb94f61f4007618c76bb9623ca9a76e4">DataManager::GetEvent</a></div><div class="ttdeci">Event * GetEvent()</div><div class="ttdoc">Return the pointer to the event of the DataManager singleton.</div><div class="ttdef"><b>Definition:</b> <a href="_data_manager_8cc_source.html#l00055">DataManager.cc:55</a></div></div>
+<div class="ttc" id="aclass_data_manager_m_t_html"><div class="ttname"><a href="class_data_manager_m_t.html">DataManagerMT</a></div><div class="ttdoc">Singleton class that manage the data in multithreading mode.</div><div class="ttdef"><b>Definition:</b> <a href="_data_manager_m_t_8hh_source.html#l00015">DataManagerMT.hh:16</a></div></div>
+<div class="ttc" id="aclass_data_manager_m_t_html_a2d9d19d85c1769ab84cd510962678566"><div class="ttname"><a href="class_data_manager_m_t.html#a2d9d19d85c1769ab84cd510962678566">DataManagerMT::GetSTDataManager</a></div><div class="ttdeci">DataManager * GetSTDataManager(int i)</div><div class="ttdoc">Return the DataManager object used by the i-th thread.</div><div class="ttdef"><b>Definition:</b> <a href="_data_manager_m_t_8cc_source.html#l00035">DataManagerMT.cc:35</a></div></div>
+<div class="ttc" id="aclass_data_manager_m_t_html_a84f6d5288b2d7c5a71911bd3b8f83607"><div class="ttname"><a href="class_data_manager_m_t.html#a84f6d5288b2d7c5a71911bd3b8f83607">DataManagerMT::GetInstance</a></div><div class="ttdeci">static DataManagerMT * GetInstance()</div><div class="ttdoc">Get the instance of the class. The first time create the singleton, then return the pointer to it.</div><div class="ttdef"><b>Definition:</b> <a href="_data_manager_m_t_8cc_source.html#l00025">DataManagerMT.cc:25</a></div></div>
+<div class="ttc" id="aclass_event_html"><div class="ttname"><a href="class_event.html">Event</a></div><div class="ttdoc">Class to store the data of the simulation.</div><div class="ttdef"><b>Definition:</b> <a href="_event_data_8hh_source.html#l00057">EventData.hh:58</a></div></div>
+<div class="ttc" id="aclass_event_html_a1b892618f44f2668f5e4dd5673995598"><div class="ttname"><a href="class_event.html#a1b892618f44f2668f5e4dd5673995598">Event::truthBeamData</a></div><div class="ttdeci">TruthBeamData truthBeamData</div><div class="ttdef"><b>Definition:</b> <a href="_event_data_8hh_source.html#l00062">EventData.hh:62</a></div></div>
+<div class="ttc" id="aclass_event_html_a84dc42ba617572023b251c869f6fd54c"><div class="ttname"><a href="class_event.html#a84dc42ba617572023b251c869f6fd54c">Event::eventID</a></div><div class="ttdeci">int eventID</div><div class="ttdef"><b>Definition:</b> <a href="_event_data_8hh_source.html#l00060">EventData.hh:60</a></div></div>
+<div class="ttc" id="aclass_my_primary_generator_html_a2d8e84de7be72677f984fb317977d732"><div class="ttname"><a href="class_my_primary_generator.html#a2d8e84de7be72677f984fb317977d732">MyPrimaryGenerator::~MyPrimaryGenerator</a></div><div class="ttdeci">~MyPrimaryGenerator()</div><div class="ttdoc">Destructor of the particle gun.</div><div class="ttdef"><b>Definition:</b> <a href="_generator_8cc_source.html#l00020">Generator.cc:20</a></div></div>
+<div class="ttc" id="aclass_my_primary_generator_html_a719b919dd38eeb0bab12357144ff5a5f"><div class="ttname"><a href="class_my_primary_generator.html#a719b919dd38eeb0bab12357144ff5a5f">MyPrimaryGenerator::MyPrimaryGenerator</a></div><div class="ttdeci">MyPrimaryGenerator()</div><div class="ttdoc">Constructor of the particle gun.</div><div class="ttdef"><b>Definition:</b> <a href="_generator_8cc_source.html#l00009">Generator.cc:9</a></div></div>
+<div class="ttc" id="aclass_my_primary_generator_html_a78b02e982cd927d94b3537e7852d7b11"><div class="ttname"><a href="class_my_primary_generator.html#a78b02e982cd927d94b3537e7852d7b11">MyPrimaryGenerator::GeneratePrimaries</a></div><div class="ttdeci">virtual void GeneratePrimaries(G4Event *event)</div><div class="ttdoc">Generate the primary particles.</div><div class="ttdef"><b>Definition:</b> <a href="_generator_8cc_source.html#l00055">Generator.cc:55</a></div></div>
+<div class="ttc" id="aclass_truth_beam_data_html_a198f3d9d01bb64afb060bd0440db1cba"><div class="ttname"><a href="class_truth_beam_data.html#a198f3d9d01bb64afb060bd0440db1cba">TruthBeamData::energy</a></div><div class="ttdeci">double energy</div><div class="ttdef"><b>Definition:</b> <a href="_event_data_8hh_source.html#l00019">EventData.hh:19</a></div></div>
+<div class="ttc" id="aclass_truth_beam_data_html_a1d1aaddf67aa2ea63706415fd388392f"><div class="ttname"><a href="class_truth_beam_data.html#a1d1aaddf67aa2ea63706415fd388392f">TruthBeamData::phi</a></div><div class="ttdeci">double phi</div><div class="ttdef"><b>Definition:</b> <a href="_event_data_8hh_source.html#l00017">EventData.hh:17</a></div></div>
+<div class="ttc" id="aclass_truth_beam_data_html_a42cae571a42f6337db40e7a65f9e4cab"><div class="ttname"><a href="class_truth_beam_data.html#a42cae571a42f6337db40e7a65f9e4cab">TruthBeamData::theta</a></div><div class="ttdeci">double theta</div><div class="ttdef"><b>Definition:</b> <a href="_event_data_8hh_source.html#l00018">EventData.hh:18</a></div></div>
+<div class="ttc" id="aclass_truth_beam_data_html_a45e06290b047b85c77a119d7bbaf0dd6"><div class="ttname"><a href="class_truth_beam_data.html#a45e06290b047b85c77a119d7bbaf0dd6">TruthBeamData::posZ</a></div><div class="ttdeci">double posZ</div><div class="ttdef"><b>Definition:</b> <a href="_event_data_8hh_source.html#l00016">EventData.hh:16</a></div></div>
+<div class="ttc" id="aclass_truth_beam_data_html_a63cb3e70d6c22ad7de3160191ca57a83"><div class="ttname"><a href="class_truth_beam_data.html#a63cb3e70d6c22ad7de3160191ca57a83">TruthBeamData::ParticleID</a></div><div class="ttdeci">int ParticleID</div><div class="ttdef"><b>Definition:</b> <a href="_event_data_8hh_source.html#l00020">EventData.hh:20</a></div></div>
+<div class="ttc" id="aclass_truth_beam_data_html_a782f34982e7ebc242e242e212aa70e73"><div class="ttname"><a href="class_truth_beam_data.html#a782f34982e7ebc242e242e212aa70e73">TruthBeamData::posX</a></div><div class="ttdeci">double posX</div><div class="ttdef"><b>Definition:</b> <a href="_event_data_8hh_source.html#l00014">EventData.hh:14</a></div></div>
+<div class="ttc" id="aclass_truth_beam_data_html_ad4a2d3d1c882cfe2d445426d2736f81c"><div class="ttname"><a href="class_truth_beam_data.html#ad4a2d3d1c882cfe2d445426d2736f81c">TruthBeamData::posY</a></div><div class="ttdeci">double posY</div><div class="ttdef"><b>Definition:</b> <a href="_event_data_8hh_source.html#l00015">EventData.hh:15</a></div></div>
+<div class="ttc" id="anamespace_beam_parameters_html"><div class="ttname"><a href="namespace_beam_parameters.html">BeamParameters</a></div><div class="ttdoc">Just a container for the beam parameters of the simulation.</div><div class="ttdef"><b>Definition:</b> <a href="_user_parameters_8hh_source.html#l00069">UserParameters.hh:67</a></div></div>
+<div class="ttc" id="anamespace_beam_parameters_html_a4d548543367492837fc80453013899c6"><div class="ttname"><a href="namespace_beam_parameters.html#a4d548543367492837fc80453013899c6">BeamParameters::minBeamEnergy</a></div><div class="ttdeci">double minBeamEnergy</div><div class="ttdef"><b>Definition:</b> <a href="_user_parameters_8hh_source.html#l00076">UserParameters.hh:76</a></div></div>
+<div class="ttc" id="anamespace_beam_parameters_html_a7aa3c8e0966376c0bab541c05d365926"><div class="ttname"><a href="namespace_beam_parameters.html#a7aa3c8e0966376c0bab541c05d365926">BeamParameters::maxBeamEnergy</a></div><div class="ttdeci">double maxBeamEnergy</div><div class="ttdef"><b>Definition:</b> <a href="_user_parameters_8hh_source.html#l00077">UserParameters.hh:77</a></div></div>
 <div class="ttc" id="anamespace_geometry_parameters_html"><div class="ttname"><a href="namespace_geometry_parameters.html">GeometryParameters</a></div><div class="ttdoc">Just a container for the geometry parameters of the detector.</div></div>
-<div class="ttc" id="anamespace_geometry_parameters_html_a570b2e932151afe5646b9299171256fc"><div class="ttname"><a href="namespace_geometry_parameters.html#a570b2e932151afe5646b9299171256fc">GeometryParameters::worldSize</a></div><div class="ttdeci">G4double worldSize</div><div class="ttdef"><b>Definition:</b> <a href="_user_parameters_8hh_source.html#l00034">UserParameters.hh:34</a></div></div>
+<div class="ttc" id="anamespace_geometry_parameters_html_a570b2e932151afe5646b9299171256fc"><div class="ttname"><a href="namespace_geometry_parameters.html#a570b2e932151afe5646b9299171256fc">GeometryParameters::worldSize</a></div><div class="ttdeci">G4double worldSize</div><div class="ttdef"><b>Definition:</b> <a href="_user_parameters_8hh_source.html#l00052">UserParameters.hh:52</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

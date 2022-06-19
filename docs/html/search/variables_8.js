@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['name_0',['name',['../struct_catch_1_1_name_and_tags.html#a7cbea60e0cebfa622c667008eb011420',1,'Catch::NameAndTags::name()'],['../struct_catch_1_1_section_info.html#a704c8fc662d309137e0d4f199cb7df58',1,'Catch::SectionInfo::name()'],['../struct_catch_1_1_test_case_info.html#a463794e2f5cfead307c93efd134ade36',1,'Catch::TestCaseInfo::name()']]],
-  ['nist_1',['nist',['../_materials_8hh.html#a97f2235c75f0e3e25e4b620776361be9',1,'Materials.hh']]]
+  ['si_0',['Si',['../namespace_materials.html#aa4297481113f745507cdf76480a37365',1,'Materials']]],
+  ['sidelength_1',['sideLength',['../_user_parameters_8hh.html#ac8a722989c5d57aa81681338d6f93572',1,'UserParameters.hh']]]
 ];

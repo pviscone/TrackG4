@@ -1,8 +1,11 @@
 var searchData=
 [
-  ['sensitivedetector_2ecc_0',['SensitiveDetector.cc',['../_sensitive_detector_8cc.html',1,'']]],
-  ['sensitivedetector_2ehh_1',['SensitiveDetector.hh',['../_sensitive_detector_8hh.html',1,'']]],
-  ['setcuts_2',['SetCuts',['../class_my_physics_list.html#a9ce516bb1f1de0addd933cb75e8e1a20',1,'MyPhysicsList']]],
-  ['si_3',['Si',['../namespace_materials.html#aa4297481113f745507cdf76480a37365',1,'Materials']]],
-  ['sidelength_4',['sideLength',['../namespace_geometry_parameters.html#a1503d8d887080d26d2bb8b0e8126510c',1,'GeometryParameters']]]
+  ['particleid_0',['ParticleID',['../class_truth_beam_data.html#a63cb3e70d6c22ad7de3160191ca57a83',1,'TruthBeamData::ParticleID()'],['../class_detector_data.html#a7d4d3d7849d4ee051adeddef29c1707e',1,'DetectorData::ParticleID()']]],
+  ['phi_1',['phi',['../class_truth_beam_data.html#a1d1aaddf67aa2ea63706415fd388392f',1,'TruthBeamData']]],
+  ['physics_2ecc_2',['Physics.cc',['../_physics_8cc.html',1,'']]],
+  ['physics_2ehh_3',['Physics.hh',['../_physics_8hh.html',1,'']]],
+  ['pixelstripspacing_4',['pixelStripSpacing',['../namespace_geometry_parameters.html#a950200812d9deff0a1edf9e91d436d76',1,'GeometryParameters']]],
+  ['posx_5',['posX',['../class_truth_beam_data.html#a782f34982e7ebc242e242e212aa70e73',1,'TruthBeamData::posX()'],['../class_detector_data.html#ae26827f392e9e1a9ead8d6edc610428c',1,'DetectorData::posX()']]],
+  ['posy_6',['posY',['../class_truth_beam_data.html#ad4a2d3d1c882cfe2d445426d2736f81c',1,'TruthBeamData::posY()'],['../class_detector_data.html#af1b12b650ecfdcf3902e88c3362b5032',1,'DetectorData::posY()']]],
+  ['posz_7',['posZ',['../class_truth_beam_data.html#a45e06290b047b85c77a119d7bbaf0dd6',1,'TruthBeamData::posZ()'],['../class_detector_data.html#af2e140673d86bb178e0cddfb1a5566a4',1,'DetectorData::posZ()']]]
 ];
