@@ -4,7 +4,7 @@
 #include "G4RunManager.hh"
 #include "DataManager.hh"
 #include "DataManagerMT.hh"
-
+#include "ReadOut.hh"
 /**
  * @brief The class that manages the sensitive detector.
  *
