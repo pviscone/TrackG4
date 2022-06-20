@@ -3,3 +3,4 @@ build/CMakeFiles
 build/cmake*
 build/output*
 analysis/
+data/fit_img/
