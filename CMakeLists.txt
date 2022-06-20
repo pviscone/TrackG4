@@ -55,8 +55,8 @@ add_executable(tests_executable ${testcpp} ${sources} ${headers})
 target_link_libraries(tests_executable ${Geant4_LIBRARIES})
 ####################################################
 
-
-
+add_executable(track ./trackfit.cc)
+target_link_libraries(track ${Geant4_LIBRARIES})
 ############# Documentation Section ################
 
 # first we can indicate the documentation build as an option and set it to ON by default
@@ -92,6 +92,8 @@ set(SCRIPTS
     )
 
 
+
+
 foreach(_script ${SCRIPTS})
     configure_file(
         ${PROJECT_SOURCE_DIR}/macro/${_script}
@@ -99,7 +101,6 @@ foreach(_script ${SCRIPTS})
         COPYONLY
     )
 endforeach()
-
 
 
 

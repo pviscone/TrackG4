@@ -142,6 +142,19 @@ tests_executable/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests_executable.dir/build.make CMakeFiles/tests_executable.dir/build
 .PHONY : tests_executable/fast
 
+#=============================================================================
+# Target rules for targets named track
+
+# Build rule for target.
+track: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 track
+.PHONY : track
+
+# fast build rule for target.
+track/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/track.dir/build.make CMakeFiles/track.dir/build
+.PHONY : track/fast
+
 G4main.o: G4main.cc.o
 .PHONY : G4main.o
 
@@ -559,6 +572,30 @@ test/mainTest.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tests_executable.dir/build.make CMakeFiles/tests_executable.dir/test/mainTest.cpp.s
 .PHONY : test/mainTest.cpp.s
 
+trackfit.o: trackfit.cc.o
+.PHONY : trackfit.o
+
+# target to build an object file
+trackfit.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/track.dir/build.make CMakeFiles/track.dir/trackfit.cc.o
+.PHONY : trackfit.cc.o
+
+trackfit.i: trackfit.cc.i
+.PHONY : trackfit.i
+
+# target to preprocess a source file
+trackfit.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/track.dir/build.make CMakeFiles/track.dir/trackfit.cc.i
+.PHONY : trackfit.cc.i
+
+trackfit.s: trackfit.cc.s
+.PHONY : trackfit.s
+
+# target to generate assembly for a file
+trackfit.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/track.dir/build.make CMakeFiles/track.dir/trackfit.cc.s
+.PHONY : trackfit.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -569,6 +606,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... CosmicMuSimulation"
 	@echo "... tests_executable"
+	@echo "... track"
 	@echo "... G4main.o"
 	@echo "... G4main.i"
 	@echo "... G4main.s"
@@ -617,6 +655,9 @@ help:
 	@echo "... test/mainTest.o"
 	@echo "... test/mainTest.i"
 	@echo "... test/mainTest.s"
+	@echo "... trackfit.o"
+	@echo "... trackfit.i"
+	@echo "... trackfit.s"
 .PHONY : help
 
 
