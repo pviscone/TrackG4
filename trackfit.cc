@@ -65,7 +65,11 @@ FitData Fit(Event *event, int i, bool saveFigs = false) {
     // Create the graph containing the hits in the ZX plane projection and fill the struct
     TCanvas c1("c1", "c1", 800, 600);
     TGraphErrors GR_zx(x.size(), &z[0], &x[0], &dz[0], &dx[0]);
-    GR_zx.Fit("line");
+    prev_mx = (x.back() - x[0]) / (z.back() - z[0]);
+    prev_x0 = x[0] - prev_mx * z[0];
+    line.SetParameter(0, prev_x0);
+    line.SetParameter(1, prev_mx);
+    auto status_zx = GR_zx.Fit("line", "Q");
     fitdata.x0 = line.GetParameter(0);
     fitdata.x0_err = line.GetParError(0);
     fitdata.mx = line.GetParameter(1);
