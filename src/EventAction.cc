@@ -24,7 +24,7 @@ void MyEventAction::EndOfEventAction(const G4Event *)
     Event *ev = dataManager->GetEvent();
     std::vector<int> layerVec=ev->detectorData.Layer;
     if(! layerVec.empty()){
-        if (std::max_element(layerVec.begin(), layerVec.end()) == std::min_element(layerVec.begin(),layerVec.end() ) ) {
+        if (std::max_element(layerVec.begin(), layerVec.end()) - std::min_element(layerVec.begin(),layerVec.end() ) < 2) {
             (ev->detectorData).Clear();
         }
     }
