@@ -50,15 +50,15 @@ FitData Fit(Event *event) {
     std::vector<double> y = (event->detectorData).posY;
     std::vector<double> z = (event->detectorData).posZ;
     std::vector<double> dx, dy;
-    std::vector<double> dz(x.size(), GeometryParameters::moduleDimZ / sqrt(12));
+    std::vector<double> dz(x.size(), GeometryParameters::moduleDimZ / 2);
     // Create vectors of errors. The even layers are pixel module, the odds are strips.
     for (auto lay : (event->detectorData).Layer) {
         if (lay % 2 == 0) {
-            dx.push_back(ReadOutParameters::pixelDimX / sqrt(12));
-            dy.push_back(ReadOutParameters::pixelDimY / sqrt(12));
+            dx.push_back(ReadOutParameters::pixelDimX / 2);
+            dy.push_back(ReadOutParameters::pixelDimY / 2);
         } else {
-            dx.push_back(ReadOutParameters::stripDimX / sqrt(12));
-            dy.push_back(ReadOutParameters::stripDimY / sqrt(12));
+            dx.push_back(ReadOutParameters::stripDimX / 2);
+            dy.push_back(ReadOutParameters::stripDimY / 2);
         }
     }
     // Create the graph containing the hits in the ZX plane projection and fill the struct
@@ -71,7 +71,11 @@ FitData Fit(Event *event) {
     fitdata.chi2zx = line.GetChisquare();
     // Create the graph containing the hits in the ZY plane projection and fill the struct
     TGraphErrors GR_zy(y.size(), &z[0], &y[0], &dz[0], &dy[0]);
-    GR_zy.Fit("line");
+    prev_my = (y.back() - y[0]) / (z.back() - z[0]);
+    prev_y0 = y[0] - prev_my * z[0];
+    line.SetParameter(0, prev_y0);
+    line.SetParameter(1, prev_my);
+    auto status_zy = GR_zy.Fit("line", "Q");
     fitdata.y0 = line.GetParameter(0);
     fitdata.y0_err = line.GetParError(0);
     fitdata.my = line.GetParameter(1);
