@@ -50,15 +50,15 @@ FitData Fit(Event *event) {
     std::vector<double> y = (event->detectorData).posY;
     std::vector<double> z = (event->detectorData).posZ;
     std::vector<double> dx, dy;
-    std::vector<double> dz(x.size(), GeometryParameters::moduleDimZ / 2);
+    std::vector<double> dz(x.size(), GeometryParameters::moduleDimZ / sqrt(12));
     // Create vectors of errors. The even layers are pixel module, the odds are strips.
     for (auto lay : (event->detectorData).Layer) {
         if (lay % 2 == 0) {
-            dx.push_back(ReadOutParameters::pixelDimX / 2);
-            dy.push_back(ReadOutParameters::pixelDimY / 2);
+            dx.push_back(ReadOutParameters::pixelDimX / sqrt(12));
+            dy.push_back(ReadOutParameters::pixelDimY / sqrt(12));
         } else {
-            dx.push_back(ReadOutParameters::stripDimX / 2);
-            dy.push_back(ReadOutParameters::stripDimY / 2);
+            dx.push_back(ReadOutParameters::stripDimX / sqrt(12));
+            dy.push_back(ReadOutParameters::stripDimY / sqrt(12));
         }
     }
     // Create the graph containing the hits in the ZX plane projection and fill the struct
