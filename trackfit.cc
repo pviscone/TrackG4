@@ -40,8 +40,9 @@ struct FitData {
  * @param event Event class object containing the hits to be fitted
  * @return FitData The struct containing the result of the fit
  */
-FitData Fit(Event *event) {
+FitData Fit(Event *event, int i, bool saveFigs = false) {
     FitData fitdata;
+    std::string name, title;
     // create the linear function to fit (a line in the range of the world size)
     TF1 line("line", "pol1", -GeometryParameters::worldSize, GeometryParameters::worldSize);
 
@@ -62,6 +63,7 @@ FitData Fit(Event *event) {
         }
     }
     // Create the graph containing the hits in the ZX plane projection and fill the struct
+    TCanvas c1("c1", "c1", 800, 600);
     TGraphErrors GR_zx(x.size(), &z[0], &x[0], &dz[0], &dx[0]);
     GR_zx.Fit("line");
     fitdata.x0 = line.GetParameter(0);
@@ -69,7 +71,17 @@ FitData Fit(Event *event) {
     fitdata.mx = line.GetParameter(1);
     fitdata.mx_err = line.GetParError(1);
     fitdata.chi2zx = line.GetChisquare();
+    title = "ZX evID:" + std::to_string(i);
+    GR_zx.SetTitle(title.c_str());
+    GR_zx.GetXaxis()->SetTitle("Z [mm]");
+    GR_zx.GetYaxis()->SetTitle("X [mm]");
+    GR_zx.Draw("AP");
+    if (saveFigs) {
+        name = "../data/fit_img/zx_" + std::to_string(i) + ".png";
+        c1.SaveAs(name.c_str());
+    }
     // Create the graph containing the hits in the ZY plane projection and fill the struct
+    TCanvas c2("c2", "c2", 800, 600);
     TGraphErrors GR_zy(y.size(), &z[0], &y[0], &dz[0], &dy[0]);
     prev_my = (y.back() - y[0]) / (z.back() - z[0]);
     prev_y0 = y[0] - prev_my * z[0];
@@ -81,6 +93,15 @@ FitData Fit(Event *event) {
     fitdata.my = line.GetParameter(1);
     fitdata.my_err = line.GetParError(1);
     fitdata.chi2zy = line.GetChisquare();
+    title = "ZY evID:" + std::to_string(i);
+    GR_zy.SetTitle(title.c_str());
+    GR_zy.GetXaxis()->SetTitle("Z [mm]");
+    GR_zy.GetYaxis()->SetTitle("Y [mm]");
+    GR_zy.Draw("AP");
+    if (saveFigs) {
+        name = "../data/fit_img/zy_" + std::to_string(i) + ".png";
+        c2.SaveAs(name.c_str());
+    }
     return fitdata;
 }
 
@@ -118,9 +139,7 @@ int main() {
         if ((event->detectorData.posX).empty()) {
             continue;
         } else {
-            fitdata = Fit(event);
-            // If the fit results are meaningless (x0,y0 outside the world size), skip the event
-            if (abs(fitdata.x0) > GeometryParameters::worldSize || abs(fitdata.y0) > GeometryParameters::worldSize) {
+            fitdata = Fit(event, i);
                 continue;
             }
             // Fill the ntuple with the fit results
