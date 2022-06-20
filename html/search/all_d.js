@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['test_5fcase_0',['TEST_CASE',['../_data_manager_test_8cpp.html#a5d2e85582a54c535325ca7cb060e4356',1,'TEST_CASE(&quot;Verify that DataManager is a singleton&quot;):&#160;DataManagerTest.cpp'],['../_data_manager_m_t_test_8cpp.html#aa13251e05e7143e9927082b47bd166b6',1,'TEST_CASE(&quot;Verify that DataManagerMT is a singleton&quot;):&#160;DataManagerMTTest.cpp'],['../_data_manager_m_t_test_8cpp.html#a4690fb3465c8781e22d98f95903e911e',1,'TEST_CASE(&quot;Verify that DataManagerMt has a vector of different instances of DataManager&quot;):&#160;DataManagerMTTest.cpp'],['../_read_out_test_8cpp.html#a9277e0e5c282003d59289835d2ce0342',1,'TEST_CASE(&quot;Test the closest_value function&quot;):&#160;ReadOutTest.cpp'],['../_read_out_test_8cpp.html#ac65d21e8754a2b8502ee4db5e0e38fc8',1,'TEST_CASE(&quot;Test the read out on single axis&quot;):&#160;ReadOutTest.cpp'],['../_read_out_test_8cpp.html#aeb2373960b7fde351c40a4b90bba8b1f',1,'TEST_CASE(&quot;Test the read out passing the strings&quot;):&#160;ReadOutTest.cpp']]],
-  ['theta_1',['theta',['../class_truth_beam_data.html#a42cae571a42f6337db40e7a65f9e4cab',1,'TruthBeamData']]],
-  ['trackg4ps_2',['TrackG4PS',['../index.html',1,'']]],
-  ['trackid_3',['TrackID',['../class_detector_data.html#a6edbd0d091bd36d579c556dd0fc7d980',1,'DetectorData']]],
-  ['triggerparameters_4',['TriggerParameters',['../namespace_trigger_parameters.html',1,'']]],
-  ['truthbeamdata_5',['TruthBeamData',['../class_truth_beam_data.html',1,'']]],
-  ['truthbeamdata_6',['truthBeamData',['../class_event.html#a1b892618f44f2668f5e4dd5673995598',1,'Event']]],
-  ['truthbeamdata_7',['TruthBeamData',['../class_truth_beam_data.html#a8246e42598cab028ef174580b9bdba86',1,'TruthBeamData']]]
+  ['sensitivedetector_2ecc_0',['SensitiveDetector.cc',['../_sensitive_detector_8cc.html',1,'']]],
+  ['sensitivedetector_2ehh_1',['SensitiveDetector.hh',['../_sensitive_detector_8hh.html',1,'']]],
+  ['setcuts_2',['SetCuts',['../class_my_physics_list.html#a9ce516bb1f1de0addd933cb75e8e1a20',1,'MyPhysicsList']]],
+  ['si_3',['Si',['../namespace_materials.html#aa4297481113f745507cdf76480a37365',1,'Materials']]],
+  ['sidelength_4',['sideLength',['../_user_parameters_8hh.html#ac8a722989c5d57aa81681338d6f93572',1,'UserParameters.hh']]],
+  ['stripdimx_5',['stripDimX',['../namespace_read_out_parameters.html#a84d23f2c3fb5466fe369888a5db75800',1,'ReadOutParameters']]],
+  ['stripdimy_6',['stripDimY',['../namespace_read_out_parameters.html#a03de47db60e997d5965a29631887dfbf',1,'ReadOutParameters']]],
+  ['systemparameters_7',['SystemParameters',['../namespace_system_parameters.html',1,'']]]
 ];

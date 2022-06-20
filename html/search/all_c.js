@@ -1,11 +1,10 @@
 var searchData=
 [
-  ['sensitivedetector_2ecc_0',['SensitiveDetector.cc',['../_sensitive_detector_8cc.html',1,'']]],
-  ['sensitivedetector_2ehh_1',['SensitiveDetector.hh',['../_sensitive_detector_8hh.html',1,'']]],
-  ['setcuts_2',['SetCuts',['../class_my_physics_list.html#a9ce516bb1f1de0addd933cb75e8e1a20',1,'MyPhysicsList']]],
-  ['si_3',['Si',['../namespace_materials.html#aa4297481113f745507cdf76480a37365',1,'Materials']]],
-  ['sidelength_4',['sideLength',['../_user_parameters_8hh.html#ac8a722989c5d57aa81681338d6f93572',1,'UserParameters.hh']]],
-  ['stripdimx_5',['stripDimX',['../namespace_read_out_parameters.html#a84d23f2c3fb5466fe369888a5db75800',1,'ReadOutParameters']]],
-  ['stripdimy_6',['stripDimY',['../namespace_read_out_parameters.html#a03de47db60e997d5965a29631887dfbf',1,'ReadOutParameters']]],
-  ['systemparameters_7',['SystemParameters',['../namespace_system_parameters.html',1,'']]]
+  ['readout_0',['ReadOut',['../class_read_out.html',1,'']]],
+  ['readout_2ecpp_1',['ReadOut.cpp',['../_read_out_8cpp.html',1,'']]],
+  ['readout_2ehh_2',['ReadOut.hh',['../_read_out_8hh.html',1,'']]],
+  ['readoutparameters_3',['ReadOutParameters',['../namespace_read_out_parameters.html',1,'']]],
+  ['readouttest_2ecpp_4',['ReadOutTest.cpp',['../_read_out_test_8cpp.html',1,'']]],
+  ['runaction_2ecc_5',['RunAction.cc',['../_run_action_8cc.html',1,'']]],
+  ['runaction_2ehh_6',['RunAction.hh',['../_run_action_8hh.html',1,'']]]
 ];
