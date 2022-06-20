@@ -107,6 +107,8 @@ FitData Fit(Event *event, int i, bool saveFigs = false) {
         name = "../data/fit_img/zy_" + std::to_string(i) + ".png";
         c2.SaveAs(name.c_str());
     }
+    // Check that the fit on both projection was successful
+    fitdata.status = status_zx && status_zy;
     return fitdata;
 }
 
