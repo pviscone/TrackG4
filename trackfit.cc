@@ -40,13 +40,20 @@ struct FitData {
  * This is a simple toy model for tracking in which are performed two different fits in the ZX and ZY planes.
  * The frame of coordinate is the frame of the world of the simulation.
  *
+ * The initial parameters for the fit are estimated computing the parameter of the line considering the first and the last point
+ * on the z axis
+ *
  *
  * @param event Event class object containing the hits to be fitted
+ * @param i: index of the event
+ * @param saveFigs: boolean that indicates if the figures are saved
+ *
  * @return FitData The struct containing the result of the fit
  */
 FitData Fit(Event *event, int i, bool saveFigs = false) {
     FitData fitdata;
     std::string name, title;
+    double prev_x0, prev_y0, prev_mx, prev_my;
     // create the linear function to fit (a line in the range of the world size)
     TF1 line("line", "pol1", -GeometryParameters::worldSize, GeometryParameters::worldSize);
 
