@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jun 20 02:25:23 2022
+# Make data base, printed on Mon Jun 20 18:02:02 2022
 
 # Variables
 
@@ -23,7 +23,7 @@ GTK_RC_FILES = /etc/gtk/gtkrc:/home/pviscone/.gtkrc:/home/pviscone/.config/gtkrc
 # environment
 CSF_EXCEPTION_PROMPT = 1
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-119aaa07-4269-4096-b3a1-f307e4556b09.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-d2e5e7cb-b2da-4959-8d80-bf8929bc2070.sock
 # environment
 CSF_XmlOcafResource = /usr/share/opencascade/resources/XmlOcafResource
 # environment
@@ -79,7 +79,7 @@ VSCODE_LOG_STACK = false
 # environment
 VSCODE_CODE_CACHE_PATH = /home/pviscone/.config/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session2
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
 # environment
 CSF_ShadersDirectory = /usr/share/opencascade/resources/Shaders
 # environment
@@ -127,7 +127,7 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 96520
+VSCODE_PID = 2123
 # environment
 XDG_SESSION_TYPE = x11
 # environment
@@ -141,7 +141,7 @@ CSF_XSMessage = /usr/share/opencascade/resources/XSMessage
 # environment
 DRAWDEFAULT = /usr/share/opencascade/resources/DrawResources/DrawDefault
 # environment
-SESSION_MANAGER = local/pviscon-desktop:@/tmp/.ICE-unix/1360,unix/pviscon-desktop:/tmp/.ICE-unix/1360
+SESSION_MANAGER = local/pviscon-desktop:@/tmp/.ICE-unix/1648,unix/pviscon-desktop:/tmp/.ICE-unix/1648
 # automatic
 *F = $(notdir $*)
 # environment
@@ -195,7 +195,7 @@ MOTD_SHOWN = pam
 # environment
 LC_TIME = it_IT.UTF-8
 # environment
-INVOCATION_ID = 6fc61c3cf94140caaccaf01d4aae50cc
+INVOCATION_ID = c03e11a5b5594053bc6104f4f2c86f33
 # environment
 G4SAIDXSDATA = /usr/share/geant4-saiddata/G4SAIDDATA2.0
 # environment
@@ -241,7 +241,7 @@ XDG_VTNR = 1
 # makefile
 .DEFAULT_GOAL := 
 # environment
-SYSTEMD_EXEC_PID = 1380
+SYSTEMD_EXEC_PID = 1672
 # environment
 CSF_TObjMessage = /usr/share/opencascade/resources/TObj
 # environment
@@ -255,7 +255,7 @@ MAKE_VERSION := 4.3
 # environment
 KDE_SESSION_UID = 1000
 # environment
-MANAGERPID = 1277
+MANAGERPID = 1570
 # environment
 LC_MEASUREMENT = it_IT.UTF-8
 # environment
@@ -277,7 +277,7 @@ G4ABLADATA = /usr/share/geant4-abladata/G4ABLA3.1
 # environment
 CSF_IGESDefaults = /usr/share/opencascade/resources/XSTEPResource
 # environment
-JOURNAL_STREAM = 8:26854
+JOURNAL_STREAM = 8:27436
 # environment
 HADOOP_CONF_DIR = /etc/hadoop
 # environment
@@ -298,6 +298,7 @@ VSCODE_IPC_HOOK = /run/user/1000/vscode-35b12023-1.68.1-main.sock
 XDG_SESSION_ID = 2
 # environment
 XCURSOR_SIZE = 24
+ 
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -329,9 +330,9 @@ LC_IDENTIFICATION = it_IT.UTF-8
 
 # Directories
 
-# . (device 38, inode 5225491): 21 files, no impossibilities.
+# . (device 38, inode 5225491): 22 files, no impossibilities.
 
-# 21 files, no impossibilities in 1 directories.
+# 22 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -381,12 +382,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 29 / storage = 254 B / avg = 8 B
-# current buf: size = 8162 B / used = 254 B / count = 29 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 30 / storage = 268 B / avg = 8 B
+# current buf: size = 8162 B / used = 268 B / count = 30 / avg = 8 B
 
-# strcache performance: lookups = 32 / hit rate = 9%
+# strcache performance: lookups = 33 / hit rate = 9%
 # hash-table stats:
-# Load=29/8192=0%, Rehash=0, Collisions=0/32=0%
-# Finished Make data base on Mon Jun 20 02:25:23 2022
+# Load=30/8192=0%, Rehash=0, Collisions=0/33=0%
+# Finished Make data base on Mon Jun 20 18:02:03 2022
 
  
