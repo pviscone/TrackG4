@@ -77,6 +77,8 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;../include/EventData.hh&quot;</code><br />
 <code>#include &quot;../include/UserParameters.hh&quot;</code><br />
+<code>#include &lt;TAxis.h&gt;</code><br />
+<code>#include &lt;TCanvas.h&gt;</code><br />
 <code>#include &lt;TF1.h&gt;</code><br />
 <code>#include &lt;TFile.h&gt;</code><br />
 <code>#include &lt;TGraphErrors.h&gt;</code><br />
@@ -85,6 +87,7 @@ $(function() {
 <code>#include &lt;TTree.h&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
 </div>
 <p><a href="trackfit_8cc_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -96,16 +99,16 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ac76592677ab9a35671b83bf2236da3eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_fit_data.html">FitData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trackfit_8cc.html#ac76592677ab9a35671b83bf2236da3eb">Fit</a> (<a class="el" href="class_event.html">Event</a> *event)</td></tr>
-<tr class="memdesc:ac76592677ab9a35671b83bf2236da3eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that, given a event data object, returns the fitdata struct containing the results of the fit.  <a href="trackfit_8cc.html#ac76592677ab9a35671b83bf2236da3eb">More...</a><br /></td></tr>
-<tr class="separator:ac76592677ab9a35671b83bf2236da3eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a066fb79c2e2be188cf0bf773f64d1c23"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_fit_data.html">FitData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trackfit_8cc.html#a066fb79c2e2be188cf0bf773f64d1c23">Fit</a> (<a class="el" href="class_event.html">Event</a> *event, int i, bool saveFigs=false)</td></tr>
+<tr class="memdesc:a066fb79c2e2be188cf0bf773f64d1c23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that, given a event data object, returns the fitdata struct containing the results of the fit.  <a href="trackfit_8cc.html#a066fb79c2e2be188cf0bf773f64d1c23">More...</a><br /></td></tr>
+<tr class="separator:a066fb79c2e2be188cf0bf773f64d1c23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="trackfit_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the fit results in a root file.  <a href="trackfit_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">More...</a><br /></td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ac76592677ab9a35671b83bf2236da3eb" name="ac76592677ab9a35671b83bf2236da3eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac76592677ab9a35671b83bf2236da3eb">&#9670;&nbsp;</a></span>Fit()</h2>
+<a id="a066fb79c2e2be188cf0bf773f64d1c23" name="a066fb79c2e2be188cf0bf773f64d1c23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a066fb79c2e2be188cf0bf773f64d1c23">&#9670;&nbsp;</a></span>Fit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -114,27 +117,46 @@ Functions</h2></td></tr>
           <td class="memname"><a class="el" href="struct_fit_data.html">FitData</a> Fit </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_event.html">Event</a> *&#160;</td>
-          <td class="paramname"><em>event</em></td><td>)</td>
+          <td class="paramname"><em>event</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>saveFigs</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Function that, given a event data object, returns the fitdata struct containing the results of the fit. </p>
 <p >This is a simple toy model for tracking in which are performed two different fits in the ZX and ZY planes. The frame of coordinate is the frame of the world of the simulation.</p>
+<p >The initial parameters for the fit are estimated computing the parameter of the line considering the first and the last point on the z axis</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">event</td><td><a class="el" href="class_event.html" title="Class to store the data of the simulation.">Event</a> class object containing the hits to be fitted </td></tr>
+    <tr><td class="paramname">i</td><td>index of the event </td></tr>
+    <tr><td class="paramname">saveFigs</td><td>boolean that indicates if the figures are saved</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_fit_data.html" title="Struct that contains the results of the fit of the track.">FitData</a> The struct containing the result of the fit </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="trackfit_8cc_source.html#l00043">43</a> of file <a class="el" href="trackfit_8cc_source.html">trackfit.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="trackfit_8cc_source.html#l00053">53</a> of file <a class="el" href="trackfit_8cc_source.html">trackfit.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="trackfit_8cc_source.html#l00029">FitData::chi2zx</a>, <a class="el" href="trackfit_8cc_source.html#l00030">FitData::chi2zy</a>, <a class="el" href="_event_data_8hh_source.html#l00063">Event::detectorData</a>, <a class="el" href="_user_parameters_8hh_source.html#l00065">GeometryParameters::moduleDimZ</a>, <a class="el" href="trackfit_8cc_source.html#l00025">FitData::mx</a>, <a class="el" href="trackfit_8cc_source.html#l00026">FitData::mx_err</a>, <a class="el" href="trackfit_8cc_source.html#l00027">FitData::my</a>, <a class="el" href="trackfit_8cc_source.html#l00028">FitData::my_err</a>, <a class="el" href="_user_parameters_8hh_source.html#l00050">ReadOutParameters::pixelDimX</a>, <a class="el" href="_user_parameters_8hh_source.html#l00052">ReadOutParameters::pixelDimY</a>, <a class="el" href="_user_parameters_8hh_source.html#l00046">ReadOutParameters::stripDimX</a>, <a class="el" href="_user_parameters_8hh_source.html#l00048">ReadOutParameters::stripDimY</a>, <a class="el" href="_user_parameters_8hh_source.html#l00077">GeometryParameters::worldSize</a>, <a class="el" href="trackfit_8cc_source.html#l00021">FitData::x0</a>, <a class="el" href="trackfit_8cc_source.html#l00022">FitData::x0_err</a>, <a class="el" href="trackfit_8cc_source.html#l00023">FitData::y0</a>, and <a class="el" href="trackfit_8cc_source.html#l00024">FitData::y0_err</a>.</p>
+<p class="reference">References <a class="el" href="trackfit_8cc_source.html#l00032">FitData::chi2zx</a>, <a class="el" href="trackfit_8cc_source.html#l00033">FitData::chi2zy</a>, <a class="el" href="_event_data_8hh_source.html#l00063">Event::detectorData</a>, <a class="el" href="_user_parameters_8hh_source.html#l00065">GeometryParameters::moduleDimZ</a>, <a class="el" href="trackfit_8cc_source.html#l00028">FitData::mx</a>, <a class="el" href="trackfit_8cc_source.html#l00029">FitData::mx_err</a>, <a class="el" href="trackfit_8cc_source.html#l00030">FitData::my</a>, <a class="el" href="trackfit_8cc_source.html#l00031">FitData::my_err</a>, <a class="el" href="_user_parameters_8hh_source.html#l00050">ReadOutParameters::pixelDimX</a>, <a class="el" href="_user_parameters_8hh_source.html#l00052">ReadOutParameters::pixelDimY</a>, <a class="el" href="trackfit_8cc_source.html#l00034">FitData::status</a>, <a class="el" href="_user_parameters_8hh_source.html#l00046">ReadOutParameters::stripDimX</a>, <a class="el" href="_user_parameters_8hh_source.html#l00048">ReadOutParameters::stripDimY</a>, <a class="el" href="_user_parameters_8hh_source.html#l00077">GeometryParameters::worldSize</a>, <a class="el" href="trackfit_8cc_source.html#l00024">FitData::x0</a>, <a class="el" href="trackfit_8cc_source.html#l00025">FitData::x0_err</a>, <a class="el" href="trackfit_8cc_source.html#l00026">FitData::y0</a>, and <a class="el" href="trackfit_8cc_source.html#l00027">FitData::y0_err</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="trackfit_8cc_source.html#l00096">main()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="trackfit_8cc_source.html#l00138">main()</a>.</p>
 
 </div>
 </div>
@@ -164,9 +186,9 @@ Functions</h2></td></tr>
 </ol>
 <p >All the distance units are in mm </p>
 
-<p class="definition">Definition at line <a class="el" href="trackfit_8cc_source.html#l00096">96</a> of file <a class="el" href="trackfit_8cc_source.html">trackfit.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="trackfit_8cc_source.html#l00138">138</a> of file <a class="el" href="trackfit_8cc_source.html">trackfit.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="trackfit_8cc_source.html#l00029">FitData::chi2zx</a>, <a class="el" href="trackfit_8cc_source.html#l00030">FitData::chi2zy</a>, <a class="el" href="trackfit_8cc_source.html#l00043">Fit()</a>, <a class="el" href="trackfit_8cc_source.html#l00025">FitData::mx</a>, <a class="el" href="trackfit_8cc_source.html#l00026">FitData::mx_err</a>, <a class="el" href="trackfit_8cc_source.html#l00027">FitData::my</a>, <a class="el" href="trackfit_8cc_source.html#l00028">FitData::my_err</a>, <a class="el" href="_user_parameters_8hh_source.html#l00077">GeometryParameters::worldSize</a>, <a class="el" href="trackfit_8cc_source.html#l00021">FitData::x0</a>, <a class="el" href="trackfit_8cc_source.html#l00022">FitData::x0_err</a>, <a class="el" href="trackfit_8cc_source.html#l00023">FitData::y0</a>, and <a class="el" href="trackfit_8cc_source.html#l00024">FitData::y0_err</a>.</p>
+<p class="reference">References <a class="el" href="trackfit_8cc_source.html#l00032">FitData::chi2zx</a>, <a class="el" href="trackfit_8cc_source.html#l00033">FitData::chi2zy</a>, <a class="el" href="trackfit_8cc_source.html#l00053">Fit()</a>, <a class="el" href="trackfit_8cc_source.html#l00028">FitData::mx</a>, <a class="el" href="trackfit_8cc_source.html#l00029">FitData::mx_err</a>, <a class="el" href="trackfit_8cc_source.html#l00030">FitData::my</a>, <a class="el" href="trackfit_8cc_source.html#l00031">FitData::my_err</a>, <a class="el" href="trackfit_8cc_source.html#l00034">FitData::status</a>, <a class="el" href="_user_parameters_8hh_source.html#l00077">GeometryParameters::worldSize</a>, <a class="el" href="trackfit_8cc_source.html#l00024">FitData::x0</a>, <a class="el" href="trackfit_8cc_source.html#l00025">FitData::x0_err</a>, <a class="el" href="trackfit_8cc_source.html#l00026">FitData::y0</a>, and <a class="el" href="trackfit_8cc_source.html#l00027">FitData::y0_err</a>.</p>
 
 </div>
 </div>
