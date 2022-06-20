@@ -28,6 +28,7 @@ struct FitData {
     double my_err;
     double chi2zx;
     double chi2zy;
+    bool status;
 };
 
 /**
@@ -144,6 +145,8 @@ int main() {
             continue;
         } else {
             fitdata = Fit(event, i);
+            // If the fit results are meaningless (x0,y0 outside the world size) or unsuccessful, skip the event
+            if ((fitdata.status) || (abs(fitdata.x0) > GeometryParameters::worldSize) || (abs(fitdata.y0) > GeometryParameters::worldSize)) {
                 continue;
             }
             // Fill the ntuple with the fit results
