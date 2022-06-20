@@ -1,5 +1,7 @@
 #include "../include/EventData.hh"
 #include "../include/UserParameters.hh"
+#include <TAxis.h>
+#include <TCanvas.h>
 #include <TF1.h>
 #include <TFile.h>
 #include <TGraphErrors.h>
@@ -8,6 +10,7 @@
 #include <TTree.h>
 #include <iostream>
 #include <math.h>
+#include <string>
 
 /**
  * @struct FitData
