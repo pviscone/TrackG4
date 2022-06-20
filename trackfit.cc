@@ -40,20 +40,13 @@ struct FitData {
  * This is a simple toy model for tracking in which are performed two different fits in the ZX and ZY planes.
  * The frame of coordinate is the frame of the world of the simulation.
  *
- * The initial parameters for the fit are estimated computing the parameter of the line considering the first and the last point
- * on the z axis
- *
  *
  * @param event Event class object containing the hits to be fitted
- * @param i: index of the event
- * @param saveFigs: boolean that indicates if the figures are saved
- *
  * @return FitData The struct containing the result of the fit
  */
 FitData Fit(Event *event, int i, bool saveFigs = false) {
     FitData fitdata;
     std::string name, title;
-    double prev_x0, prev_y0, prev_mx, prev_my;
     // create the linear function to fit (a line in the range of the world size)
     TF1 line("line", "pol1", -GeometryParameters::worldSize, GeometryParameters::worldSize);
 
@@ -147,7 +140,7 @@ int main() {
     TFile *results = new TFile("../data/fit_results.root", "RECREATE");
     TNtuple *resNtuple = new TNtuple("fitResults", "fitResults", "evID:x0:x0_err:mx:mx_err:chi2zx:y0:y0_err:my:my_err:chi2zy");
     FitData fitdata;
-
+    int nonEmptyEventCounter = 0;
     // Loop over the events in the file
     for (int i = 0; i < tree->GetEntries(); i++) {
         tree->GetEntry(i);
@@ -156,6 +149,7 @@ int main() {
         if ((event->detectorData.posX).empty()) {
             continue;
         } else {
+            nonEmptyEventCounter++;
             fitdata = Fit(event, i);
             // If the fit results are meaningless (x0,y0 outside the world size) or unsuccessful, skip the event
             if ((fitdata.status) || (abs(fitdata.x0) > GeometryParameters::worldSize) || (abs(fitdata.y0) > GeometryParameters::worldSize)) {
@@ -166,6 +160,7 @@ int main() {
                             fitdata.y0, fitdata.y0_err, fitdata.my, fitdata.my_err, fitdata.chi2zy);
         }
     }
+    std::cout << "Number of events with hits: " << nonEmptyEventCounter << std::endl;
     // Write and close the file
     resNtuple->Write();
     results->Close();
