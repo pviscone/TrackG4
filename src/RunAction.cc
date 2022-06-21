@@ -8,6 +8,9 @@ void MyRunAction::BeginOfRunAction(const G4Run *)
 {
 
     G4int threadId = G4Threading::G4GetThreadId();
+    if(threadId==-1){
+        DataManagerMT::GetInstance();
+    }
     // Exclude the master thread (id=-1) from the file creation
     if (threadId > -1)
     {
