@@ -4,6 +4,7 @@ build/cmake*
 build/output*
 build/CosmicMuSimulation
 build/tests_executable
+build/Makefile
 build/track
 analysis/
 data/fit_img/
