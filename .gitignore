@@ -6,5 +6,6 @@ build/CosmicMuSimulation
 build/tests_executable
 build/Makefile
 build/track
+build/*.mac
 analysis/
 data/fit_img/
