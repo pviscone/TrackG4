@@ -8,8 +8,8 @@ var searchData=
   ['modulespacingx_5',['moduleSpacingX',['../namespace_geometry_parameters.html#a3ce7b5308aabc7ffbf0ff8dc412e1bd9',1,'GeometryParameters']]],
   ['modulespacingy_6',['moduleSpacingY',['../namespace_geometry_parameters.html#a2763e94bd416b1eff142b09fa73921e7',1,'GeometryParameters']]],
   ['modulespacingz_7',['moduleSpacingZ',['../namespace_geometry_parameters.html#a46a0cbb7abc6811fc93ad9d6010ecbee',1,'GeometryParameters']]],
-  ['mx_8',['mx',['../struct_fit_data.html#acb3379fd05292a0685a377381b1d8bda',1,'FitData']]],
-  ['mx_5ferr_9',['mx_err',['../struct_fit_data.html#a9a5aaa4de5d1af6c375e1ce667da1c37',1,'FitData']]],
-  ['my_10',['my',['../struct_fit_data.html#a690f4ba2a46c4784a48d5f5a2ac50fb3',1,'FitData']]],
-  ['my_5ferr_11',['my_err',['../struct_fit_data.html#a64ca045b8229ae4063d6193bc8368ff1',1,'FitData']]]
+  ['mx_8',['mx',['../struct_fit_data.html#a7641748d9ca819fe5a4fe7b34a745ba1',1,'FitData']]],
+  ['mx_5ferr_9',['mx_err',['../struct_fit_data.html#ab1cb1564c553b040534189ce9bff10c6',1,'FitData']]],
+  ['my_10',['my',['../struct_fit_data.html#ad3e7d524a6814f3270a4e6d8158afbb2',1,'FitData']]],
+  ['my_5ferr_11',['my_err',['../struct_fit_data.html#af9c8cbb17b5bb78650ce865e60605f8b',1,'FitData']]]
 ];
