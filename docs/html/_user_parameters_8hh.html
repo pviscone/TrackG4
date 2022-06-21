@@ -79,8 +79,8 @@ $(function() {
   <div class="headertitle"><div class="title">UserParameters.hh File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;G4NistManager.hh&quot;</code><br />
-<code>#include &quot;G4Material.hh&quot;</code><br />
+<div class="textblock"><code>#include &quot;G4Material.hh&quot;</code><br />
+<code>#include &quot;G4NistManager.hh&quot;</code><br />
 <code>#include &quot;G4SystemOfUnits.hh&quot;</code><br />
 <code>#include &lt;thread&gt;</code><br />
 </div>
@@ -88,8 +88,14 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
 Namespaces</h2></td></tr>
+<tr class="memitem:namespace_trigger_parameters"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_trigger_parameters.html">TriggerParameters</a></td></tr>
+<tr class="memdesc:namespace_trigger_parameters"><td class="mdescLeft">&#160;</td><td class="mdescRight">Just a container for the parameter of the Trigger. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespace_system_parameters"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_system_parameters.html">SystemParameters</a></td></tr>
 <tr class="memdesc:namespace_system_parameters"><td class="mdescLeft">&#160;</td><td class="mdescRight">Just a container for the system parameters of the simulation. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespace_read_out_parameters"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_read_out_parameters.html">ReadOutParameters</a></td></tr>
+<tr class="memdesc:namespace_read_out_parameters"><td class="mdescLeft">&#160;</td><td class="mdescRight">Just a container for the parameters of the readout. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespace_geometry_parameters"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_geometry_parameters.html">GeometryParameters</a></td></tr>
 <tr class="memdesc:namespace_geometry_parameters"><td class="mdescLeft">&#160;</td><td class="mdescRight">Just a container for the geometry parameters of the detector. <br /></td></tr>
@@ -100,22 +106,38 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespace_beam_parameters"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_beam_parameters.html">BeamParameters</a></td></tr>
 <tr class="memdesc:namespace_beam_parameters"><td class="mdescLeft">&#160;</td><td class="mdescRight">Just a container for the beam parameters of the simulation. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespace_outer_parameters"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_outer_parameters.html">OuterParameters</a></td></tr>
-<tr class="memdesc:namespace_outer_parameters"><td class="mdescLeft">&#160;</td><td class="mdescRight">A container for the parameters of the output data. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:namespace_output_parameters"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_output_parameters.html">OutputParameters</a></td></tr>
+<tr class="memdesc:namespace_output_parameters"><td class="mdescLeft">&#160;</td><td class="mdescRight">Just a container for the parameters of the output data. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a68c50f6ae1ff7058b5a6a45db7055cf1"><td class="memItemLeft" align="right" valign="top">G4double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_trigger_parameters.html#a68c50f6ae1ff7058b5a6a45db7055cf1">TriggerParameters::energyCut</a> =40 *keV</td></tr>
+<tr class="separator:a68c50f6ae1ff7058b5a6a45db7055cf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8a722989c5d57aa81681338d6f93572"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_user_parameters_8hh.html#ac8a722989c5d57aa81681338d6f93572">sideLength</a></td></tr>
 <tr class="memdesc:ac8a722989c5d57aa81681338d6f93572"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the length of the side of the box given the number of modules, their size and spacing.  <a href="_user_parameters_8hh.html#ac8a722989c5d57aa81681338d6f93572">More...</a><br /></td></tr>
 <tr class="separator:ac8a722989c5d57aa81681338d6f93572"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac301f75a096ad8b3c57504179c39775b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_system_parameters.html#ac301f75a096ad8b3c57504179c39775b">SystemParameters::nThreads</a> = std::thread::hardware_concurrency()</td></tr>
 <tr class="separator:ac301f75a096ad8b3c57504179c39775b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65d74a94eaba495be26919fbde95e752"><td class="memItemLeft" align="right" valign="top">G4double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_geometry_parameters.html#a65d74a94eaba495be26919fbde95e752">GeometryParameters::moduleDimX</a> = 20 * cm</td></tr>
+<tr class="memitem:a690fbbe0bbb7c0177bb5ac807f034daf"><td class="memItemLeft" align="right" valign="top">G4int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_read_out_parameters.html#a690fbbe0bbb7c0177bb5ac807f034daf">ReadOutParameters::nXStrips</a> = 960</td></tr>
+<tr class="separator:a690fbbe0bbb7c0177bb5ac807f034daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84d23f2c3fb5466fe369888a5db75800"><td class="memItemLeft" align="right" valign="top">G4double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_read_out_parameters.html#a84d23f2c3fb5466fe369888a5db75800">ReadOutParameters::stripDimX</a> = 0.1 * mm</td></tr>
+<tr class="separator:a84d23f2c3fb5466fe369888a5db75800"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91d45736bd6069070689010c3708aec5"><td class="memItemLeft" align="right" valign="top">G4int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_read_out_parameters.html#a91d45736bd6069070689010c3708aec5">ReadOutParameters::nYStrips</a> = 2</td></tr>
+<tr class="separator:a91d45736bd6069070689010c3708aec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03de47db60e997d5965a29631887dfbf"><td class="memItemLeft" align="right" valign="top">G4double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_read_out_parameters.html#a03de47db60e997d5965a29631887dfbf">ReadOutParameters::stripDimY</a> = 25 * mm</td></tr>
+<tr class="separator:a03de47db60e997d5965a29631887dfbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee82d1303cfa9aefabe53682ffd6ba95"><td class="memItemLeft" align="right" valign="top">G4int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_read_out_parameters.html#aee82d1303cfa9aefabe53682ffd6ba95">ReadOutParameters::nXPixels</a> = 960</td></tr>
+<tr class="separator:aee82d1303cfa9aefabe53682ffd6ba95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab82c38e7859ea3f83322b387407446fd"><td class="memItemLeft" align="right" valign="top">G4double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_read_out_parameters.html#ab82c38e7859ea3f83322b387407446fd">ReadOutParameters::pixelDimX</a> = 0.1 * mm</td></tr>
+<tr class="separator:ab82c38e7859ea3f83322b387407446fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dfb5761908b81deb2057d28f90e2139"><td class="memItemLeft" align="right" valign="top">G4int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_read_out_parameters.html#a4dfb5761908b81deb2057d28f90e2139">ReadOutParameters::nYPixels</a> = 32</td></tr>
+<tr class="separator:a4dfb5761908b81deb2057d28f90e2139"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae480bd8f3732f4eccf3b397f64c1555f"><td class="memItemLeft" align="right" valign="top">G4double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_read_out_parameters.html#ae480bd8f3732f4eccf3b397f64c1555f">ReadOutParameters::pixelDimY</a> = 1.5625 * mm</td></tr>
+<tr class="separator:ae480bd8f3732f4eccf3b397f64c1555f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65d74a94eaba495be26919fbde95e752"><td class="memItemLeft" align="right" valign="top">G4double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_geometry_parameters.html#a65d74a94eaba495be26919fbde95e752">GeometryParameters::moduleDimX</a> = <a class="el" href="namespace_read_out_parameters.html#a690fbbe0bbb7c0177bb5ac807f034daf">ReadOutParameters::nXStrips</a> * <a class="el" href="namespace_read_out_parameters.html#a84d23f2c3fb5466fe369888a5db75800">ReadOutParameters::stripDimX</a></td></tr>
 <tr class="separator:a65d74a94eaba495be26919fbde95e752"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32b118028fd9493ffa4a2005305c574d"><td class="memItemLeft" align="right" valign="top">G4double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_geometry_parameters.html#a32b118028fd9493ffa4a2005305c574d">GeometryParameters::moduleDimY</a> = 5 * cm</td></tr>
+<tr class="memitem:a32b118028fd9493ffa4a2005305c574d"><td class="memItemLeft" align="right" valign="top">G4double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_geometry_parameters.html#a32b118028fd9493ffa4a2005305c574d">GeometryParameters::moduleDimY</a> = <a class="el" href="namespace_read_out_parameters.html#a91d45736bd6069070689010c3708aec5">ReadOutParameters::nYStrips</a> * <a class="el" href="namespace_read_out_parameters.html#a03de47db60e997d5965a29631887dfbf">ReadOutParameters::stripDimY</a></td></tr>
 <tr class="separator:a32b118028fd9493ffa4a2005305c574d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab180c77d70d544948a6f365d7c931673"><td class="memItemLeft" align="right" valign="top">G4double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_geometry_parameters.html#ab180c77d70d544948a6f365d7c931673">GeometryParameters::moduleDimZ</a> = 0.3 * mm</td></tr>
 <tr class="separator:ab180c77d70d544948a6f365d7c931673"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,7 +155,7 @@ Variables</h2></td></tr>
 <tr class="separator:aa882b7dc6fbc1aa2ad87e227a3a5bd85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91d6de733cf761562085544a21d1cc10"><td class="memItemLeft" align="right" valign="top">G4int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_geometry_parameters.html#a91d6de733cf761562085544a21d1cc10">GeometryParameters::nOfLayers</a> = 5</td></tr>
 <tr class="separator:a91d6de733cf761562085544a21d1cc10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a570b2e932151afe5646b9299171256fc"><td class="memItemLeft" align="right" valign="top">G4double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_geometry_parameters.html#a570b2e932151afe5646b9299171256fc">GeometryParameters::worldSize</a> = 1.2 * std::max({<a class="el" href="_user_parameters_8hh.html#ac8a722989c5d57aa81681338d6f93572">sideLength</a>(moduleDimX, moduleSpacingX, nOfColsX), <a class="el" href="_user_parameters_8hh.html#ac8a722989c5d57aa81681338d6f93572">sideLength</a>(moduleDimY, moduleSpacingY, nOfColsY), <a class="el" href="_user_parameters_8hh.html#ac8a722989c5d57aa81681338d6f93572">sideLength</a>(moduleDimZ, moduleSpacingZ, nOfLayers)}) / 2</td></tr>
+<tr class="memitem:a570b2e932151afe5646b9299171256fc"><td class="memItemLeft" align="right" valign="top">G4double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_geometry_parameters.html#a570b2e932151afe5646b9299171256fc">GeometryParameters::worldSize</a> = 1 * std::max({<a class="el" href="_user_parameters_8hh.html#ac8a722989c5d57aa81681338d6f93572">sideLength</a>(moduleDimX, moduleSpacingX, nOfColsX), <a class="el" href="_user_parameters_8hh.html#ac8a722989c5d57aa81681338d6f93572">sideLength</a>(moduleDimY, moduleSpacingY, nOfColsY), <a class="el" href="_user_parameters_8hh.html#ac8a722989c5d57aa81681338d6f93572">sideLength</a>(moduleDimZ, moduleSpacingZ, nOfLayers)}) / 2</td></tr>
 <tr class="separator:a570b2e932151afe5646b9299171256fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8309d530acdf9f83c697beabd369348a"><td class="memItemLeft" align="right" valign="top">G4NistManager *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_materials.html#a8309d530acdf9f83c697beabd369348a">Materials::nist</a> = G4NistManager::Instance()</td></tr>
 <tr class="separator:a8309d530acdf9f83c697beabd369348a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,9 +190,8 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= [](G4double moduleDimOnAxis, G4double spacingOnAxis, G4int nOfCols)</div>
-<div class="line">{</div>
-<div class="line">        <span class="keywordflow">return</span> (moduleDimOnAxis + spacingOnAxis) * (nOfCols + 1);</div>
+<b>Initial value:</b><div class="fragment"><div class="line">= [](G4double moduleDimOnAxis, G4double spacingOnAxis, G4int nOfCols) {</div>
+<div class="line">    <span class="keywordflow">return</span> (moduleDimOnAxis + spacingOnAxis) * (nOfCols + 1);</div>
 <div class="line">}</div>
 </div><!-- fragment -->
 <p>Calculate the length of the side of the box given the number of modules, their size and spacing. </p>
@@ -184,7 +205,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The length of the side of the box </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_user_parameters_8hh_source.html#l00014">14</a> of file <a class="el" href="_user_parameters_8hh_source.html">UserParameters.hh</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_user_parameters_8hh_source.html#l00023">23</a> of file <a class="el" href="_user_parameters_8hh_source.html">UserParameters.hh</a>.</p>
 
 </div>
 </div>

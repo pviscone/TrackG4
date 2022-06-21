@@ -62,6 +62,10 @@ public:
     int eventID;
     DetectorData detectorData;
     TruthBeamData truthBeamData;
+    /**
+     * @brief Clear the detectorData vectors
+     *
+     */
     void Clear();
     Event() {}
     ~Event() {}

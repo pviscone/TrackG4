@@ -8,7 +8,7 @@
  *  **warning**: Due to the lack of compatibility between RunManager and RunManagerMT the simulation has to run in multithreading mode.
  * You can set the number of thread in the G4main.cc but you have to compile Geant with the flag -DG4_USE_THREADS.
  *
- * \subsection How to run the simulation
+ * \subsection HOW How to run the simulation
  * 1. Build and run the simulation in batch mode running the script G4batch.sh in the main folder.
  * The data will be saved in output.root in the build folder
  * 2. To run the tests runs the tests_executable in the build folder
@@ -17,7 +17,7 @@
  *  the fit results in fits_result.root in the data folder.If you want to modify this path
  * or save the plot images change the paths and the flags in trackfit.cc before step 1)
  *
- * \section PS module
+ * \section PSModules PS modules
  * A PS module is composed by a layer of strips and a layer of pixels.
  * The dimension of a single layer is 10cm x 5cm x 0.3mm and two layers are spaced by 4mm.
  *
@@ -26,7 +26,7 @@
  *
  * In the commissioning the PS modules are placed in a grid of 2 columns, 1 row and 5 layers.
  *
- * All the geometrical parameters can be modified in the header file ./include/UserParameters.hh
+ * All the geometrical parameters can be modified in the header file UserParameters.hh
  * The default parameters for the spacing values in the grid are 10cm x 10cm x 20cm
  *
  * \section Simulation
@@ -34,8 +34,8 @@
  * The simulation is performed with the Geant4.
  * The physics module used is G4EmStandardPhysics.
  *
- * \subsection Particle Gun
- * The class that manage the particle gun is MyGenerator in the ./src/Generator.cc file.
+ * \subsection PG Particle Gun
+ * The class that manage the particle gun is MyPrimaryGenerator .
  *
  * The particle gun generate positive and negative muons according to their real charge ratio \f$ \frac{\mu_{+}}{\mu_{-}} = 1.3 \f$
  *
@@ -64,18 +64,18 @@
  * - If the released energy of the hit is less than the threshold, the hit is discarded
  * - If there isn't at list two hit in 2 different PS layers, the hit is discarded
  *
- * The energy threshold is set to 40 keV and can be modified in the header file ./include/UserParameters.hh
+ * The energy threshold is set to 40 keV and can be modified in the header file UserParameters.hh
  *
  * \subsection ReadOut
- * The readout is performed by the class MyReadOut in the ./src/ReadOut.cc file.
+ * The readout is performed by the class ReadOut in the ReadOut.cc file.
  *
- * \subsection Output data
+ * \subsection DATA Output data
  * The results of the simulation are stored in a root file that contains a branch containing a event object defined in the ./include/EventData.hh file.
  *
  * During the simulation the data are managed by the class DataManagerMT. Each thread has its own DataManager object and manage a different file.
  * DatamanagerMT is a singleton that contains a vector of DataManager objects.
  *
- * - In the method MyGenerator::GeneratePrimaries that runs every time a beam is created the DataManagerMT object fill the event object with 
+ * - In the method MyPrimaryGenerator::GeneratePrimaries that runs every time a beam is created the DataManagerMT object fill the event object with 
  * the data of the beam
  * - In the method MySensitiveDetector::ProcessHits that runs at each step in the PS module the DataManagerMT object fill the event object with the data of the hit
  * - In the method MyEventAction::EndOfEventAction that runs at the end of the event the DataManagerMT object fill the event object with the data of the event

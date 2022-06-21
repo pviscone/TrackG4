@@ -72,6 +72,9 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_data_manager_m_t-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">DataManagerMT Class Reference</div></div>
 </div><!--header-->
@@ -96,6 +99,27 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a84f6d5288b2d7c5a71911bd3b8f83607"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_data_manager_m_t.html">DataManagerMT</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_manager_m_t.html#a84f6d5288b2d7c5a71911bd3b8f83607">GetInstance</a> ()</td></tr>
 <tr class="memdesc:a84f6d5288b2d7c5a71911bd3b8f83607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the instance of the class. The first time create the singleton, then return the pointer to it.  <a href="class_data_manager_m_t.html#a84f6d5288b2d7c5a71911bd3b8f83607">More...</a><br /></td></tr>
 <tr class="separator:a84f6d5288b2d7c5a71911bd3b8f83607"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:afb6f99e78ea596e0201395e0e1232e25"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_manager_m_t.html#afb6f99e78ea596e0201395e0e1232e25">DataManagerMT</a> ()</td></tr>
+<tr class="memdesc:afb6f99e78ea596e0201395e0e1232e25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private constructor.  <a href="class_data_manager_m_t.html#afb6f99e78ea596e0201395e0e1232e25">More...</a><br /></td></tr>
+<tr class="separator:afb6f99e78ea596e0201395e0e1232e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a62ace1d728da3673ef1a577ed235f977"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_manager_m_t.html#a62ace1d728da3673ef1a577ed235f977">nThreads</a> = SystemParameters::nThreads</td></tr>
+<tr class="memdesc:a62ace1d728da3673ef1a577ed235f977"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of thread used to run the simulation.  <a href="class_data_manager_m_t.html#a62ace1d728da3673ef1a577ed235f977">More...</a><br /></td></tr>
+<tr class="separator:a62ace1d728da3673ef1a577ed235f977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af413e4c2516a9f48610cb1e547620e85"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_data_manager.html">DataManager</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_manager_m_t.html#af413e4c2516a9f48610cb1e547620e85">dataManagerVector</a></td></tr>
+<tr class="memdesc:af413e4c2516a9f48610cb1e547620e85"><td class="mdescLeft">&#160;</td><td class="mdescRight">The vector of <a class="el" href="class_data_manager.html" title="This class manage TFiles and TTrees to store the data exploiting the Event class structure.">DataManager</a> objects.  <a href="class_data_manager_m_t.html#af413e4c2516a9f48610cb1e547620e85">More...</a><br /></td></tr>
+<tr class="separator:af413e4c2516a9f48610cb1e547620e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:abf19dcef3d6b0197b434a225954d239c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_data_manager_m_t.html">DataManagerMT</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_data_manager_m_t.html#abf19dcef3d6b0197b434a225954d239c">instanceMT</a> = nullptr</td></tr>
+<tr class="memdesc:abf19dcef3d6b0197b434a225954d239c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Private constructor.  <a href="class_data_manager_m_t.html#abf19dcef3d6b0197b434a225954d239c">More...</a><br /></td></tr>
+<tr class="separator:abf19dcef3d6b0197b434a225954d239c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Singleton class that manage the data in multithreading mode. </p>
@@ -104,6 +128,40 @@ This class is a singleton container for multiple instance of <a class="el" href=
 
 <p class="definition">Definition at line <a class="el" href="_data_manager_m_t_8hh_source.html#l00015">15</a> of file <a class="el" href="_data_manager_m_t_8hh_source.html">DataManagerMT.hh</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="afb6f99e78ea596e0201395e0e1232e25" name="afb6f99e78ea596e0201395e0e1232e25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb6f99e78ea596e0201395e0e1232e25">&#9670;&nbsp;</a></span>DataManagerMT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DataManagerMT::DataManagerMT </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Private constructor. </p>
+<p >The constructor is private because the class is a singleton. </p>
+
+<p class="definition">Definition at line <a class="el" href="_data_manager_m_t_8cc_source.html#l00005">5</a> of file <a class="el" href="_data_manager_m_t_8cc_source.html">DataManagerMT.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="_data_manager_m_t_8hh_source.html#l00040">dataManagerVector</a>, and <a class="el" href="_data_manager_m_t_8hh_source.html#l00031">nThreads</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_data_manager_m_t_8cc_source.html#l00025">GetInstance()</a>.</p>
+
+</div>
+</div>
 <a id="af2534e4d090646fb0179bae271036c3c" name="af2534e4d090646fb0179bae271036c3c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af2534e4d090646fb0179bae271036c3c">&#9670;&nbsp;</a></span>~DataManagerMT()</h2>
 
@@ -122,6 +180,8 @@ This class is a singleton container for multiple instance of <a class="el" href=
 <p>Destroy the <a class="el" href="class_data_manager_m_t.html" title="Singleton class that manage the data in multithreading mode.">DataManagerMT</a> object. </p>
 
 <p class="definition">Definition at line <a class="el" href="_data_manager_m_t_8cc_source.html#l00015">15</a> of file <a class="el" href="_data_manager_m_t_8cc_source.html">DataManagerMT.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="_data_manager_m_t_8hh_source.html#l00040">dataManagerVector</a>, <a class="el" href="_data_manager_m_t_8hh_source.html#l00023">instanceMT</a>, and <a class="el" href="_data_manager_m_t_8hh_source.html#l00031">nThreads</a>.</p>
 
 </div>
 </div>
@@ -154,7 +214,9 @@ This class is a singleton container for multiple instance of <a class="el" href=
 
 <p class="definition">Definition at line <a class="el" href="_data_manager_m_t_8cc_source.html#l00025">25</a> of file <a class="el" href="_data_manager_m_t_8cc_source.html">DataManagerMT.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_run_action_8cc_source.html#l00007">MyRunAction::BeginOfRunAction()</a>, <a class="el" href="_event_action_8cc_source.html#l00015">MyEventAction::EndOfEventAction()</a>, <a class="el" href="_run_action_8cc_source.html#l00023">MyRunAction::EndOfRunAction()</a>, <a class="el" href="_generator_8cc_source.html#l00055">MyPrimaryGenerator::GeneratePrimaries()</a>, and <a class="el" href="_data_manager_m_t_test_8cpp_source.html#l00007">TEST_CASE()</a>.</p>
+<p class="reference">References <a class="el" href="_data_manager_m_t_8cc_source.html#l00005">DataManagerMT()</a>, and <a class="el" href="_data_manager_m_t_8hh_source.html#l00023">instanceMT</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_run_action_8cc_source.html#l00007">MyRunAction::BeginOfRunAction()</a>, <a class="el" href="_event_action_8cc_source.html#l00016">MyEventAction::EndOfEventAction()</a>, <a class="el" href="_run_action_8cc_source.html#l00023">MyRunAction::EndOfRunAction()</a>, <a class="el" href="_generator_8cc_source.html#l00055">MyPrimaryGenerator::GeneratePrimaries()</a>, <a class="el" href="_sensitive_detector_8cc_source.html#l00022">MySensitiveDetector::ProcessHits()</a>, and <a class="el" href="_data_manager_m_t_test_8cpp_source.html#l00007">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -185,7 +247,97 @@ This class is a singleton container for multiple instance of <a class="el" href=
 
 <p class="definition">Definition at line <a class="el" href="_data_manager_m_t_8cc_source.html#l00035">35</a> of file <a class="el" href="_data_manager_m_t_8cc_source.html">DataManagerMT.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_run_action_8cc_source.html#l00007">MyRunAction::BeginOfRunAction()</a>, <a class="el" href="_event_action_8cc_source.html#l00015">MyEventAction::EndOfEventAction()</a>, <a class="el" href="_run_action_8cc_source.html#l00023">MyRunAction::EndOfRunAction()</a>, <a class="el" href="_generator_8cc_source.html#l00055">MyPrimaryGenerator::GeneratePrimaries()</a>, and <a class="el" href="_data_manager_m_t_test_8cpp_source.html#l00014">TEST_CASE()</a>.</p>
+<p class="reference">References <a class="el" href="_data_manager_m_t_8hh_source.html#l00040">dataManagerVector</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_run_action_8cc_source.html#l00007">MyRunAction::BeginOfRunAction()</a>, <a class="el" href="_event_action_8cc_source.html#l00016">MyEventAction::EndOfEventAction()</a>, <a class="el" href="_run_action_8cc_source.html#l00023">MyRunAction::EndOfRunAction()</a>, <a class="el" href="_generator_8cc_source.html#l00055">MyPrimaryGenerator::GeneratePrimaries()</a>, <a class="el" href="_sensitive_detector_8cc_source.html#l00022">MySensitiveDetector::ProcessHits()</a>, and <a class="el" href="_data_manager_m_t_test_8cpp_source.html#l00014">TEST_CASE()</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="af413e4c2516a9f48610cb1e547620e85" name="af413e4c2516a9f48610cb1e547620e85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af413e4c2516a9f48610cb1e547620e85">&#9670;&nbsp;</a></span>dataManagerVector</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="class_data_manager.html">DataManager</a> *&gt; DataManagerMT::dataManagerVector</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The vector of <a class="el" href="class_data_manager.html" title="This class manage TFiles and TTrees to store the data exploiting the Event class structure.">DataManager</a> objects. </p>
+<p >The vector is used to store the <a class="el" href="class_data_manager.html" title="This class manage TFiles and TTrees to store the data exploiting the Event class structure.">DataManager</a> objects. Each element of the vector contain a <a class="el" href="class_data_manager.html" title="This class manage TFiles and TTrees to store the data exploiting the Event class structure.">DataManager</a> object used by the same thread </p>
+
+<p class="definition">Definition at line <a class="el" href="_data_manager_m_t_8hh_source.html#l00040">40</a> of file <a class="el" href="_data_manager_m_t_8hh_source.html">DataManagerMT.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_data_manager_m_t_8cc_source.html#l00005">DataManagerMT()</a>, <a class="el" href="_data_manager_m_t_8cc_source.html#l00035">GetSTDataManager()</a>, and <a class="el" href="_data_manager_m_t_8cc_source.html#l00015">~DataManagerMT()</a>.</p>
+
+</div>
+</div>
+<a id="abf19dcef3d6b0197b434a225954d239c" name="abf19dcef3d6b0197b434a225954d239c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf19dcef3d6b0197b434a225954d239c">&#9670;&nbsp;</a></span>instanceMT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_data_manager_m_t.html">DataManagerMT</a> * DataManagerMT::instanceMT = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Private constructor. </p>
+<p >The constructor is private because the class is a singleton. </p>
+
+<p class="definition">Definition at line <a class="el" href="_data_manager_m_t_8hh_source.html#l00023">23</a> of file <a class="el" href="_data_manager_m_t_8hh_source.html">DataManagerMT.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_data_manager_m_t_8cc_source.html#l00025">GetInstance()</a>, and <a class="el" href="_data_manager_m_t_8cc_source.html#l00015">~DataManagerMT()</a>.</p>
+
+</div>
+</div>
+<a id="a62ace1d728da3673ef1a577ed235f977" name="a62ace1d728da3673ef1a577ed235f977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62ace1d728da3673ef1a577ed235f977">&#9670;&nbsp;</a></span>nThreads</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DataManagerMT::nThreads = SystemParameters::nThreads</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The number of thread used to run the simulation. </p>
+<p >The number of thread is set in the UserParameters file </p>
+
+<p class="definition">Definition at line <a class="el" href="_data_manager_m_t_8hh_source.html#l00031">31</a> of file <a class="el" href="_data_manager_m_t_8hh_source.html">DataManagerMT.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_data_manager_m_t_8cc_source.html#l00005">DataManagerMT()</a>, and <a class="el" href="_data_manager_m_t_8cc_source.html#l00015">~DataManagerMT()</a>.</p>
 
 </div>
 </div>

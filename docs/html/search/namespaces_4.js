@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['systemparameters_0',['SystemParameters',['../namespace_system_parameters.html',1,'']]]
+  ['readoutparameters_0',['ReadOutParameters',['../namespace_read_out_parameters.html',1,'']]]
 ];

@@ -1,13 +1,9 @@
 var searchData=
 [
-  ['g4main_2ecc_0',['G4main.cc',['../_g4main_8cc.html',1,'']]],
-  ['generateprimaries_1',['GeneratePrimaries',['../class_my_primary_generator.html#a78b02e982cd927d94b3537e7852d7b11',1,'MyPrimaryGenerator']]],
-  ['generator_2ecc_2',['Generator.cc',['../_generator_8cc.html',1,'']]],
-  ['generator_2ehh_3',['Generator.hh',['../_generator_8hh.html',1,'']]],
-  ['geometryparameters_4',['GeometryParameters',['../namespace_geometry_parameters.html',1,'']]],
-  ['getevent_5',['GetEvent',['../class_data_manager.html#afb94f61f4007618c76bb9623ca9a76e4',1,'DataManager']]],
-  ['getfile_6',['GetFile',['../class_data_manager.html#a6cd2165e510ec8d0d8b9d9d590220baf',1,'DataManager']]],
-  ['getinstance_7',['GetInstance',['../class_data_manager.html#a9b7aa6c36b8fbd437f3724980361e71f',1,'DataManager::GetInstance()'],['../class_data_manager_m_t.html#a84f6d5288b2d7c5a71911bd3b8f83607',1,'DataManagerMT::GetInstance()']]],
-  ['getstdatamanager_8',['GetSTDataManager',['../class_data_manager_m_t.html#a2d9d19d85c1769ab84cd510962678566',1,'DataManagerMT']]],
-  ['gettree_9',['GetTree',['../class_data_manager.html#a4a6ec110119f2849d8c768146d070c2d',1,'DataManager']]]
+  ['file_0',['file',['../class_data_manager.html#ac70d3a4999882d3deca1f842ccedc04a',1,'DataManager']]],
+  ['fit_1',['Fit',['../_fit_8hh.html#aae77cba92a66ef93403f66fb5100a762',1,'Fit.hh']]],
+  ['fit_2ehh_2',['Fit.hh',['../_fit_8hh.html',1,'']]],
+  ['fitdata_3',['FitData',['../struct_fit_data.html',1,'']]],
+  ['fittest_2ecpp_4',['FitTest.cpp',['../_fit_test_8cpp.html',1,'']]],
+  ['fparticlegun_5',['fParticleGun',['../class_my_primary_generator.html#ab7d247b47385d72f227be546bc50636d',1,'MyPrimaryGenerator']]]
 ];

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['energy_0',['energy',['../class_truth_beam_data.html#a198f3d9d01bb64afb060bd0440db1cba',1,'TruthBeamData']]],
-  ['energydeposited_1',['EnergyDeposited',['../class_detector_data.html#ac778f5c36e85d89e993280d67f1f7409',1,'DetectorData']]],
-  ['eventid_2',['eventID',['../class_event.html#a84dc42ba617572023b251c869f6fd54c',1,'Event']]]
+  ['datamanagervector_0',['dataManagerVector',['../class_data_manager_m_t.html#af413e4c2516a9f48610cb1e547620e85',1,'DataManagerMT']]],
+  ['detectordata_1',['detectorData',['../class_event.html#a3d20427bd9193d7640c729d5669aadfb',1,'Event']]]
 ];

@@ -71,6 +71,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_my_primary_generator-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">MyPrimaryGenerator Class Reference</div></div>
 </div><!--header-->
@@ -98,6 +99,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a78b02e982cd927d94b3537e7852d7b11"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_primary_generator.html#a78b02e982cd927d94b3537e7852d7b11">GeneratePrimaries</a> (G4Event *event)</td></tr>
 <tr class="memdesc:a78b02e982cd927d94b3537e7852d7b11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate the primary particles.  <a href="class_my_primary_generator.html#a78b02e982cd927d94b3537e7852d7b11">More...</a><br /></td></tr>
 <tr class="separator:a78b02e982cd927d94b3537e7852d7b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ab7d247b47385d72f227be546bc50636d"><td class="memItemLeft" align="right" valign="top">G4ParticleGun *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_primary_generator.html#ab7d247b47385d72f227be546bc50636d">fParticleGun</a></td></tr>
+<tr class="memdesc:ab7d247b47385d72f227be546bc50636d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The particle gun.  <a href="class_my_primary_generator.html#ab7d247b47385d72f227be546bc50636d">More...</a><br /></td></tr>
+<tr class="separator:ab7d247b47385d72f227be546bc50636d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3887889cc144754ccea5db3b10a16aa"><td class="memItemLeft" align="right" valign="top">G4ParticleTable *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_primary_generator.html#ab3887889cc144754ccea5db3b10a16aa">particleTable</a></td></tr>
+<tr class="memdesc:ab3887889cc144754ccea5db3b10a16aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Particle table.  <a href="class_my_primary_generator.html#ab3887889cc144754ccea5db3b10a16aa">More...</a><br /></td></tr>
+<tr class="separator:ab3887889cc144754ccea5db3b10a16aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >The generator of the primary beam. </p>
@@ -126,6 +136,8 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_generator_8cc_source.html#l00009">9</a> of file <a class="el" href="_generator_8cc_source.html">Generator.cc</a>.</p>
 
+<p class="reference">References <a class="el" href="_generator_8hh_source.html#l00028">fParticleGun</a>, and <a class="el" href="_generator_8hh_source.html#l00035">particleTable</a>.</p>
+
 </div>
 </div>
 <a id="a2d8e84de7be72677f984fb317977d732" name="a2d8e84de7be72677f984fb317977d732"></a>
@@ -148,6 +160,8 @@ Public Member Functions</h2></td></tr>
 <p >Destroy the particle gun </p>
 
 <p class="definition">Definition at line <a class="el" href="_generator_8cc_source.html#l00020">20</a> of file <a class="el" href="_generator_8cc_source.html">Generator.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="_generator_8hh_source.html#l00028">fParticleGun</a>.</p>
 
 </div>
 </div>
@@ -191,9 +205,9 @@ Public Member Functions</h2></td></tr>
 <p >\( \frac{dN_{\mu}}{dE_{\mu} d \Omega} \approx \frac{0.14 E_{\mu}^{-2.7}}{cm^2 \; s \;sr \; GeV} \left( \frac{1}{1+\frac{1.1 E_{\mu}\cos{\theta}}{115 GeV}} + \frac{0.054}{1+\frac{1.1 E_{\mu}\cos{\theta}}{850 GeV}} \right)\)</p>
 <p >The data of every beam is stored as an ntuple in the output root file. The saved data are:</p><ul>
 <li>EventID</li>
-<li>posX X position of the particle gun (m)</li>
-<li>posY Y position of the particle gun (m)</li>
-<li>posZ Z position of the particle gun (m)</li>
+<li>posX X position of the particle gun (mm)</li>
+<li>posY Y position of the particle gun (mm)</li>
+<li>posZ Z position of the particle gun (mm)</li>
 <li>phi Polar angle of the direction vector of the beam</li>
 <li>theta Azimuthal angle of the direction vector of the beam</li>
 <li>energy Beam energy (GeV)</li>
@@ -203,7 +217,66 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_generator_8cc_source.html#l00055">55</a> of file <a class="el" href="_generator_8cc_source.html">Generator.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="_event_data_8hh_source.html#l00019">TruthBeamData::energy</a>, <a class="el" href="_event_data_8hh_source.html#l00060">Event::eventID</a>, <a class="el" href="_data_manager_8cc_source.html#l00055">DataManager::GetEvent()</a>, <a class="el" href="_data_manager_m_t_8cc_source.html#l00025">DataManagerMT::GetInstance()</a>, <a class="el" href="_data_manager_m_t_8cc_source.html#l00035">DataManagerMT::GetSTDataManager()</a>, <a class="el" href="_user_parameters_8hh_source.html#l00077">BeamParameters::maxBeamEnergy</a>, <a class="el" href="_user_parameters_8hh_source.html#l00076">BeamParameters::minBeamEnergy</a>, <a class="el" href="_event_data_8hh_source.html#l00020">TruthBeamData::ParticleID</a>, <a class="el" href="_event_data_8hh_source.html#l00017">TruthBeamData::phi</a>, <a class="el" href="_event_data_8hh_source.html#l00014">TruthBeamData::posX</a>, <a class="el" href="_event_data_8hh_source.html#l00015">TruthBeamData::posY</a>, <a class="el" href="_event_data_8hh_source.html#l00016">TruthBeamData::posZ</a>, <a class="el" href="_event_data_8hh_source.html#l00018">TruthBeamData::theta</a>, <a class="el" href="_event_data_8hh_source.html#l00062">Event::truthBeamData</a>, and <a class="el" href="_user_parameters_8hh_source.html#l00052">GeometryParameters::worldSize</a>.</p>
+<p class="reference">References <a class="el" href="_event_data_8hh_source.html#l00018">TruthBeamData::energy</a>, <a class="el" href="_event_data_8hh_source.html#l00062">Event::eventID</a>, <a class="el" href="_generator_8hh_source.html#l00028">fParticleGun</a>, <a class="el" href="_data_manager_8cc_source.html#l00055">DataManager::GetEvent()</a>, <a class="el" href="_data_manager_m_t_8cc_source.html#l00025">DataManagerMT::GetInstance()</a>, <a class="el" href="_data_manager_m_t_8cc_source.html#l00035">DataManagerMT::GetSTDataManager()</a>, <a class="el" href="_user_parameters_8hh_source.html#l00100">BeamParameters::maxBeamEnergy</a>, <a class="el" href="_user_parameters_8hh_source.html#l00099">BeamParameters::minBeamEnergy</a>, <a class="el" href="_event_data_8hh_source.html#l00019">TruthBeamData::ParticleID</a>, <a class="el" href="_generator_8hh_source.html#l00035">particleTable</a>, <a class="el" href="_event_data_8hh_source.html#l00016">TruthBeamData::phi</a>, <a class="el" href="_event_data_8hh_source.html#l00013">TruthBeamData::posX</a>, <a class="el" href="_event_data_8hh_source.html#l00014">TruthBeamData::posY</a>, <a class="el" href="_event_data_8hh_source.html#l00015">TruthBeamData::posZ</a>, <a class="el" href="_event_data_8hh_source.html#l00017">TruthBeamData::theta</a>, <a class="el" href="_event_data_8hh_source.html#l00064">Event::truthBeamData</a>, and <a class="el" href="_user_parameters_8hh_source.html#l00077">GeometryParameters::worldSize</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab7d247b47385d72f227be546bc50636d" name="ab7d247b47385d72f227be546bc50636d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7d247b47385d72f227be546bc50636d">&#9670;&nbsp;</a></span>fParticleGun</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">G4ParticleGun* MyPrimaryGenerator::fParticleGun</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The particle gun. </p>
+<p >The particle gun is used to generate the primary particles. </p>
+
+<p class="definition">Definition at line <a class="el" href="_generator_8hh_source.html#l00028">28</a> of file <a class="el" href="_generator_8hh_source.html">Generator.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_generator_8cc_source.html#l00055">GeneratePrimaries()</a>, <a class="el" href="_generator_8cc_source.html#l00009">MyPrimaryGenerator()</a>, and <a class="el" href="_generator_8cc_source.html#l00020">~MyPrimaryGenerator()</a>.</p>
+
+</div>
+</div>
+<a id="ab3887889cc144754ccea5db3b10a16aa" name="ab3887889cc144754ccea5db3b10a16aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3887889cc144754ccea5db3b10a16aa">&#9670;&nbsp;</a></span>particleTable</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">G4ParticleTable* MyPrimaryGenerator::particleTable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Particle table. </p>
+<p >The particle table is used to find the particle definition. </p>
+
+<p class="definition">Definition at line <a class="el" href="_generator_8hh_source.html#l00035">35</a> of file <a class="el" href="_generator_8hh_source.html">Generator.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_generator_8cc_source.html#l00055">GeneratePrimaries()</a>, and <a class="el" href="_generator_8cc_source.html#l00009">MyPrimaryGenerator()</a>.</p>
 
 </div>
 </div>

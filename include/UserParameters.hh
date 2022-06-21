@@ -102,7 +102,7 @@ inline double maxBeamEnergy = 1000; // Gev
 
 /**
  * @namespace OutputParameters
- * @brief A container for the parameters of the output data
+ * @brief Just a container for the parameters of the output data
  *
  */
 namespace OutputParameters {

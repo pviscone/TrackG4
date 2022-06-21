@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['g4main_2ecc_0',['G4main.cc',['../_g4main_8cc.html',1,'']]],
-  ['generator_2ecc_1',['Generator.cc',['../_generator_8cc.html',1,'']]],
-  ['generator_2ehh_2',['Generator.hh',['../_generator_8hh.html',1,'']]]
+  ['fit_2ehh_0',['Fit.hh',['../_fit_8hh.html',1,'']]],
+  ['fittest_2ecpp_1',['FitTest.cpp',['../_fit_test_8cpp.html',1,'']]]
 ];

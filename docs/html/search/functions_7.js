@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['setcuts_0',['SetCuts',['../class_my_physics_list.html#a9ce516bb1f1de0addd933cb75e8e1a20',1,'MyPhysicsList']]]
+  ['openfile_0',['OpenFile',['../class_data_manager.html#aad04d255f87e2e3ba58282ad8cef7961',1,'DataManager']]]
 ];
