@@ -7,5 +7,6 @@ var searchData=
   ['closest_5fvalue_4',['closest_value',['../class_read_out.html#a7e411189150da6c1f6f70674a9051e59',1,'ReadOut']]],
   ['computemoduleposition_5',['ComputeModulePosition',['../class_my_detector_construction.html#a14e1749fb2e077c053e8739e32908721',1,'MyDetectorConstruction']]],
   ['construct_6',['Construct',['../class_my_detector_construction.html#af59abea99479b785b14f81c3e6a9a2e8',1,'MyDetectorConstruction']]],
-  ['createtree_7',['CreateTree',['../class_data_manager.html#a628b94d1191cc0f89211e2b2c621a145',1,'DataManager']]]
+  ['constructsdandfield_7',['ConstructSDandField',['../class_my_detector_construction.html#ac139d9ccf0e9f64e9730c34b5676ee93',1,'MyDetectorConstruction']]],
+  ['createtree_8',['CreateTree',['../class_data_manager.html#a628b94d1191cc0f89211e2b2c621a145',1,'DataManager']]]
 ];

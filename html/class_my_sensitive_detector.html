@@ -71,6 +71,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="class_my_sensitive_detector-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">MySensitiveDetector Class Reference</div></div>
 </div><!--header-->
@@ -95,6 +96,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a144f30235a096f92552720481135468c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_sensitive_detector.html#a144f30235a096f92552720481135468c">~MySensitiveDetector</a> ()</td></tr>
 <tr class="memdesc:a144f30235a096f92552720481135468c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor of the sensitive detector.  <a href="class_my_sensitive_detector.html#a144f30235a096f92552720481135468c">More...</a><br /></td></tr>
 <tr class="separator:a144f30235a096f92552720481135468c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a5b82f67fdd1f787a8b98d8385ed3110d"><td class="memItemLeft" align="right" valign="top">virtual G4bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_sensitive_detector.html#a5b82f67fdd1f787a8b98d8385ed3110d">ProcessHits</a> (G4Step *, G4TouchableHistory *)</td></tr>
+<tr class="memdesc:a5b82f67fdd1f787a8b98d8385ed3110d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that is called when a step is detected.  <a href="class_my_sensitive_detector.html#a5b82f67fdd1f787a8b98d8385ed3110d">More...</a><br /></td></tr>
+<tr class="separator:a5b82f67fdd1f787a8b98d8385ed3110d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >The class that manages the sensitive detector. </p>
@@ -148,6 +155,68 @@ Public Member Functions</h2></td></tr>
 <p>Destructor of the sensitive detector. </p>
 
 <p class="definition">Definition at line <a class="el" href="_sensitive_detector_8cc_source.html#l00006">6</a> of file <a class="el" href="_sensitive_detector_8cc_source.html">SensitiveDetector.cc</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5b82f67fdd1f787a8b98d8385ed3110d" name="a5b82f67fdd1f787a8b98d8385ed3110d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b82f67fdd1f787a8b98d8385ed3110d">&#9670;&nbsp;</a></span>ProcessHits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">G4bool MySensitiveDetector::ProcessHits </td>
+          <td>(</td>
+          <td class="paramtype">G4Step *&#160;</td>
+          <td class="paramname"><em>aStep</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">G4TouchableHistory *&#160;</td>
+          <td class="paramname"><em>R0hist</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method that is called when a step is detected. </p>
+<p >This method runs at every step of the particle in the sensitive detector and it is used to save the data.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">aStep</td><td>The step that is detected. </td></tr>
+    <tr><td class="paramname">R0hist</td><td>The history of the step.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The data stored at each step is:</p><ul>
+<li>EventID</li>
+<li>TrackID</li>
+<li>ParticleID</li>
+<li>ParticleName</li>
+<li>EnergyDeposited (keV)</li>
+<li>posX X position of the channel that was hit (mm)</li>
+<li>posY Y position of the channel that was hit (mm)</li>
+<li>posZ Z position of the channel that was hit (mm)</li>
+<li>Layer layer that the hit is in (odd layer are pixels module, even layer are strips module) </li>
+</ul>
+
+<p class="definition">Definition at line <a class="el" href="_sensitive_detector_8cc_source.html#l00022">22</a> of file <a class="el" href="_sensitive_detector_8cc_source.html">SensitiveDetector.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="_read_out_8cpp_source.html#l00067">ReadOut::closest_channel()</a>, <a class="el" href="_event_data_8hh_source.html#l00063">Event::detectorData</a>, <a class="el" href="_user_parameters_8hh_source.html#l00013">TriggerParameters::energyCut</a>, <a class="el" href="_event_data_8hh_source.html#l00033">DetectorData::EnergyDeposited</a>, <a class="el" href="_data_manager_8cc_source.html#l00055">DataManager::GetEvent()</a>, <a class="el" href="_data_manager_m_t_8cc_source.html#l00025">DataManagerMT::GetInstance()</a>, <a class="el" href="_read_out_8cpp_source.html#l00020">ReadOut::GetInstance()</a>, <a class="el" href="_data_manager_m_t_8cc_source.html#l00035">DataManagerMT::GetSTDataManager()</a>, <a class="el" href="_event_data_8hh_source.html#l00037">DetectorData::Layer</a>, <a class="el" href="_event_data_8hh_source.html#l00032">DetectorData::ParticleID</a>, <a class="el" href="_event_data_8hh_source.html#l00034">DetectorData::posX</a>, <a class="el" href="_event_data_8hh_source.html#l00035">DetectorData::posY</a>, <a class="el" href="_event_data_8hh_source.html#l00036">DetectorData::posZ</a>, and <a class="el" href="_event_data_8hh_source.html#l00031">DetectorData::TrackID</a>.</p>
 
 </div>
 </div>

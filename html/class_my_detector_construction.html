@@ -72,6 +72,8 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_my_detector_construction-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">MyDetectorConstruction Class Reference</div></div>
 </div><!--header-->
@@ -105,6 +107,18 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a14e1749fb2e077c053e8739e32908721"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; G4double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_detector_construction.html#a14e1749fb2e077c053e8739e32908721">ComputeModulePosition</a> (G4int nOfModulesOnAxis, G4double moduleSize, G4double moduleSpacing)</td></tr>
 <tr class="memdesc:a14e1749fb2e077c053e8739e32908721"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the positions of the center of the modules on a given axis.  <a href="class_my_detector_construction.html#a14e1749fb2e077c053e8739e32908721">More...</a><br /></td></tr>
 <tr class="separator:a14e1749fb2e077c053e8739e32908721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ac139d9ccf0e9f64e9730c34b5676ee93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_detector_construction.html#ac139d9ccf0e9f64e9730c34b5676ee93">ConstructSDandField</a> ()</td></tr>
+<tr class="memdesc:ac139d9ccf0e9f64e9730c34b5676ee93"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor of the sensitive volume.  <a href="class_my_detector_construction.html#ac139d9ccf0e9f64e9730c34b5676ee93">More...</a><br /></td></tr>
+<tr class="separator:ac139d9ccf0e9f64e9730c34b5676ee93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aefeb72f8f3282dddda8e0aa4d6c16b3b"><td class="memItemLeft" align="right" valign="top">G4LogicalVolume *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_detector_construction.html#aefeb72f8f3282dddda8e0aa4d6c16b3b">logicSiModule</a></td></tr>
+<tr class="memdesc:aefeb72f8f3282dddda8e0aa4d6c16b3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The logical volume of the sensitive silicon module.  <a href="class_my_detector_construction.html#aefeb72f8f3282dddda8e0aa4d6c16b3b">More...</a><br /></td></tr>
+<tr class="separator:aefeb72f8f3282dddda8e0aa4d6c16b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >The class that build the geometry of the simulation. </p>
@@ -233,7 +247,67 @@ If the number of units is even then it add to the vector \( \pm \) (i+1/2)*(size
 
 <p class="definition">Definition at line <a class="el" href="_detector_geometry_8cc_source.html#l00045">45</a> of file <a class="el" href="_detector_geometry_8cc_source.html">DetectorGeometry.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="_user_parameters_8hh_source.html#l00088">Materials::Air</a>, <a class="el" href="_detector_geometry_8cc_source.html#l00015">ComputeModulePosition()</a>, <a class="el" href="_user_parameters_8hh_source.html#l00063">GeometryParameters::moduleDimX</a>, <a class="el" href="_user_parameters_8hh_source.html#l00064">GeometryParameters::moduleDimY</a>, <a class="el" href="_user_parameters_8hh_source.html#l00065">GeometryParameters::moduleDimZ</a>, <a class="el" href="_user_parameters_8hh_source.html#l00067">GeometryParameters::moduleSpacingX</a>, <a class="el" href="_user_parameters_8hh_source.html#l00068">GeometryParameters::moduleSpacingY</a>, <a class="el" href="_user_parameters_8hh_source.html#l00069">GeometryParameters::moduleSpacingZ</a>, <a class="el" href="_user_parameters_8hh_source.html#l00073">GeometryParameters::nOfColsX</a>, <a class="el" href="_user_parameters_8hh_source.html#l00074">GeometryParameters::nOfColsY</a>, <a class="el" href="_user_parameters_8hh_source.html#l00075">GeometryParameters::nOfLayers</a>, <a class="el" href="_user_parameters_8hh_source.html#l00071">GeometryParameters::pixelStripSpacing</a>, <a class="el" href="_user_parameters_8hh_source.html#l00089">Materials::Si</a>, and <a class="el" href="_user_parameters_8hh_source.html#l00077">GeometryParameters::worldSize</a>.</p>
+<p class="reference">References <a class="el" href="_user_parameters_8hh_source.html#l00088">Materials::Air</a>, <a class="el" href="_detector_geometry_8cc_source.html#l00015">ComputeModulePosition()</a>, <a class="el" href="_detector_geometry_8hh_source.html#l00023">logicSiModule</a>, <a class="el" href="_user_parameters_8hh_source.html#l00063">GeometryParameters::moduleDimX</a>, <a class="el" href="_user_parameters_8hh_source.html#l00064">GeometryParameters::moduleDimY</a>, <a class="el" href="_user_parameters_8hh_source.html#l00065">GeometryParameters::moduleDimZ</a>, <a class="el" href="_user_parameters_8hh_source.html#l00067">GeometryParameters::moduleSpacingX</a>, <a class="el" href="_user_parameters_8hh_source.html#l00068">GeometryParameters::moduleSpacingY</a>, <a class="el" href="_user_parameters_8hh_source.html#l00069">GeometryParameters::moduleSpacingZ</a>, <a class="el" href="_user_parameters_8hh_source.html#l00073">GeometryParameters::nOfColsX</a>, <a class="el" href="_user_parameters_8hh_source.html#l00074">GeometryParameters::nOfColsY</a>, <a class="el" href="_user_parameters_8hh_source.html#l00075">GeometryParameters::nOfLayers</a>, <a class="el" href="_user_parameters_8hh_source.html#l00071">GeometryParameters::pixelStripSpacing</a>, <a class="el" href="_user_parameters_8hh_source.html#l00089">Materials::Si</a>, and <a class="el" href="_user_parameters_8hh_source.html#l00077">GeometryParameters::worldSize</a>.</p>
+
+</div>
+</div>
+<a id="ac139d9ccf0e9f64e9730c34b5676ee93" name="ac139d9ccf0e9f64e9730c34b5676ee93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac139d9ccf0e9f64e9730c34b5676ee93">&#9670;&nbsp;</a></span>ConstructSDandField()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MyDetectorConstruction::ConstructSDandField </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The constructor of the sensitive volume. </p>
+
+<p class="definition">Definition at line <a class="el" href="_detector_geometry_8cc_source.html#l00083">83</a> of file <a class="el" href="_detector_geometry_8cc_source.html">DetectorGeometry.cc</a>.</p>
+
+<p class="reference">References <a class="el" href="_detector_geometry_8hh_source.html#l00023">logicSiModule</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aefeb72f8f3282dddda8e0aa4d6c16b3b" name="aefeb72f8f3282dddda8e0aa4d6c16b3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefeb72f8f3282dddda8e0aa4d6c16b3b">&#9670;&nbsp;</a></span>logicSiModule</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">G4LogicalVolume* MyDetectorConstruction::logicSiModule</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The logical volume of the sensitive silicon module. </p>
+
+<p class="definition">Definition at line <a class="el" href="_detector_geometry_8hh_source.html#l00023">23</a> of file <a class="el" href="_detector_geometry_8hh_source.html">DetectorGeometry.hh</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_detector_geometry_8cc_source.html#l00045">Construct()</a>, and <a class="el" href="_detector_geometry_8cc_source.html#l00083">ConstructSDandField()</a>.</p>
 
 </div>
 </div>
