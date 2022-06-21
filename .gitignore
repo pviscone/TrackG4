@@ -2,5 +2,8 @@ build/CMake*
 build/CMakeFiles
 build/cmake*
 build/output*
+build/CosmicMuSimulation
+build/tests_executable
+build/track
 analysis/
 data/fit_img/

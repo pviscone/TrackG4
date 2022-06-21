@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jun 20 18:02:02 2022
+# Make data base, printed on Tue Jun 21 12:53:01 2022
 
 # Variables
 
@@ -21,11 +19,7 @@ NO_AT_BRIDGE = 1
 # environment
 GTK_RC_FILES = /etc/gtk/gtkrc:/home/pviscone/.gtkrc:/home/pviscone/.config/gtkrc
 # environment
-CSF_EXCEPTION_PROMPT = 1
-# environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-d2e5e7cb-b2da-4959-8d80-bf8929bc2070.sock
-# environment
-CSF_XmlOcafResource = /usr/share/opencascade/resources/XmlOcafResource
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-35c44eb7-4c28-4ecd-8d0e-aeeaee3a392f.sock
 # environment
 LC_NAME = it_IT.UTF-8
 # environment
@@ -35,15 +29,7 @@ VSCODE_CWD = /home/pviscone
 # environment
 HADOOP_SLAVES = /etc/hadoop/slaves
 # environment
-MMGT_CLEAR = 1
-# environment
-CSF_XCAFDefaults = /usr/share/opencascade/resources/StdResource
-# environment
-CSF_PluginDefaults = /usr/share/opencascade/resources/StdResource
-# environment
 UBUNTU_MENUPROXY = 1
-# environment
-CASROOT = /usr
 # environment
 G4INCLDATA = /usr/share/geant4-incldata/G4INCL1.0
 # environment
@@ -77,11 +63,9 @@ VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = /home/pviscone/.config/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
+VSCODE_CODE_CACHE_PATH = /home/pviscone/.config/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
 # environment
 XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
-# environment
-CSF_ShadersDirectory = /usr/share/opencascade/resources/Shaders
 # environment
 LANG = C
 # environment
@@ -111,8 +95,6 @@ MFLAGS = -pqrR
 # default
 .SHELLFLAGS := -c
 # environment
-CSF_MDTVTexturesDirectory = /usr/share/opencascade/resources/Textures
-# environment
 XDG_CONFIG_DIRS = /home/pviscone/.config/kdedefaults:/etc/xdg
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
@@ -127,7 +109,7 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 2123
+VSCODE_PID = 44649
 # environment
 XDG_SESSION_TYPE = x11
 # environment
@@ -137,19 +119,13 @@ CUDA_PATH = /opt/cuda
 # environment
 HADOOP_PID_DIR = /tmp/hadoop/run
 # environment
-CSF_XSMessage = /usr/share/opencascade/resources/XSMessage
-# environment
-DRAWDEFAULT = /usr/share/opencascade/resources/DrawResources/DrawDefault
-# environment
-SESSION_MANAGER = local/pviscon-desktop:@/tmp/.ICE-unix/1648,unix/pviscon-desktop:/tmp/.ICE-unix/1648
+SESSION_MANAGER = local/pviscon-81ue:@/tmp/.ICE-unix/2264,unix/pviscon-81ue:/tmp/.ICE-unix/2264
 # automatic
 *F = $(notdir $*)
 # environment
 PYTHIA8 = /usr
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
-# environment
-CSF_SHMessage = /usr/share/opencascade/resources/SHMessage
 # environment
 DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # automatic
@@ -171,15 +147,15 @@ SHLVL = 1
 # environment
 MOZ_USE_XINPUT2 = 1
 # environment
-CSF_TObjDefaults = /usr/share/opencascade/resources/StdResource
-# environment
 MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
 G4REALSURFACEDATA = /usr/share/geant4-realsurfacedata/RealSurface2.2
 # environment
-PATH = /usr/local/sbin:/usr/local/bin:/usr/bin:/opt/cuda/bin:/opt/cuda/nsight_compute:/opt/cuda/nsight_systems/bin:/opt/fv:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+FLUTTER_HOME = /opt/flutter
+# environment
+PATH = /usr/local/sbin:/usr/local/bin:/usr/bin:/opt/cuda/bin:/opt/cuda/nsight_compute:/opt/cuda/nsight_systems/bin:/var/lib/flatpak/exports/bin:/opt/flutter/bin:/opt/fv:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
 # default
 MAKEFILES := 
 # environment
@@ -187,23 +163,17 @@ G4PARTICLEXSDATA = /usr/share/geant4-particlexsdata/G4PARTICLEXS3.1
 # environment
 LC_MONETARY = it_IT.UTF-8
 # environment
-CSF_OCCTResourcePath = /usr/share/opencascade/resources
-# environment
 MOTD_SHOWN = pam
 # automatic
 ^F = $(notdir $^)
 # environment
 LC_TIME = it_IT.UTF-8
 # environment
-INVOCATION_ID = c03e11a5b5594053bc6104f4f2c86f33
+GRADLE_HOME = /usr/share/java/gradle
 # environment
 G4SAIDXSDATA = /usr/share/geant4-saiddata/G4SAIDDATA2.0
 # environment
 VSCODE_LOG_NATIVE = false
-# environment
-CSF_StandardLiteDefaults = /usr/share/opencascade/resources/StdResource
-# environment
-CSF_STEPDefaults = /usr/share/opencascade/resources/XSTEPResource
 # environment
 LC_TELEPHONE = it_IT.UTF-8
 # automatic
@@ -217,8 +187,6 @@ XDG_CURRENT_DESKTOP = KDE
 # environment
 G4ENSDFSTATEDATA = /usr/share/geant4-ensdfstatedata/G4ENSDFSTATE2.3
 # environment
-CSF_MIGRATION_TYPES = /usr/share/opencascade/resources/StdResource/MigrationSheet.txt
-# environment
 MKLROOT = /opt/intel/mkl
 # automatic
 +F = $(notdir $+)
@@ -231,19 +199,13 @@ ORIGINAL_XDG_CURRENT_DESKTOP = KDE
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
-QT_SCREEN_SCALE_FACTORS = DVI-I-0=1.25;DVI-I-1=1.25;HDMI-0=1.25;DP-0=1.25;DP-1=1.25;DVI-D-0=1.25;
-# environment
 LOGNAME = pviscone
-# environment
-CSF_LANGUAGE = us
 # environment
 XDG_VTNR = 1
 # makefile
 .DEFAULT_GOAL := 
 # environment
-SYSTEMD_EXEC_PID = 1672
-# environment
-CSF_TObjMessage = /usr/share/opencascade/resources/TObj
+SYSTEMD_EXEC_PID = 2092
 # environment
 DISPLAY = :0
 # environment
@@ -255,11 +217,7 @@ MAKE_VERSION := 4.3
 # environment
 KDE_SESSION_UID = 1000
 # environment
-MANAGERPID = 1570
-# environment
 LC_MEASUREMENT = it_IT.UTF-8
-# environment
-NODE_TLS_REJECT_UNAUTHORIZED = 0
 # environment
 G4LEVELGAMMADATA = /usr/share/geant4-levelgammadata/PhotonEvaporation5.7
 # environment
@@ -271,13 +229,7 @@ LC_PAPER = it_IT.UTF-8
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
-CSF_DrawPluginDefaults = /usr/share/opencascade/resources/DrawResources
-# environment
 G4ABLADATA = /usr/share/geant4-abladata/G4ABLA3.1
-# environment
-CSF_IGESDefaults = /usr/share/opencascade/resources/XSTEPResource
-# environment
-JOURNAL_STREAM = 8:27436
 # environment
 HADOOP_CONF_DIR = /etc/hadoop
 # environment
@@ -291,14 +243,11 @@ HOME = /home/pviscone
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-DRAWHOME = /usr/share/opencascade/resources/DrawResources
-# environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-35b12023-1.68.1-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-35b12023-1.67.2-main.sock
 # environment
 XDG_SESSION_ID = 2
 # environment
 XCURSOR_SIZE = 24
- 
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -312,8 +261,6 @@ VSCODE_CLI = 1
 # environment
 ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
-CSF_StandardDefaults = /usr/share/opencascade/resources/StdResource
-# environment
 KDE_SESSION_VERSION = 5
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink guile load
@@ -322,7 +269,7 @@ KDE_FULL_SESSION = true
 # environment
 LC_IDENTIFICATION = it_IT.UTF-8
 # variable set hash-table stats:
-# Load=154/1024=15%, Rehash=0, Collisions=13/181=7%
+# Load=129/1024=13%, Rehash=0, Collisions=8/156=5%
 
 # Pattern-specific Variable Values
 
@@ -330,7 +277,7 @@ LC_IDENTIFICATION = it_IT.UTF-8
 
 # Directories
 
-# . (device 38, inode 5225491): 22 files, no impossibilities.
+# . (device 39, inode 25631082): 22 files, no impossibilities.
 
 # 22 files, no impossibilities in 1 directories.
 
@@ -348,6 +295,9 @@ Makefile:
 #  Failed to be updated.
 
 # Not a target:
+ 
+make: *** No rule to make target 'all'.  Stop.
+
 .DEFAULT:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -388,6 +338,6 @@ GNUmakefile:
 # strcache performance: lookups = 33 / hit rate = 9%
 # hash-table stats:
 # Load=30/8192=0%, Rehash=0, Collisions=0/33=0%
-# Finished Make data base on Mon Jun 20 18:02:03 2022
+# Finished Make data base on Tue Jun 21 12:53:01 2022
 
  
