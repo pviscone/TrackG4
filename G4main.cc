@@ -29,6 +29,8 @@
  * All the geometrical parameters can be modified in the header file UserParameters.hh \n
  * The default parameters for the spacing values in the grid are 10cm x ... x 20cm
  *
+ * \image html detector.png "Geometry of the detector" width=500
+ *
  * \section Simulation
  *
  * The simulation is performed with the Geant4. \n

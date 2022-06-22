@@ -17,9 +17,9 @@ You can set the number of thread in the UserParameters.hh but you have to compil
 The data will be saved in output.root in the build folder
 2. To run the tests runs the tests_executable in the build folder
 3. To run the tracking algorithm run track in the build folder
-  (By default it takes the input data from oputput.root in the data folder and save
-  the fit results in fits_result.root in the data folder. If you want to modify this paths
-or save the plot images change the paths and the flags in trackfit.cc before step 1)
+    (By default it takes the input data from oputput.root in the data folder and save
+    the fit results in fits_result.root in the data folder. If you want to modify this paths
+    or save the plot images change the paths and the flags in trackfit.cc before step 1)
 
 ## PS modules
 A PS silicon module is composed by a layer of strips and a layer of pixels. \n
@@ -32,6 +32,8 @@ In the commissioning the PS modules are placed in a grid of 2 columns, 1 row and
 
 All the geometrical parameters can be modified in the header file UserParameters.hh \n
 The default parameters for the spacing values in the grid are 10cm x ... x 20cm
+
+<img src="docs/img/detector.png" style="zoom:40%;" />
 
 ## Simulation
 
