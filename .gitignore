@@ -7,5 +7,6 @@ build/tests_executable
 build/Makefile
 build/track
 build/*.mac
+docs/html
 analysis/
 data/fit_img/
