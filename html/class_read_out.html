@@ -165,9 +165,9 @@ Static Private Attributes</h2></td></tr>
 <p>Private constructor (because is a singleton) </p>
 <p >Initialize the modulePosition vectors with the values of the module position This avoid to compute the module position every time the function is called </p>
 
-<p class="definition">Definition at line <a class="el" href="_read_out_8cpp_source.html#l00013">13</a> of file <a class="el" href="_read_out_8cpp_source.html">ReadOut.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_read_out_8cc_source.html#l00013">13</a> of file <a class="el" href="_read_out_8cc_source.html">ReadOut.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_read_out_8cpp_source.html#l00020">GetInstance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_read_out_8cc_source.html#l00020">GetInstance()</a>.</p>
 
 </div>
 </div>
@@ -186,7 +186,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_read_out_8cpp_source.html#l00018">18</a> of file <a class="el" href="_read_out_8cpp_source.html">ReadOut.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_read_out_8cc_source.html#l00018">18</a> of file <a class="el" href="_read_out_8cc_source.html">ReadOut.cc</a>.</p>
 
 </div>
 </div>
@@ -235,9 +235,9 @@ Static Private Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>G4double Postion on the given axis of the pixel/strip channel that was hit</dd></dl>
 <p>It is just a wrapper to the function G4double <a class="el" href="class_read_out.html#a27713f4b79592b07036bb0b63c9cd3d6" title="Function to find the position on the axis of the pixel/strip channel that was hit.">closest_channel(G4double hit_position, std::vector&lt;G4double&gt; modulePositions, G4double pitchOnAxis)</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="_read_out_8cpp_source.html#l00078">78</a> of file <a class="el" href="_read_out_8cpp_source.html">ReadOut.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_read_out_8cc_source.html#l00078">78</a> of file <a class="el" href="_read_out_8cc_source.html">ReadOut.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="_read_out_8cpp_source.html#l00067">closest_channel()</a>, <a class="el" href="_read_out_8cpp_source.html#l00033">closest_value()</a>, <a class="el" href="_user_parameters_8hh_source.html#l00065">GeometryParameters::moduleDimZ</a>, <a class="el" href="_user_parameters_8hh_source.html#l00050">ReadOutParameters::pixelDimX</a>, <a class="el" href="_user_parameters_8hh_source.html#l00052">ReadOutParameters::pixelDimY</a>, <a class="el" href="_user_parameters_8hh_source.html#l00071">GeometryParameters::pixelStripSpacing</a>, <a class="el" href="_user_parameters_8hh_source.html#l00046">ReadOutParameters::stripDimX</a>, <a class="el" href="_user_parameters_8hh_source.html#l00048">ReadOutParameters::stripDimY</a>, <a class="el" href="_read_out_8hh_source.html#l00024">xModulePosition</a>, <a class="el" href="_read_out_8hh_source.html#l00028">yModulePosition</a>, and <a class="el" href="_read_out_8hh_source.html#l00032">zModulePosition</a>.</p>
+<p class="reference">References <a class="el" href="_read_out_8cc_source.html#l00067">closest_channel()</a>, <a class="el" href="_read_out_8cc_source.html#l00033">closest_value()</a>, <a class="el" href="_user_parameters_8hh_source.html#l00065">GeometryParameters::moduleDimZ</a>, <a class="el" href="_user_parameters_8hh_source.html#l00050">ReadOutParameters::pixelDimX</a>, <a class="el" href="_user_parameters_8hh_source.html#l00052">ReadOutParameters::pixelDimY</a>, <a class="el" href="_user_parameters_8hh_source.html#l00071">GeometryParameters::pixelStripSpacing</a>, <a class="el" href="_user_parameters_8hh_source.html#l00046">ReadOutParameters::stripDimX</a>, <a class="el" href="_user_parameters_8hh_source.html#l00048">ReadOutParameters::stripDimY</a>, <a class="el" href="_read_out_8hh_source.html#l00024">xModulePosition</a>, <a class="el" href="_read_out_8hh_source.html#l00028">yModulePosition</a>, and <a class="el" href="_read_out_8hh_source.html#l00032">zModulePosition</a>.</p>
 
 </div>
 </div>
@@ -285,9 +285,9 @@ Static Private Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>G4double Postion on the given axis of the pixel/strip channel that was hit</dd></dl>
 <p>It is just a wrapper to the function G4double closest_channel(G4double hit_position, std::string axis, std::string moduleType) </p>
 
-<p class="definition">Definition at line <a class="el" href="_read_out_8cpp_source.html#l00125">125</a> of file <a class="el" href="_read_out_8cpp_source.html">ReadOut.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_read_out_8cc_source.html#l00125">125</a> of file <a class="el" href="_read_out_8cc_source.html">ReadOut.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="_read_out_8cpp_source.html#l00067">closest_channel()</a>.</p>
+<p class="reference">References <a class="el" href="_read_out_8cc_source.html#l00067">closest_channel()</a>.</p>
 
 </div>
 </div>
@@ -343,11 +343,11 @@ Static Private Attributes</h2></td></tr>
 </ul>
 <p >Achtung: this function works only if the number of channel on the given axis is even. If the number of channels is odd, there will be an offset of 0.5 of the pitch of the channel on the axis. </p>
 
-<p class="definition">Definition at line <a class="el" href="_read_out_8cpp_source.html#l00067">67</a> of file <a class="el" href="_read_out_8cpp_source.html">ReadOut.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_read_out_8cc_source.html#l00067">67</a> of file <a class="el" href="_read_out_8cc_source.html">ReadOut.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="_read_out_8cpp_source.html#l00033">closest_value()</a>.</p>
+<p class="reference">References <a class="el" href="_read_out_8cc_source.html#l00033">closest_value()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_read_out_8cpp_source.html#l00078">closest_channel()</a>, <a class="el" href="_sensitive_detector_8cc_source.html#l00022">MySensitiveDetector::ProcessHits()</a>, and <a class="el" href="_read_out_test_8cpp_source.html#l00040">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_read_out_8cc_source.html#l00078">closest_channel()</a>, <a class="el" href="_sensitive_detector_8cc_source.html#l00022">MySensitiveDetector::ProcessHits()</a>, and <a class="el" href="_read_out_test_8cpp_source.html#l00040">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -388,9 +388,9 @@ Static Private Attributes</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>G4double The closest value in the vector to "value"</dd></dl>
 <p>The closest value is found sorting the vector and then finding the closest value iterating on the vector. When the distance between the element of the array and the value is greater than the previous distance, the for loop is broken and the element of the vector is returned. </p>
 
-<p class="definition">Definition at line <a class="el" href="_read_out_8cpp_source.html#l00033">33</a> of file <a class="el" href="_read_out_8cpp_source.html">ReadOut.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_read_out_8cc_source.html#l00033">33</a> of file <a class="el" href="_read_out_8cc_source.html">ReadOut.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_read_out_8cpp_source.html#l00067">closest_channel()</a>, and <a class="el" href="_read_out_test_8cpp_source.html#l00011">TEST_CASE()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_read_out_8cc_source.html#l00067">closest_channel()</a>, and <a class="el" href="_read_out_test_8cpp_source.html#l00011">TEST_CASE()</a>.</p>
 
 </div>
 </div>
@@ -420,9 +420,9 @@ Static Private Attributes</h2></td></tr>
 <p>Get the Instance object If the instance is not created, it will be created If the instance is already created, it will be returned the pointer to the previous instance. </p>
 <dl class="section return"><dt>Returns</dt><dd>ReadOut* </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_read_out_8cpp_source.html#l00020">20</a> of file <a class="el" href="_read_out_8cpp_source.html">ReadOut.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_read_out_8cc_source.html#l00020">20</a> of file <a class="el" href="_read_out_8cc_source.html">ReadOut.cc</a>.</p>
 
-<p class="reference">References <a class="el" href="_read_out_8hh_source.html#l00041">instance</a>, and <a class="el" href="_read_out_8cpp_source.html#l00013">ReadOut()</a>.</p>
+<p class="reference">References <a class="el" href="_read_out_8hh_source.html#l00041">instance</a>, and <a class="el" href="_read_out_8cc_source.html#l00013">ReadOut()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_sensitive_detector_8cc_source.html#l00022">MySensitiveDetector::ProcessHits()</a>, and <a class="el" href="_read_out_test_8cpp_source.html#l00011">TEST_CASE()</a>.</p>
 
@@ -453,7 +453,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_read_out_8hh_source.html#l00041">41</a> of file <a class="el" href="_read_out_8hh_source.html">ReadOut.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_read_out_8cpp_source.html#l00020">GetInstance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_read_out_8cc_source.html#l00020">GetInstance()</a>.</p>
 
 </div>
 </div>
@@ -481,7 +481,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_read_out_8hh_source.html#l00024">24</a> of file <a class="el" href="_read_out_8hh_source.html">ReadOut.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_read_out_8cpp_source.html#l00078">closest_channel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_read_out_8cc_source.html#l00078">closest_channel()</a>.</p>
 
 </div>
 </div>
@@ -509,7 +509,7 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_read_out_8hh_source.html#l00028">28</a> of file <a class="el" href="_read_out_8hh_source.html">ReadOut.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_read_out_8cpp_source.html#l00078">closest_channel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_read_out_8cc_source.html#l00078">closest_channel()</a>.</p>
 
 </div>
 </div>
@@ -537,13 +537,13 @@ Static Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_read_out_8hh_source.html#l00032">32</a> of file <a class="el" href="_read_out_8hh_source.html">ReadOut.hh</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_read_out_8cpp_source.html#l00078">closest_channel()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_read_out_8cc_source.html#l00078">closest_channel()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="_read_out_8hh_source.html">ReadOut.hh</a></li>
-<li>src/<a class="el" href="_read_out_8cpp_source.html">ReadOut.cpp</a></li>
+<li>src/<a class="el" href="_read_out_8cc_source.html">ReadOut.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
