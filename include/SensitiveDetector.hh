@@ -1,9 +1,9 @@
 #pragma once
-#include "G4VSensitiveDetector.hh"
-#include "G4SystemOfUnits.hh"
-#include "G4RunManager.hh"
 #include "DataManager.hh"
 #include "DataManagerMT.hh"
+#include "G4RunManager.hh"
+#include "G4SystemOfUnits.hh"
+#include "G4VSensitiveDetector.hh"
 #include "ReadOut.hh"
 /**
  * @brief The class that manages the sensitive detector.
@@ -12,8 +12,7 @@
  *
  *
  */
-class MySensitiveDetector : public G4VSensitiveDetector
-{
+class MySensitiveDetector : public G4VSensitiveDetector {
 public:
     /**
      * @brief Constructor of the sensitive detector.

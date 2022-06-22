@@ -1,17 +1,16 @@
-#include "G4UserEventAction.hh"
-#include "TTree.h"
-#include "TFile.h"
 #include "DataManager.hh"
 #include "DataManagerMT.hh"
 #include "G4Threading.hh"
+#include "G4UserEventAction.hh"
+#include "TFile.h"
+#include "TTree.h"
 #include <iostream>
 
 /**
  * @brief This class manage the user action at each event
  *
  */
-class MyEventAction : public G4UserEventAction
-{
+class MyEventAction : public G4UserEventAction {
 public:
     MyEventAction();
     virtual ~MyEventAction();

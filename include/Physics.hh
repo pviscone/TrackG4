@@ -1,16 +1,15 @@
 #pragma once
-#include "G4VModularPhysicsList.hh"
-#include "G4EmStandardPhysics.hh"
 #include "G4DecayPhysics.hh"
+#include "G4EmStandardPhysics.hh"
 #include "G4SystemOfUnits.hh"
+#include "G4VModularPhysicsList.hh"
 
 /** @class MyPhysicsList
  * @brief The PhysicsList class that defines the physics processes involved in the simulation
  *
  * This class contains the physics processes used in the simulation.
  */
-class MyPhysicsList : public G4VModularPhysicsList
-{
+class MyPhysicsList : public G4VModularPhysicsList {
 public:
     /** @brief Constructor of the PhysicsList class
      *

@@ -6,8 +6,7 @@ using namespace BeamParameters;
  * Create the particle gun and the particle table
  *
  */
-MyPrimaryGenerator::MyPrimaryGenerator()
-{
+MyPrimaryGenerator::MyPrimaryGenerator() {
 
     fParticleGun = new G4ParticleGun(1);
     particleTable = G4ParticleTable::GetParticleTable();
@@ -17,8 +16,7 @@ MyPrimaryGenerator::MyPrimaryGenerator()
  * Destroy the particle gun
  *
  */
-MyPrimaryGenerator::~MyPrimaryGenerator()
-{
+MyPrimaryGenerator::~MyPrimaryGenerator() {
     delete fParticleGun;
 }
 
@@ -52,8 +50,7 @@ MyPrimaryGenerator::~MyPrimaryGenerator()
  * - ParticleID
  * - ParticleName
  */
-void MyPrimaryGenerator::GeneratePrimaries(G4Event *event)
-{
+void MyPrimaryGenerator::GeneratePrimaries(G4Event *event) {
 
     /********************************PARTICLE DEFINITION********************************/
     // Definition of mu+ and mu-
@@ -64,12 +61,9 @@ void MyPrimaryGenerator::GeneratePrimaries(G4Event *event)
     G4double muCharge = (G4UniformRand());
     // The charge ratio of cosmic muons (mu+/mu-) is 1.3 (assumed constant in energy)
     // This means that the 57% of the muons are mu+ and 43% of them are mu-
-    if (muCharge > 0.57)
-    {
+    if (muCharge > 0.57) {
         fParticleGun->SetParticleDefinition(mu_n);
-    }
-    else
-    {
+    } else {
         fParticleGun->SetParticleDefinition(mu_p);
     }
 
@@ -100,26 +94,23 @@ void MyPrimaryGenerator::GeneratePrimaries(G4Event *event)
     /******************************** SAVE THE DATA ********************************/
     int evID = event->GetEventID();
 
-    //Get the DataManager object of the i-th thread
+    // Get the DataManager object of the i-th thread
     DataManagerMT *dataManagerMT = DataManagerMT::GetInstance();
     int threadID = G4Threading::G4GetThreadId();
     DataManager *dataManager = dataManagerMT->GetSTDataManager(threadID);
 
-    //Fill the event object with the data
+    // Fill the event object with the data
     Event *ev = dataManager->GetEvent();
     ev->eventID = evID;
-    ev->truthBeamData.posX = (double)(xPos /mm);
-    ev->truthBeamData.posY = (double)(yPos /mm);
-    ev->truthBeamData.posZ = (double)(zPos /mm);
+    ev->truthBeamData.posX = (double)(xPos / mm);
+    ev->truthBeamData.posY = (double)(yPos / mm);
+    ev->truthBeamData.posZ = (double)(zPos / mm);
     ev->truthBeamData.phi = (double)(phi);
     ev->truthBeamData.theta = (double)(theta);
     ev->truthBeamData.energy = (double)(energy / GeV);
-    if (muCharge > 0.57)
-    {
+    if (muCharge > 0.57) {
         ev->truthBeamData.ParticleID = 0; // mu-
-    }
-    else
-    {
+    } else {
         ev->truthBeamData.ParticleID = 1; // mu+
     }
 

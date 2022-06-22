@@ -7,9 +7,8 @@
 #include <string>
 #include <vector>
 
-
 TEST_CASE("Test the closest_value function") {
-    ReadOut* RO=ReadOut::GetInstance();
+    ReadOut *RO = ReadOut::GetInstance();
     std::vector<double> vec = {6, 7, 8, 9, 10, 1, 2, 3, 4, 5};
     SECTION("Value greater than the nearest") {
         std::vector<double> greater_values = {6.1, 7.2, 8.3, 9.4, 10.4,
@@ -38,7 +37,7 @@ TEST_CASE("Test the closest_value function") {
 }
 
 TEST_CASE("Test the read out on single axis") {
-    ReadOut* RO=ReadOut::GetInstance();
+    ReadOut *RO = ReadOut::GetInstance();
     double pitch = 0.1;
     std::vector<double> modulePositions{0, 3, -3, 2, -2, -1, 1};
     std::vector<double> hits{1.11, 2.19, -1.11, -1.49};
@@ -52,7 +51,7 @@ TEST_CASE("Test the read out on single axis") {
     }
 }
 
-TEST_CASE("Test the read out passing the strings"){
-    ReadOut* RO=ReadOut::GetInstance();
+TEST_CASE("Test the read out passing the strings") {
+    ReadOut *RO = ReadOut::GetInstance();
     RO->closest_channel(1.11, "x", 0);
 }

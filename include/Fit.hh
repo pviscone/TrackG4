@@ -12,15 +12,31 @@
 #include <TTree.h>
 #include <iostream>
 #include <math.h>
-#include <string>
 #include <numeric>
+#include <string>
 
 /**
  * @struct FitData
  * @brief Struct that contains the results of the fit of the track
  *
  * The line is parametrized in the ZX and ZY plane in cartesian coordinates in the frame of the world of the simulation.
+ * \f$ x= m_x z + x_0 \f$ and \f$ y= m_y z + y_0 \f$
+ *
  * All the distance units are in mm
+ *
+ * The data stored in the struct are:
+ * - x0
+ * - xo_err
+ * - y0
+ * - yo_err
+ * - mx
+ * - mx_err
+ * - my
+ * - my_err
+ * - chi2zx (chi2 of the fit in the ZX plane)
+ * - chi2zy (chi2 of the fit in the ZY plane)
+ * - nHits (number of hits in the fit)
+ *
  *
  */
 struct FitData {
@@ -55,18 +71,18 @@ struct FitData {
  *
  * @return FitData The struct containing the result of the fit
  */
-FitData Fit(Event *event, TF1 * line, std::string imgpath="",int i=0) {
+FitData Fit(Event *event, TF1 *line, std::string imgpath = "", int i = 0) {
     FitData fitdata;
     std::string name, title;
     long double prev_x0, prev_y0, prev_mx, prev_my;
 
     // Store the hits and order them according to the z coordinate
     std::vector<double> z = (event->detectorData).posZ;
-    std::vector<double> x,y;
+    std::vector<double> x, y;
     std::vector<int> idx(z.size());
     std::iota(idx.begin(), idx.end(), 0);
-    std::sort(idx.begin(),idx.end(),[z](const size_t &i1, const size_t &i2){return z[i1] < z[i2];});
-    for(auto idx_val: idx){
+    std::sort(idx.begin(), idx.end(), [z](const size_t &i1, const size_t &i2) { return z[i1] < z[i2]; });
+    for (auto idx_val : idx) {
         x.push_back((event->detectorData).posX[idx_val]);
         y.push_back((event->detectorData).posY[idx_val]);
     }
@@ -98,14 +114,14 @@ FitData Fit(Event *event, TF1 * line, std::string imgpath="",int i=0) {
     fitdata.mx_err = line->GetParError(1);
     fitdata.chi2zx = line->GetChisquare();
 
-    //Save the ZX fig if saveFig is true
-    if (imgpath!="") {
+    // Save the ZX fig if saveFig is true
+    if (imgpath != "") {
         title = "ZX evID:" + std::to_string(i);
         GR_zx.SetTitle(title.c_str());
         GR_zx.GetXaxis()->SetTitle("Z [mm]");
         GR_zx.GetYaxis()->SetTitle("X [mm]");
         GR_zx.Draw("AP");
-        name = imgpath+"/zx_" + std::to_string(i) + ".png";
+        name = imgpath + "/zx_" + std::to_string(i) + ".png";
         c1.SaveAs(name.c_str());
     }
 
@@ -123,22 +139,22 @@ FitData Fit(Event *event, TF1 * line, std::string imgpath="",int i=0) {
     fitdata.my_err = line->GetParError(1);
     fitdata.chi2zy = line->GetChisquare();
 
-    //Save the ZY fig if saveFig is true
-    if (imgpath!="") {
+    // Save the ZY fig if saveFig is true
+    if (imgpath != "") {
         title = "ZY evID:" + std::to_string(i);
         GR_zy.SetTitle(title.c_str());
         GR_zy.GetXaxis()->SetTitle("Z [mm]");
         GR_zy.GetYaxis()->SetTitle("Y [mm]");
         GR_zy.Draw("AP");
-        name = imgpath+"/zy_" + std::to_string(i) + ".png";
+        name = imgpath + "/zy_" + std::to_string(i) + ".png";
         c2.SaveAs(name.c_str());
     }
     // Check that the fit on both projection was successful
     fitdata.status = status_zx && status_zy;
 
-    //Save the number of hits
-    fitdata.nHit=z.size();
+    // Save the number of hits
+    fitdata.nHit = z.size();
 
-    //Return the fitdata struct
+    // Return the fitdata struct
     return fitdata;
 }

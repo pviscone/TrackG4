@@ -1,7 +1,7 @@
 #pragma once
+#include "EventData.hh"
 #include "TFile.h"
 #include "TTree.h"
-#include "EventData.hh"
 
 /**
  *@class DataManager
@@ -10,8 +10,7 @@
  *
  * This class is a singleton
  */
-class DataManager
-{
+class DataManager {
 private:
     /**
      * @brief Private constructor.

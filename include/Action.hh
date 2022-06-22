@@ -1,8 +1,8 @@
 #pragma once
+#include "EventAction.hh"
 #include "G4VUserActionInitialization.hh"
 #include "Generator.hh"
 #include "RunAction.hh"
-#include "EventAction.hh"
 
 /**
  * @brief The class that manages the action initialization.
@@ -11,8 +11,7 @@
  *
  *
  */
-class MyActionInitialization : public G4VUserActionInitialization
-{
+class MyActionInitialization : public G4VUserActionInitialization {
 public:
     /**
      * @brief Constructor of the action initialization.

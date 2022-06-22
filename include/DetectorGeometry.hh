@@ -1,20 +1,19 @@
 #pragma once
+#include "G4Box.hh"
+#include "G4LogicalVolume.hh"
+#include "G4PVPlacement.hh"
+#include "G4Region.hh"
+#include "G4SystemOfUnits.hh"
+#include "G4ThreeVector.hh"
+#include "G4VPhysicalVolume.hh"
 #include "G4VUserDetectorConstruction.hh"
 #include "UserParameters.hh"
-#include "G4LogicalVolume.hh"
-#include "G4VPhysicalVolume.hh"
-#include "G4SystemOfUnits.hh"
-#include "G4PVPlacement.hh"
-#include "G4ThreeVector.hh"
-#include "G4Box.hh"
-#include "G4Region.hh"
 #include "cppitertools/enumerate.hpp"
 
 /**
  * @brief The class that build the geometry of the simulation
  */
-class MyDetectorConstruction : public G4VUserDetectorConstruction
-{
+class MyDetectorConstruction : public G4VUserDetectorConstruction {
 
 private:
     /**

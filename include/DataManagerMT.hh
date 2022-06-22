@@ -1,8 +1,8 @@
 #pragma once
-#include <thread>
-#include <vector>
 #include "DataManager.hh"
 #include "UserParameters.hh"
+#include <thread>
+#include <vector>
 
 /**
  * @class DataManagerMT
@@ -12,8 +12,7 @@
  * This class is a singleton container for multiple instance of DataManager
  *
  */
-class DataManagerMT
-{
+class DataManagerMT {
 private:
     /**
      * @brief Private constructor.

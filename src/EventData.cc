@@ -1,7 +1,7 @@
 #include "EventData.hh"
 
-//Clear all the vectors in the event
-void Event::Clear(){
+// Clear all the vectors in the event
+void Event::Clear() {
     detectorData.TrackID.clear();
     detectorData.ParticleID.clear();
     detectorData.EnergyDeposited.clear();
@@ -11,7 +11,7 @@ void Event::Clear(){
     detectorData.Layer.clear();
 }
 
-void DetectorData::Clear(){
+void DetectorData::Clear() {
     TrackID.clear();
     ParticleID.clear();
     EnergyDeposited.clear();

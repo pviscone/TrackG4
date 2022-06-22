@@ -4,13 +4,12 @@
 #include "G4SystemOfUnits.hh"
 #include <thread>
 
-
 /**
  * @namespace TriggerParameters
  * @brief Just a container for the parameter of the Trigger
  */
-namespace TriggerParameters{
-    inline G4double energyCut=40 *keV;
+namespace TriggerParameters {
+inline G4double energyCut = 40 * keV;
 }
 
 /**

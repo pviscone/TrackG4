@@ -1,12 +1,12 @@
 #pragma once
-#include "G4UserRunAction.hh"
-#include "G4Threading.hh"
+#include "DataManager.hh"
+#include "DataManagerMT.hh"
 #include "EventData.hh"
+#include "G4Threading.hh"
+#include "G4UserRunAction.hh"
 #include "TFile.h"
 #include "TSystem.h"
 #include "TTree.h"
-#include "DataManager.hh"
-#include "DataManagerMT.hh"
 #include "UserParameters.hh"
 #include <string>
 
@@ -18,8 +18,7 @@
  *
  *
  */
-class MyRunAction : public G4UserRunAction
-{
+class MyRunAction : public G4UserRunAction {
 public:
     /**
      * @brief Constructor of the run action.

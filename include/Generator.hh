@@ -1,15 +1,15 @@
 #pragma once
-#include "G4VUserPrimaryGeneratorAction.hh"
-#include "G4ParticleGun.hh"
-#include "G4SystemOfUnits.hh"
-#include "G4ParticleTable.hh"
-#include "G4UniformRandPool.hh"
 #include "CLHEP/Units/PhysicalConstants.h"
-#include "G4RunManager.hh"
-#include "UserParameters.hh"
-#include "TF1.h"
 #include "DataManager.hh"
 #include "DataManagerMT.hh"
+#include "G4ParticleGun.hh"
+#include "G4ParticleTable.hh"
+#include "G4RunManager.hh"
+#include "G4SystemOfUnits.hh"
+#include "G4UniformRandPool.hh"
+#include "G4VUserPrimaryGeneratorAction.hh"
+#include "TF1.h"
+#include "UserParameters.hh"
 
 /**
  * @class MyPrimaryGenerator
@@ -17,8 +17,7 @@
  *
  * This class manages the primary particles generation.
  */
-class MyPrimaryGenerator : public G4VUserPrimaryGeneratorAction
-{
+class MyPrimaryGenerator : public G4VUserPrimaryGeneratorAction {
 private:
     /**
      * @brief The particle gun.
