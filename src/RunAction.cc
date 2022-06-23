@@ -7,6 +7,8 @@ MyRunAction::~MyRunAction() {}
 void MyRunAction::BeginOfRunAction(const G4Run *) {
 
     G4int threadId = G4Threading::G4GetThreadId();
+    
+    // The master thread (id=-1) create the only instance of DataManagerMT
     if (threadId == -1) {
         DataManagerMT::GetInstance();
     }
