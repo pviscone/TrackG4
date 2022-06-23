@@ -2,6 +2,11 @@
   <img align="center" src="https://github.com/pviscone/TrackG4/actions/workflows/docs.yml/badge.svg" />
 </a>
 
+<a href="https://github.com/pviscone/TrackG4/blob/main/report/TrackG4PS.pdf">
+  <img align="center" src="https://img.shields.io/badge/-Report-blue" />
+</a>
+
+
 
 # TrackG4
 
@@ -10,7 +15,7 @@ This project is a simulation with Geant4 of the commissioning with cosmic rays o
 With the data obtained by the simulation the muons track are reconstructed with a simple toy model for tracking.
 
 **warning: Due to the lack of compatibility between RunManager and RunManagerMT methods, the simulation has to run in multithreading mode.
-You can set the number of thread in the UserParameters.hh but you have to compile Geant with the flag -DG4_USE_THREADS. **
+You can set the number of thread in the UserParameters.hh but you have to compile Geant with the flag -DG4_USE_THREADS.**
 
 ### How to run the simulation
 1. Build and run the simulation in batch mode running the script G4batch.sh in the main folder.
