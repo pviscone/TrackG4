@@ -71,7 +71,7 @@ struct FitData {
  *
  * @return FitData The struct containing the result of the fit
  */
-FitData Fit(Event *event, TF1 *line, std::string imgpath = "", int i = 0) {
+FitData Fit(Event *event, TF1 *line, const std::string &imgpath = "", int i = 0) {
     FitData fitdata;
     std::string name, title;
     long double prev_x0, prev_y0, prev_mx, prev_my;
