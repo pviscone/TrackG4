@@ -8,7 +8,7 @@
 
 
 
-# TrackG4
+# TrackG4PS
 
 This project is a simulation with Geant4 of the commissioning with cosmic rays of the PS module for the future CMS outer tracker detector.
 
@@ -27,22 +27,26 @@ The data will be saved in output.root in the build folder
     or save the plot images change the paths and the flags in trackfit.cc before step 1)
 
 ## PS modules
-A PS silicon module is composed by a layer of strips and a layer of pixels. \n
+
+<img src="docs/img/ps_module.png" style="zoom:20%;" />
+
+ 
+A PS silicon module is composed by a layer of strips and a layer of pixels.
 The dimension of a single layer is 10cm x 5cm x 0.3mm and two layers are spaced by 4mm.
 
-The strip module is composed by 2 columns of 960 strips \n
+The strip module is composed by 2 columns of 960 strips
 The pixel module is composed by 32 columns of 960 pixels
 
 In the commissioning the PS modules are placed in a grid of 2 columns, 1 row and 5 layers.
 
-All the geometrical parameters can be modified in the header file UserParameters.hh \n
+All the geometrical parameters can be modified in the header file UserParameters.hh
 The default parameters for the spacing values in the grid are 10cm x ... x 20cm
 
 <img src="docs/img/detector.png" style="zoom:40%;" />
 
 ## Simulation
 
-The simulation is performed with the Geant4. \n
+The simulation is performed with the Geant4.
 The physics module used is G4EmStandardPhysics.
 
 ### Particle Gun
@@ -64,7 +68,7 @@ according to the energy distribution for cosmic muons at the sea surface
 
 This distribution are generated using a TF1 object from ROOT
 
-To limit the presence of delta rays a range cut is applied in the run.mac macro \n
+To limit the presence of delta rays a range cut is applied in the run.mac macro
 The defaults values are: 10cm in the air and 0.1mm in the silicon
 
 ### Trigger
@@ -92,7 +96,7 @@ the data of the beam
 
 ## Tracking
 The tracking algorithm is a simple toy model that consist in a simple linear fit on the hits in the XZ and YZ projection.
-Some tracks are not well fitted due to the presence of hits of delta rays. \n
+Some tracks are not well fitted due to the presence of hits of delta rays.
 A simple filter to remove some of this tracks consists in
 remove all the fits with parameters that force the linear function to be outside the world box.
 
