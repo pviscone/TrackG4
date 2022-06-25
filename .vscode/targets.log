@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jun 25 07:51:58 2022
+# Make data base, printed on Sat Jun 25 09:16:57 2022
 
 # Variables
 
@@ -23,7 +21,7 @@ GTK_RC_FILES = /etc/gtk/gtkrc:/home/pviscone/.gtkrc:/home/pviscone/.config/gtkrc
 # environment
 CSF_EXCEPTION_PROMPT = 1
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-6c07c1c5-1461-47d4-ad2d-c158149e59d6.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-86d6bb1d-40c1-4858-ad3c-b9745f7aece8.sock
 # environment
 CSF_XmlOcafResource = /usr/share/opencascade/resources/XmlOcafResource
 # environment
@@ -127,7 +125,7 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 92940
+VSCODE_PID = 127944
 # environment
 XDG_SESSION_TYPE = x11
 # environment
@@ -279,7 +277,6 @@ CSF_IGESDefaults = /usr/share/opencascade/resources/XSTEPResource
 # environment
 JOURNAL_STREAM = 8:23530
 # environment
- 
 HADOOP_CONF_DIR = /etc/hadoop
 # environment
 XDG_SESSION_CLASS = user
@@ -330,9 +327,9 @@ LC_IDENTIFICATION = it_IT.UTF-8
 
 # Directories
 
-# . (device 40, inode 5225491): 24 files, no impossibilities.
+# . (device 40, inode 5555793): 23 files, no impossibilities.
 
-# 24 files, no impossibilities in 1 directories.
+# 23 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -382,12 +379,14 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 32 / storage = 282 B / avg = 8 B
-# current buf: size = 8162 B / used = 282 B / count = 32 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 31 / storage = 275 B / avg = 8 B
+# current buf: size = 8162 B / used = 275 B / count = 31 / avg = 8 B
 
-# strcache performance: lookups = 35 / hit rate = 8%
+# strcache performance: lookups = 34 / hit rate = 8%
 # hash-table stats:
-# Load=32/8192=0%, Rehash=0, Collisions=0/35=0%
-# Finished Make data base on Sat Jun 25 07:51:58 2022
+# Load=31/8192=0%, Rehash=0, Collisions=0/34=0%
+# Finished Make data base on Sat Jun 25 09:16:57 2022
 
  
+make: *** No rule to make target 'all'.  Stop.
+
