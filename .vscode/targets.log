@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jun 25 07:43:41 2022
+# Make data base, printed on Sat Jun 25 07:51:58 2022
 
 # Variables
 
@@ -23,7 +23,7 @@ GTK_RC_FILES = /etc/gtk/gtkrc:/home/pviscone/.gtkrc:/home/pviscone/.config/gtkrc
 # environment
 CSF_EXCEPTION_PROMPT = 1
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-de9c90ed-8200-4d75-87f7-75533fd845a2.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-6c07c1c5-1461-47d4-ad2d-c158149e59d6.sock
 # environment
 CSF_XmlOcafResource = /usr/share/opencascade/resources/XmlOcafResource
 # environment
@@ -127,7 +127,7 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 89888
+VSCODE_PID = 92940
 # environment
 XDG_SESSION_TYPE = x11
 # environment
@@ -388,6 +388,6 @@ GNUmakefile:
 # strcache performance: lookups = 35 / hit rate = 8%
 # hash-table stats:
 # Load=32/8192=0%, Rehash=0, Collisions=0/35=0%
-# Finished Make data base on Sat Jun 25 07:43:41 2022
+# Finished Make data base on Sat Jun 25 07:51:58 2022
 
  
