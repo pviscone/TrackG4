@@ -91,20 +91,26 @@ $(function() {
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">int</span> threadId = G4Threading::G4GetThreadId();</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_class" href="class_data_manager.html">DataManager</a> *dataManager = dataManagerMT-&gt;<a class="code hl_function" href="class_data_manager_m_t.html#a2d9d19d85c1769ab84cd510962678566">GetSTDataManager</a>(threadId);</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">// Trigger: if the event has not at least two hit in two different layers, it is not saved</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_class" href="class_event.html">Event</a> *ev = dataManager-&gt;<a class="code hl_function" href="class_data_manager.html#afb94f61f4007618c76bb9623ca9a76e4">GetEvent</a>();</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    std::vector&lt;int&gt; layerVec = ev-&gt;<a class="code hl_variable" href="class_event.html#a3d20427bd9193d7640c729d5669aadfb">detectorData</a>.<a class="code hl_variable" href="class_detector_data.html#a209d214e4fd21cedb0e3d24c5b57a601">Layer</a>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordflow">if</span> (!layerVec.empty()) {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordflow">if</span> (std::max_element(layerVec.begin(), layerVec.end()) - std::min_element(layerVec.begin(), layerVec.end()) &lt; 1) {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            (ev-&gt;<a class="code hl_variable" href="class_event.html#a3d20427bd9193d7640c729d5669aadfb">detectorData</a>).Clear();</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        }</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">// Fill the tree and clear the event</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    TTree *tree = dataManager-&gt;<a class="code hl_function" href="class_data_manager.html#a4a6ec110119f2849d8c768146d070c2d">GetTree</a>();</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    tree-&gt;Fill();</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    dataManager-&gt;<a class="code hl_function" href="class_data_manager.html#afb94f61f4007618c76bb9623ca9a76e4">GetEvent</a>()-&gt;<a class="code hl_function" href="class_event.html#ae39cdc53bffb0741bfda9c5634b7018b">Clear</a>();</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>}</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">// Trigger: if the event:</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">// - has less than 2 hits</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="comment">// - has hits only in the same pixel/strip module</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">// - has only hits in the same PS module</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">// then it is not saved</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_class" href="class_event.html">Event</a> *ev = dataManager-&gt;<a class="code hl_function" href="class_data_manager.html#afb94f61f4007618c76bb9623ca9a76e4">GetEvent</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    std::vector&lt;int&gt; layerVec = ev-&gt;<a class="code hl_variable" href="class_event.html#a3d20427bd9193d7640c729d5669aadfb">detectorData</a>.<a class="code hl_variable" href="class_detector_data.html#a209d214e4fd21cedb0e3d24c5b57a601">Layer</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordflow">if</span> (!layerVec.empty()) {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordtype">int</span> min_layer=std::min_element(layerVec.begin(), layerVec.end());</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordtype">int</span> layer_diff=std::max_element(layerVec.begin(), layerVec.end()) - min_layer;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">if</span> ( (layerVec.size()&lt;2) || (layer_diff == 0) || ((layer_diff==1) &amp;&amp; (min_layer%2=1)) ) {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            (ev-&gt;<a class="code hl_variable" href="class_event.html#a3d20427bd9193d7640c729d5669aadfb">detectorData</a>).Clear();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">// Fill the tree and clear the event</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    TTree *tree = dataManager-&gt;<a class="code hl_function" href="class_data_manager.html#a4a6ec110119f2849d8c768146d070c2d">GetTree</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    tree-&gt;Fill();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    dataManager-&gt;<a class="code hl_function" href="class_data_manager.html#afb94f61f4007618c76bb9623ca9a76e4">GetEvent</a>()-&gt;<a class="code hl_function" href="class_event.html#ae39cdc53bffb0741bfda9c5634b7018b">Clear</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
 <div class="ttc" id="a_event_action_8hh_html"><div class="ttname"><a href="_event_action_8hh.html">EventAction.hh</a></div></div>
 <div class="ttc" id="aclass_data_manager_html"><div class="ttname"><a href="class_data_manager.html">DataManager</a></div><div class="ttdoc">This class manage TFiles and TTrees to store the data exploiting the Event class structure.</div><div class="ttdef"><b>Definition:</b> <a href="_data_manager_8hh_source.html#l00013">DataManager.hh:13</a></div></div>
 <div class="ttc" id="aclass_data_manager_html_a4a6ec110119f2849d8c768146d070c2d"><div class="ttname"><a href="class_data_manager.html#a4a6ec110119f2849d8c768146d070c2d">DataManager::GetTree</a></div><div class="ttdeci">TTree * GetTree()</div><div class="ttdoc">Return the pointer to the tree of the DataManager singleton.</div><div class="ttdef"><b>Definition:</b> <a href="_data_manager_8cc_source.html#l00043">DataManager.cc:43</a></div></div>
