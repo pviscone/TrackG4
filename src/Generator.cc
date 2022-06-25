@@ -80,15 +80,15 @@ void MyPrimaryGenerator::GeneratePrimaries(G4Event *event) {
     /********************************PARTICLE DIRECTION******************************/
     // Set the particle direction using the cos^2 distribution for the azimuthal angle and the uniform distribution for the polar angle
     double phi = G4UniformRand() * 2 * TMath::Pi();
-    TF1 *fTheta = new TF1("f2", "cos(x)*cos(x)", 0, TMath::Pi() / 2);
-    double theta = fTheta->GetRandom();
+    TF1 fTheta = TF1("f2", "cos(x)*cos(x)", 0, TMath::Pi() / 2);
+    double theta = fTheta.GetRandom();
     fParticleGun->SetParticleMomentumDirection(G4ThreeVector(cos(phi) * sin(theta), sin(phi) * sin(theta), cos(theta)));
 
     /********************************PARTICLE ENERGY********************************/
     // Set the particle energy according to the muon energy distribution at the surface
-    TF1 *fSpectrum = new TF1("f4", "0.14*TMath::Power(x,-2.7)*(1/(1+(1.1*x*TMath::Cos([0]))/115)+0.054/(1+(1.1*x*TMath::Cos([0]))/850))", minBeamEnergy, maxBeamEnergy);
-    fSpectrum->SetParameter(0, theta);
-    G4double energy = (fSpectrum->GetRandom()) * GeV;
+    TF1 fSpectrum = TF1("f4", "0.14*TMath::Power(x,-2.7)*(1/(1+(1.1*x*TMath::Cos([0]))/115)+0.054/(1+(1.1*x*TMath::Cos([0]))/850))", minBeamEnergy, maxBeamEnergy);
+    fSpectrum.SetParameter(0, theta);
+    G4double energy = (fSpectrum.GetRandom()) * GeV;
     fParticleGun->SetParticleEnergy(energy);
 
     /******************************** SAVE THE DATA ********************************/
