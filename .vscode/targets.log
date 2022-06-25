@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jun 25 07:39:19 2022
+# Make data base, printed on Sat Jun 25 07:43:41 2022
 
 # Variables
 
@@ -23,7 +23,7 @@ GTK_RC_FILES = /etc/gtk/gtkrc:/home/pviscone/.gtkrc:/home/pviscone/.config/gtkrc
 # environment
 CSF_EXCEPTION_PROMPT = 1
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-6faf6ab8-5822-40e4-98b7-871c0f561fa6.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-de9c90ed-8200-4d75-87f7-75533fd845a2.sock
 # environment
 CSF_XmlOcafResource = /usr/share/opencascade/resources/XmlOcafResource
 # environment
@@ -127,7 +127,7 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 89071
+VSCODE_PID = 89888
 # environment
 XDG_SESSION_TYPE = x11
 # environment
@@ -279,6 +279,7 @@ CSF_IGESDefaults = /usr/share/opencascade/resources/XSTEPResource
 # environment
 JOURNAL_STREAM = 8:23530
 # environment
+ 
 HADOOP_CONF_DIR = /etc/hadoop
 # environment
 XDG_SESSION_CLASS = user
@@ -295,7 +296,6 @@ DRAWHOME = /usr/share/opencascade/resources/DrawResources
 # environment
 VSCODE_IPC_HOOK = /run/user/1000/vscode-35b12023-1.68.1-main.sock
 # environment
- 
 XDG_SESSION_ID = 2
 # environment
 XCURSOR_SIZE = 24
@@ -388,6 +388,6 @@ GNUmakefile:
 # strcache performance: lookups = 35 / hit rate = 8%
 # hash-table stats:
 # Load=32/8192=0%, Rehash=0, Collisions=0/35=0%
-# Finished Make data base on Sat Jun 25 07:39:19 2022
+# Finished Make data base on Sat Jun 25 07:43:41 2022
 
  
