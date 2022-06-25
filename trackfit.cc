@@ -53,7 +53,7 @@ int main() {
             fitdata = Fit(event, line, imgpath, i);
 
             // If the fit results are meaningless (x0,y0 outside the world size or nan) or unsuccessful, skip the event
-            if ((fitdata.status) || (std::isnan(fitdata.x0)) || (std::isnan(fitdata.y0)) || (std::isnan(fitdata.mx)) || (std::isnan(fitdata.my))) {
+            if ((abs(fitdata.mx)>100) || (fitdata.status) || (std::isnan(fitdata.x0)) || (std::isnan(fitdata.y0)) || (std::isnan(fitdata.mx)) || (std::isnan(fitdata.my))) {
                 continue;
             }
             // Fill the ntuple with the fit results
