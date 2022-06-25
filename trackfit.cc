@@ -16,7 +16,7 @@
 int main() {
     // Create imgpath to store the images. Leave empty if you don't want to save the images
     std::string imgpath = "../data/img";
-    imgpath = "";
+    //imgpath = "";
 
     // Set the file path
     std::string input_root_file = "../data/output.root";
