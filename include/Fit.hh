@@ -33,8 +33,8 @@
  * - mx_err
  * - my
  * - my_err
- * - chi2zx (chi2 of the fit in the ZX plane)
- * - chi2zy (chi2 of the fit in the ZY plane)
+ * - chi2zx (reduced chi2 of the fit in the ZX plane)
+ * - chi2zy (reduced chi2 of the fit in the ZY plane)
  * - nHits (number of hits in the fit)
  *
  *
@@ -100,6 +100,10 @@ FitData Fit(Event *event, TF1 *line, const std::string &imgpath = "", int i = 0)
             dy.push_back(ReadOutParameters::stripDimY / sqrt(12));
         }
     }
+
+    // Save the number of hits
+    fitdata.nHit = z.size();
+
     // Create the graph containing the hits in the ZX plane projection and fill the struct with the fit results
     TCanvas c1("c1", "c1", 800, 600);
     TGraphErrors GR_zx(x.size(), &z[0], &x[0], &dz[0], &dx[0]);
@@ -112,7 +116,11 @@ FitData Fit(Event *event, TF1 *line, const std::string &imgpath = "", int i = 0)
     fitdata.x0_err = line->GetParError(0);
     fitdata.mx = line->GetParameter(1);
     fitdata.mx_err = line->GetParError(1);
-    fitdata.chi2zx = line->GetChisquare();
+    if(fitdata.nHit>2){
+        fitdata.chi2zx = line->GetChisquare()/(fitdata.nHit-2);
+    }else{
+        fitdata.chi2zx = line->GetChisquare();
+    }
 
     // Save the ZX fig if saveFig is true
     if (imgpath != "") {
@@ -137,7 +145,11 @@ FitData Fit(Event *event, TF1 *line, const std::string &imgpath = "", int i = 0)
     fitdata.y0_err = line->GetParError(0);
     fitdata.my = line->GetParameter(1);
     fitdata.my_err = line->GetParError(1);
-    fitdata.chi2zy = line->GetChisquare();
+    if(fitdata.nHit>2){
+        fitdata.chi2zy = line->GetChisquare()/(fitdata.nHit-2);
+    }else{
+        fitdata.chi2zy = line->GetChisquare();
+    }
 
     // Save the ZY fig if saveFig is true
     if (imgpath != "") {
@@ -152,8 +164,7 @@ FitData Fit(Event *event, TF1 *line, const std::string &imgpath = "", int i = 0)
     // Check that the fit on both projection was successful
     fitdata.status = status_zx && status_zy;
 
-    // Save the number of hits
-    fitdata.nHit = z.size();
+
 
     // Return the fitdata struct
     return fitdata;
