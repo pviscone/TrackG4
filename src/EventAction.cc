@@ -18,11 +18,17 @@ void MyEventAction::EndOfEventAction(const G4Event *) {
     int threadId = G4Threading::G4GetThreadId();
     DataManager *dataManager = dataManagerMT->GetSTDataManager(threadId);
 
-    // Trigger: if the event has not at least two hit in two different layers, it is not saved
+    // Trigger: if the event:
+    // - has less than 2 hits
+    // - has hits only in the same pixel/strip module
+    // - has only hits in the same PS module
+    // then it is not saved
     Event *ev = dataManager->GetEvent();
     std::vector<int> layerVec = ev->detectorData.Layer;
     if (!layerVec.empty()) {
-        if (std::max_element(layerVec.begin(), layerVec.end()) - std::min_element(layerVec.begin(), layerVec.end()) < 1) {
+        int min_layer=std::min_element(layerVec.begin(), layerVec.end());
+        int layer_diff=std::max_element(layerVec.begin(), layerVec.end()) - min_layer;
+        if ( (layerVec.size()<2) || (layer_diff == 0) || ((layer_diff==1) && (min_layer%2=1)) ) {
             (ev->detectorData).Clear();
         }
     }

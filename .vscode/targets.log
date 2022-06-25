@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jun 25 06:43:23 2022
+# Make data base, printed on Sat Jun 25 07:00:58 2022
 
 # Variables
 
@@ -23,7 +23,7 @@ GTK_RC_FILES = /etc/gtk/gtkrc:/home/pviscone/.gtkrc:/home/pviscone/.config/gtkrc
 # environment
 CSF_EXCEPTION_PROMPT = 1
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-c7f58481-77ee-4c3b-8d34-16def3375590.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-703082c2-cfe9-4251-bdfa-294af8b6f981.sock
 # environment
 CSF_XmlOcafResource = /usr/share/opencascade/resources/XmlOcafResource
 # environment
@@ -127,7 +127,7 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 82449
+VSCODE_PID = 85172
 # environment
 XDG_SESSION_TYPE = x11
 # environment
@@ -259,6 +259,8 @@ MANAGERPID = 1272
 # environment
 LC_MEASUREMENT = it_IT.UTF-8
 # environment
+NODE_TLS_REJECT_UNAUTHORIZED = 0
+# environment
 G4LEVELGAMMADATA = /usr/share/geant4-levelgammadata/PhotonEvaporation5.7
 # environment
 _ = /usr/bin/make
@@ -298,10 +300,10 @@ XDG_SESSION_ID = 2
 XCURSOR_SIZE = 24
 # default
 .RECIPEPREFIX := 
+ 
 # automatic
 <F = $(notdir $<)
 # default
- 
 SUFFIXES := 
 # environment
 QT_AUTO_SCREEN_SCALE_FACTOR = 0
@@ -320,7 +322,7 @@ KDE_FULL_SESSION = true
 # environment
 LC_IDENTIFICATION = it_IT.UTF-8
 # variable set hash-table stats:
-# Load=153/1024=15%, Rehash=0, Collisions=13/180=7%
+# Load=154/1024=15%, Rehash=0, Collisions=13/181=7%
 
 # Pattern-specific Variable Values
 
@@ -386,6 +388,6 @@ GNUmakefile:
 # strcache performance: lookups = 35 / hit rate = 8%
 # hash-table stats:
 # Load=32/8192=0%, Rehash=0, Collisions=0/35=0%
-# Finished Make data base on Sat Jun 25 06:43:23 2022
+# Finished Make data base on Sat Jun 25 07:00:58 2022
 
  
