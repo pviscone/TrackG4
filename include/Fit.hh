@@ -79,20 +79,22 @@ FitData Fit(Event *event, TF1 *line, const std::string &imgpath = "", int i = 0)
     // Store the hits and order them according to the z coordinate
     std::vector<double> z = (event->detectorData).posZ;
     std::vector<double> x, y;
+    std::vector<int> layer;
     std::vector<int> idx(z.size());
     std::iota(idx.begin(), idx.end(), 0);
     std::sort(idx.begin(), idx.end(), [z](const size_t &i1, const size_t &i2) { return z[i1] < z[i2]; });
     for (auto idx_val : idx) {
         x.push_back((event->detectorData).posX[idx_val]);
         y.push_back((event->detectorData).posY[idx_val]);
+        layer.push_back((event->detectorData).Layer[idx_val]);
     }
     std::sort(z.begin(), z.end());
 
     // Create vectors of errors. The even layers are pixel module, the odds are strips.
     std::vector<double> dx, dy;
     std::vector<double> dz(x.size(), GeometryParameters::moduleDimZ / sqrt(12));
-    for (auto lay : (event->detectorData).Layer) {
-        if (lay % 2 == 0) {
+    for (auto lay : layer) {
+        if (lay % 2 == 1) {
             dx.push_back(ReadOutParameters::pixelDimX / sqrt(12));
             dy.push_back(ReadOutParameters::pixelDimY / sqrt(12));
         } else {
