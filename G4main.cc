@@ -6,7 +6,7 @@
  * With the data obtained by the simulation the muons track are reconstructed with a simple toy model for tracking.
  *
  *  **warning**: Due to the lack of compatibility between RunManager and RunManagerMT the simulation has to run in multithreading mode.
- * You can set the number of thread in the UserParameters.hh but you have to compile Geant with the flag -DG4_USE_THREADS.
+ * You can set the number of thread in the UserParameters.hh but you have to compile Geant with the flag GEANT4_BUILD_MULTITHREADED ON.
  *
  * \subsection HOW How to run the simulation
  * 1. Build and run the simulation in batch mode running the script G4batch.sh in the main folder.
@@ -121,7 +121,7 @@ int main(int argc, char **argv) {
     runManager->SetNumberOfThreads(SystemParameters::nThreads);
 #else
 // raise an exception at compile time if the user tries to run the simulation in single-threaded mode
-#error "Geant4 was not compiled in multithreaded mode. Please compile with -DG4MULTITHREADED");
+#error "Geant4 was not compiled in multithreaded mode. Please compile with GEANT4_BUILD_MULTITHREADED ON");
     // Single threaded mode disabled due to the lack of support of the G4RunManager
     // G4RunManager *runManager=new G4RunManager();
 #endif
