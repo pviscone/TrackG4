@@ -102,7 +102,7 @@ $(function() {
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    runManager-&gt;SetNumberOfThreads(<a class="code hl_variable" href="namespace_system_parameters.html#ac301f75a096ad8b3c57504179c39775b">SystemParameters::nThreads</a>);</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="comment">// raise an exception at compile time if the user tries to run the simulation in single-threaded mode</span></div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="preprocessor">#error &quot;Geant4 was not compiled in multithreaded mode. Please compile with -DG4MULTITHREADED&quot;</span>);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="preprocessor">#error &quot;Geant4 was not compiled in multithreaded mode. Please compile with GEANT4_BUILD_MULTITHREADED ON&quot;</span>);</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="comment">// Single threaded mode disabled due to the lack of support of the G4RunManager</span></div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="comment">// G4RunManager *runManager=new G4RunManager();</span></div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="preprocessor">#endif</span></div>
