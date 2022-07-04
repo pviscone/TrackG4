@@ -86,8 +86,6 @@
  *\section Tracking
  *The tracking algorithm is a simple toy model that consist in a simple linear fit on the hits in the XZ and YZ projection.
  *Some tracks are not well fitted due to the presence of hits of delta rays. \n
- * A simple filter to remove some of this tracks consists in
- * remove all the fits with parameters that force the linear function to be outside the world box.
  *
  * The results of the fit (parameters and their errors) are stored in a root file.
  */

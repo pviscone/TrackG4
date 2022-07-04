@@ -34,7 +34,7 @@ The data will be saved in output.root in the build folder
 
 <img src="docs/img/ps_module.png" style="zoom:20%;" />
 
- 
+
 A PS silicon module is composed by a layer of strips and a layer of pixels.
 The dimension of a single layer is 10cm x 5cm x 0.3mm and two layers are spaced by 4mm.
 
@@ -101,7 +101,5 @@ the data of the beam
 ## Tracking
 The tracking algorithm is a simple toy model that consist in a simple linear fit on the hits in the XZ and YZ projection.
 Some tracks are not well fitted due to the presence of hits of delta rays.
-A simple filter to remove some of this tracks consists in
-remove all the fits with parameters that force the linear function to be outside the world box.
 
 The results of the fit (parameters and their errors) are stored in a root file.
