@@ -1,5 +1,7 @@
 #include "SensitiveDetector.hh"
 
+using namespace GeometryParameters;
+
 MySensitiveDetector::MySensitiveDetector(G4String name) : G4VSensitiveDetector(name) {
 }
 
@@ -23,8 +25,7 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *R0his
     /********************** TRACK ID AND PARTICLE NAME **********************/
     G4Track *track = aStep->GetTrack();
     G4int trackID = track->GetTrackID();
-    G4String particleName = track->GetDefinition()->GetParticleName();
-    std::string particle = particleName;
+
 
     /*************************** HIT POSITION ******************************/
     G4StepPoint *preStepPoint = aStep->GetPreStepPoint();
@@ -38,24 +39,10 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *R0his
     const G4VTouchable *touchable = preStepPoint->GetTouchable();
     // Uncomment to get the position of the detector that was hit
     // G4ThreeVector detPos = (touchable->GetVolume())->GetTranslation();
-    G4int layer = touchable->GetCopyNumber();
+    G4int layer = -1 * ((touchable->GetCopyNumber()) - nOfLayers*2);
 
     /*************************** PARTICLE ID ****************************/
     // Set a particle ID according to the particle name
-    G4double particleID;
-    if (particle == "mu-") {
-        particleID = 0;
-    } else if (particle == "mu+") {
-        particleID = 1;
-    } else if (particle == "e-") {
-        particleID = 2;
-    } else if (particle == "e+") {
-        particleID = 3;
-    } else if (particle == "gamma") {
-        particleID = 4;
-    } else {
-        particleID = -1;
-    }
 
     /*************************** FILL DETECTOR DATA ****************************/
     // Get the DataManager object of the i-th thread
@@ -69,11 +56,10 @@ G4bool MySensitiveDetector::ProcessHits(G4Step *aStep, G4TouchableHistory *R0his
 
     if (edep / keV > TriggerParameters::energyCut / keV) {
         ev->detectorData.TrackID.push_back((int)trackID);
-        ev->detectorData.ParticleID.push_back((int)particleID);
+
         ev->detectorData.EnergyDeposited.push_back((double)(edep / keV));
-        ev->detectorData.posX.push_back((RO->closest_channel((double)realHitPos.x() / mm, "x", (int)layer)));
-        ev->detectorData.posY.push_back((RO->closest_channel((double)realHitPos.y() / mm, "y", (int)layer)));
-        ev->detectorData.posZ.push_back((RO->closest_channel((double)realHitPos.z() / mm, "z", (int)layer)));
+        ev->detectorData.channelX.push_back((RO->closest_channel((double)realHitPos.x() / mm, "x", (int)layer)));
+        ev->detectorData.channelY.push_back((RO->closest_channel((double)realHitPos.y() / mm, "y", (int)layer)));
         ev->detectorData.Layer.push_back((int)layer);
         // Uncomment to get the real position of the hit
         /*     ev->detectorData.posX.push_back((double)(realHitPos.x()/mm));

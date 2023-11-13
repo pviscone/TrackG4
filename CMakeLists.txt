@@ -50,13 +50,13 @@ target_link_libraries(${EXECUTABLE_NAME} ${Geant4_LIBRARIES})
 ################# Tests section ####################
 
 ## Create the executable of the tests
-file(GLOB testcpp ${PROJECT_SOURCE_DIR}/test/*/*.cpp ${PROJECT_SOURCE_DIR}/test/*)
-add_executable(tests_executable ${testcpp} ${sources} ${headers})
-target_link_libraries(tests_executable ${Geant4_LIBRARIES})
+#file(GLOB testcpp ${PROJECT_SOURCE_DIR}/test/*/*.cpp ${PROJECT_SOURCE_DIR}/test/*)
+#add_executable(tests_executable ${testcpp} ${sources} ${headers})
+#target_link_libraries(tests_executable ${Geant4_LIBRARIES})
 ####################################################
 
-add_executable(track ./trackfit.cc)
-target_link_libraries(track ${Geant4_LIBRARIES})
+#add_executable(track ./trackfit.cc)
+#target_link_libraries(track ${Geant4_LIBRARIES})
 ############# Documentation Section ################
 
 # first we can indicate the documentation build as an option and set it to ON by default

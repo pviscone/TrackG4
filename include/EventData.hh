@@ -2,13 +2,12 @@
 #include "TSystem.h"
 #include <string>
 #include <vector>
-
 /**
  * @class TruthBeamData
  * @brief Class to store the truth data of the primary beam
  *
  */
-class TruthBeamData {
+class TruthBeamData  {
 public:
     double posX;
     double posY;
@@ -26,22 +25,22 @@ public:
  * @brief Class to store the data of the sensitive detector
  *
  */
-class DetectorData {
+class DetectorData  {
 public:
     std::vector<int> TrackID;
-    std::vector<int> ParticleID;
+    
     std::vector<double> EnergyDeposited;
-    std::vector<double> posX;
-    std::vector<double> posY;
-    std::vector<double> posZ;
+    std::vector<int> channelX;
+    std::vector<int> channelY;
+    
     std::vector<int> Layer;
     DetectorData() {
         TrackID.clear();
-        ParticleID.clear();
+
         EnergyDeposited.clear();
-        posX.clear();
-        posY.clear();
-        posZ.clear();
+        channelX.clear();
+        channelY.clear();
+
         Layer.clear();
     }
     ~DetectorData() {}
@@ -57,7 +56,7 @@ public:
  * @class Event
  * @brief Class to store the data of the simulation
  */
-class Event {
+class Event  {
 public:
     int eventID;
     DetectorData detectorData;

@@ -69,7 +69,7 @@ G4double ReadOut::closest_channel(G4double hit_position, std::vector<G4double> m
     G4double positionOfHitModule = closest_value(modulePositions, hit_position);
     G4double hitPositionTranslated = hit_position - positionOfHitModule;
 
-    return ((std::floor(hitPositionTranslated / pitchOnAxis) + 0.5) * pitchOnAxis + positionOfHitModule);
+    return ((std::floor(hitPositionTranslated / pitchOnAxis)));
 }
 
 /**

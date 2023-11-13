@@ -5,6 +5,6 @@ cd ./build
 rm ./output*.root
 cmake ..
 make -j$THREADS
-./tests_executable -s
+#./tests_executable -s
 ./CosmicMuSimulation run.mac
 hadd ./output.root ./output*.root

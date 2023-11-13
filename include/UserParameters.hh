@@ -69,9 +69,9 @@ inline G4double moduleSpacingZ = 20 * cm;
 // Spacing between pixels and strips
 inline G4double pixelStripSpacing = 4 * mm;
 // Number of silicon module in the x and y directions
-inline G4int nOfColsX = 2;
+inline G4int nOfColsX = 1;
 inline G4int nOfColsY = 1;
-inline G4int nOfLayers = 5;
+inline G4int nOfLayers = 12;
 // Put the world size equal the longest side of the detector multiplied by a factor chosen by the user
 inline G4double worldSize = 1 * std::max({sideLength(moduleDimX, moduleSpacingX, nOfColsX), sideLength(moduleDimY, moduleSpacingY, nOfColsY), sideLength(moduleDimZ, moduleSpacingZ, nOfLayers)}) / 2;
 
@@ -86,6 +86,7 @@ namespace Materials {
 inline G4NistManager *nist = G4NistManager::Instance();
 inline G4Material *Air = (nist)->FindOrBuildMaterial("G4_AIR");
 inline G4Material *Si = (nist)->FindOrBuildMaterial("G4_Si");
+inline G4Material *Graphite = (nist)->FindOrBuildMaterial("G4_GRAPHITE");
 
 }; // namespace Materials
 
@@ -95,8 +96,11 @@ inline G4Material *Si = (nist)->FindOrBuildMaterial("G4_Si");
  * This namespace contains all the energy parameters of the beam
  */
 namespace BeamParameters {
-inline double minBeamEnergy = 1;    // GeV
-inline double maxBeamEnergy = 1000; // Gev
+inline double sigmaX = 0.75 * cm;
+inline double sigmaY = 0.5 * cm;
+inline double dispersionTheta = 5 * mrad;
+inline double mu_energy = 100 * GeV;
+inline double sigma_energy = 1 * GeV;
 };                                  // namespace BeamParameters
 
 /**

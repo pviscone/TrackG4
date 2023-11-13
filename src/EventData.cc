@@ -3,20 +3,16 @@
 // Clear all the vectors in the event
 void Event::Clear() {
     detectorData.TrackID.clear();
-    detectorData.ParticleID.clear();
     detectorData.EnergyDeposited.clear();
-    detectorData.posX.clear();
-    detectorData.posY.clear();
-    detectorData.posZ.clear();
+    detectorData.channelX.clear();
+    detectorData.channelY.clear();
     detectorData.Layer.clear();
 }
 
 void DetectorData::Clear() {
     TrackID.clear();
-    ParticleID.clear();
     EnergyDeposited.clear();
-    posX.clear();
-    posY.clear();
-    posZ.clear();
+    channelX.clear();
+    channelY.clear();
     Layer.clear();
 }

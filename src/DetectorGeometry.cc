@@ -67,6 +67,10 @@ G4VPhysicalVolume *MyDetectorConstruction::Construct() {
         }
     }
 
+    G4Box *graphiteBox = new G4Box("Module", moduleDimX / 2, moduleDimY / 2, 10*mm);
+    logicGraphite = new G4LogicalVolume(graphiteBox, Graphite, "graphite");
+    new G4PVPlacement(0, G4ThreeVector(0,0,0), logicGraphite, "graphite", logicWorld, false, 0, false);
+
     // Return the physical world
     return physWorld;
 }

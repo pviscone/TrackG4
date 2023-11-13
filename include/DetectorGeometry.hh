@@ -20,6 +20,7 @@ private:
      * @brief The logical volume of the sensitive silicon module
      */
     G4LogicalVolume *logicSiModule;
+    G4LogicalVolume *logicGraphite;
 
     /**
      * @brief The constructor of the sensitive volume
